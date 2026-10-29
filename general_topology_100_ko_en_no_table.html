@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General Topology 정리 100개</title>
+<style>
+body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f5f7fb;color:#1f2937;line-height:1.65;margin:0;padding:0}
+header{background:linear-gradient(135deg,#312e81,#2563eb);color:white;text-align:center;padding:38px 18px}
+header h1{margin:0;font-size:32px} header p{margin:10px 0 0;font-size:16px}
+main{max-width:1120px;margin:0 auto;padding:24px}.card{background:white;border-left:8px solid #4f46e5;border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,.08);padding:22px;margin:18px 0}.num{display:inline-block;background:#e0e7ff;color:#3730a3;border-radius:999px;padding:4px 12px;font-weight:700}.ko-title{font-size:23px;font-weight:800;color:#111827;margin-top:12px}.en-title{font-size:20px;font-weight:800;color:#4338ca;margin-top:2px}.line{margin:8px 0}.label{font-weight:800;color:#1d4ed8}.example{background:#f8fafc;border-radius:12px;padding:12px;margin-top:10px}.top{position:fixed;right:18px;bottom:18px;background:#4f46e5;color:white;text-decoration:none;padding:10px 14px;border-radius:999px}footer{text-align:center;color:#6b7280;padding:28px}
+</style>
+</head>
+<body id="top">
+<header><h1>General Topology 정리 100개</h1><p>각각 한국어 한 줄, 영어 한 줄, 정리와 예시 포함 · 표 없는 HTML</p></header>
+<main>
+<section class="card" id="s1">
+<span class="num">001</span>
+<div class="ko-title">제목: 위상공간의 정의</div>
+<div class="en-title">Title: Definition of a Topological Space</div>
+<div class="line"><span class="label">정리:</span> 집합 X와 X의 부분집합들의 모임 T가 공집합과 X를 포함하고, 임의의 합집합과 유한 교집합에 대해 닫혀 있으면 (X,T)는 위상공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A set X together with a collection T of subsets of X is a topological space if T contains the empty set and X, and is closed under arbitrary unions and finite intersections.</div>
+<div class="example"><div><span class="label">예시:</span> 실수집합 R에서 열린구간들의 합으로 나타나는 집합들을 모으면 보통위상이 된다.</div><div><span class="label">Example:</span> On R, the collection of all sets expressible as unions of open intervals is the usual topology.</div></div>
+</section>
+<section class="card" id="s2">
+<span class="num">002</span>
+<div class="ko-title">제목: 열린집합</div>
+<div class="en-title">Title: Open Set</div>
+<div class="line"><span class="label">정리:</span> 위상 T에 속하는 집합을 열린집합이라고 한다.</div>
+<div class="line"><span class="label">Theorem:</span> A set is open if it belongs to the topology T.</div>
+<div class="example"><div><span class="label">예시:</span> 실수의 보통위상에서 (0,1)은 열린집합이다.</div><div><span class="label">Example:</span> In the usual topology on R, the interval (0,1) is open.</div></div>
+</section>
+<section class="card" id="s3">
+<span class="num">003</span>
+<div class="ko-title">제목: 닫힌집합</div>
+<div class="en-title">Title: Closed Set</div>
+<div class="line"><span class="label">정리:</span> 여집합이 열린집합인 부분집합을 닫힌집합이라고 한다.</div>
+<div class="line"><span class="label">Theorem:</span> A subset is closed if its complement is open.</div>
+<div class="example"><div><span class="label">예시:</span> 실수에서 [0,1]의 여집합은 열린집합이므로 [0,1]은 닫힌집합이다.</div><div><span class="label">Example:</span> In R, [0,1] is closed because its complement is open.</div></div>
+</section>
+<section class="card" id="s4">
+<span class="num">004</span>
+<div class="ko-title">제목: 공집합과 전체공간</div>
+<div class="en-title">Title: Empty Set and Whole Space</div>
+<div class="line"><span class="label">정리:</span> 모든 위상공간에서 공집합과 전체공간은 열린집합이고 동시에 닫힌집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> In every topological space, the empty set and the whole space are both open and closed.</div>
+<div class="example"><div><span class="label">예시:</span> R에서 ∅와 R은 모두 열리고 닫혀 있다.</div><div><span class="label">Example:</span> In R, both ∅ and R are open and closed.</div></div>
+</section>
+<section class="card" id="s5">
+<span class="num">005</span>
+<div class="ko-title">제목: 임의 합집합의 열린성</div>
+<div class="en-title">Title: Arbitrary Union of Open Sets</div>
+<div class="line"><span class="label">정리:</span> 열린집합들의 임의 합집합은 열린집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> The arbitrary union of open sets is open.</div>
+<div class="example"><div><span class="label">예시:</span> (0,1), (1,2), (2,3)의 합집합은 열린집합이다.</div><div><span class="label">Example:</span> The union of (0,1), (1,2), and (2,3) is open.</div></div>
+</section>
+<section class="card" id="s6">
+<span class="num">006</span>
+<div class="ko-title">제목: 유한 교집합의 열린성</div>
+<div class="en-title">Title: Finite Intersection of Open Sets</div>
+<div class="line"><span class="label">정리:</span> 열린집합들의 유한 교집합은 열린집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> The finite intersection of open sets is open.</div>
+<div class="example"><div><span class="label">예시:</span> (0,3)∩(1,4)=(1,3)은 열린집합이다.</div><div><span class="label">Example:</span> (0,3)∩(1,4)=(1,3) is open.</div></div>
+</section>
+<section class="card" id="s7">
+<span class="num">007</span>
+<div class="ko-title">제목: 임의 교집합은 항상 열리지 않음</div>
+<div class="en-title">Title: Arbitrary Intersection Need Not Be Open</div>
+<div class="line"><span class="label">정리:</span> 열린집합들의 무한 교집합은 일반적으로 열린집합이 아닐 수 있다.</div>
+<div class="line"><span class="label">Theorem:</span> An infinite intersection of open sets need not be open.</div>
+<div class="example"><div><span class="label">예시:</span> (-1/n,1/n)을 모든 n에 대해 교집합하면 {0}이 되어 R에서 열리지 않는다.</div><div><span class="label">Example:</span> The intersection of (-1/n,1/n) over all n is {0}, which is not open in R.</div></div>
+</section>
+<section class="card" id="s8">
+<span class="num">008</span>
+<div class="ko-title">제목: 닫힌집합의 임의 교집합</div>
+<div class="en-title">Title: Arbitrary Intersection of Closed Sets</div>
+<div class="line"><span class="label">정리:</span> 닫힌집합들의 임의 교집합은 닫힌집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> The arbitrary intersection of closed sets is closed.</div>
+<div class="example"><div><span class="label">예시:</span> [−1/n,1/n]들의 교집합은 {0}이고 닫혀 있다.</div><div><span class="label">Example:</span> The intersection of [−1/n,1/n] is {0}, which is closed.</div></div>
+</section>
+<section class="card" id="s9">
+<span class="num">009</span>
+<div class="ko-title">제목: 닫힌집합의 유한 합집합</div>
+<div class="en-title">Title: Finite Union of Closed Sets</div>
+<div class="line"><span class="label">정리:</span> 닫힌집합들의 유한 합집합은 닫힌집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> The finite union of closed sets is closed.</div>
+<div class="example"><div><span class="label">예시:</span> [0,1]∪[2,3]은 R에서 닫힌집합이다.</div><div><span class="label">Example:</span> [0,1]∪[2,3] is closed in R.</div></div>
+</section>
+<section class="card" id="s10">
+<span class="num">010</span>
+<div class="ko-title">제목: 이산위상</div>
+<div class="en-title">Title: Discrete Topology</div>
+<div class="line"><span class="label">정리:</span> 집합 X의 모든 부분집합을 열린집합으로 정한 위상을 이산위상이라고 한다.</div>
+<div class="line"><span class="label">Theorem:</span> The topology consisting of all subsets of X is called the discrete topology.</div>
+<div class="example"><div><span class="label">예시:</span> X={a,b}이면 P(X)={∅,{a},{b},X}가 이산위상이다.</div><div><span class="label">Example:</span> If X={a,b}, then P(X)={∅,{a},{b},X} is the discrete topology.</div></div>
+</section>
+<section class="card" id="s11">
+<span class="num">011</span>
+<div class="ko-title">제목: 비이산위상</div>
+<div class="en-title">Title: Indiscrete Topology</div>
+<div class="line"><span class="label">정리:</span> 집합 X에서 ∅와 X만 열린집합으로 정한 위상을 비이산위상이라고 한다.</div>
+<div class="line"><span class="label">Theorem:</span> The topology consisting only of ∅ and X is called the indiscrete topology.</div>
+<div class="example"><div><span class="label">예시:</span> X={a,b,c}에서 T={∅,X}는 비이산위상이다.</div><div><span class="label">Example:</span> For X={a,b,c}, T={∅,X} is the indiscrete topology.</div></div>
+</section>
+<section class="card" id="s12">
+<span class="num">012</span>
+<div class="ko-title">제목: 더 강한 위상</div>
+<div class="en-title">Title: Finer Topology</div>
+<div class="line"><span class="label">정리:</span> 위상 T1이 T2를 포함하면 T1은 T2보다 더 강하거나 더 세밀한 위상이다.</div>
+<div class="line"><span class="label">Theorem:</span> If T1 contains T2, then T1 is finer than T2.</div>
+<div class="example"><div><span class="label">예시:</span> 이산위상은 같은 집합 위의 어떤 위상보다 강하다.</div><div><span class="label">Example:</span> The discrete topology is finer than any topology on the same set.</div></div>
+</section>
+<section class="card" id="s13">
+<span class="num">013</span>
+<div class="ko-title">제목: 더 약한 위상</div>
+<div class="en-title">Title: Coarser Topology</div>
+<div class="line"><span class="label">정리:</span> 위상 T1이 T2에 포함되면 T1은 T2보다 더 약하거나 더 거친 위상이다.</div>
+<div class="line"><span class="label">Theorem:</span> If T1 is contained in T2, then T1 is coarser than T2.</div>
+<div class="example"><div><span class="label">예시:</span> 비이산위상은 같은 집합 위의 어떤 위상보다 약하다.</div><div><span class="label">Example:</span> The indiscrete topology is coarser than any topology on the same set.</div></div>
+</section>
+<section class="card" id="s14">
+<span class="num">014</span>
+<div class="ko-title">제목: 기저의 정의</div>
+<div class="en-title">Title: Basis</div>
+<div class="line"><span class="label">정리:</span> 위상 T의 모든 열린집합이 어떤 모임 B의 원소들의 합집합으로 표현되면 B는 T의 기저이다.</div>
+<div class="line"><span class="label">Theorem:</span> A collection B is a basis for T if every open set in T is a union of elements of B.</div>
+<div class="example"><div><span class="label">예시:</span> R에서 모든 열린구간들의 모임은 보통위상의 기저이다.</div><div><span class="label">Example:</span> The collection of open intervals is a basis for the usual topology on R.</div></div>
+</section>
+<section class="card" id="s15">
+<span class="num">015</span>
+<div class="ko-title">제목: 기저 조건</div>
+<div class="en-title">Title: Basis Criterion</div>
+<div class="line"><span class="label">정리:</span> 기저 B는 X를 덮고, 두 기저원소의 교집합 안의 각 점 주변에 더 작은 기저원소가 있어야 한다.</div>
+<div class="line"><span class="label">Theorem:</span> A basis must cover X, and intersections of basis elements must locally contain smaller basis elements.</div>
+<div class="example"><div><span class="label">예시:</span> 열린구간들은 이 조건을 만족하므로 R의 기저가 된다.</div><div><span class="label">Example:</span> Open intervals satisfy this criterion on R.</div></div>
+</section>
+<section class="card" id="s16">
+<span class="num">016</span>
+<div class="ko-title">제목: 부분기저</div>
+<div class="en-title">Title: Subbasis</div>
+<div class="line"><span class="label">정리:</span> 부분기저 S로부터 유한 교집합을 만들고 다시 임의 합집합을 취하면 위상이 생성된다.</div>
+<div class="line"><span class="label">Theorem:</span> A subbasis generates a topology by taking finite intersections and then arbitrary unions.</div>
+<div class="example"><div><span class="label">예시:</span> R에서 (-∞,a), (a,∞) 꼴의 집합들은 보통위상의 부분기저가 된다.</div><div><span class="label">Example:</span> The sets (-∞,a) and (a,∞) form a subbasis for the usual topology on R.</div></div>
+</section>
+<section class="card" id="s17">
+<span class="num">017</span>
+<div class="ko-title">제목: 근방</div>
+<div class="en-title">Title: Neighborhood</div>
+<div class="line"><span class="label">정리:</span> 점 x의 근방은 x를 포함하는 열린집합을 안에 포함하는 집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> A neighborhood of x is a set containing an open set that contains x.</div>
+<div class="example"><div><span class="label">예시:</span> [−1,1]은 0의 근방이다. 왜냐하면 (-1/2,1/2)를 포함하기 때문이다.</div><div><span class="label">Example:</span> [−1,1] is a neighborhood of 0 because it contains (-1/2,1/2).</div></div>
+</section>
+<section class="card" id="s18">
+<span class="num">018</span>
+<div class="ko-title">제목: 내부</div>
+<div class="en-title">Title: Interior</div>
+<div class="line"><span class="label">정리:</span> A의 내부는 A에 포함되는 가장 큰 열린집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> The interior of A is the largest open set contained in A.</div>
+<div class="example"><div><span class="label">예시:</span> R에서 [0,1]의 내부는 (0,1)이다.</div><div><span class="label">Example:</span> In R, the interior of [0,1] is (0,1).</div></div>
+</section>
+<section class="card" id="s19">
+<span class="num">019</span>
+<div class="ko-title">제목: 폐포</div>
+<div class="en-title">Title: Closure</div>
+<div class="line"><span class="label">정리:</span> A의 폐포는 A를 포함하는 가장 작은 닫힌집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> The closure of A is the smallest closed set containing A.</div>
+<div class="example"><div><span class="label">예시:</span> R에서 (0,1)의 폐포는 [0,1]이다.</div><div><span class="label">Example:</span> In R, the closure of (0,1) is [0,1].</div></div>
+</section>
+<section class="card" id="s20">
+<span class="num">020</span>
+<div class="ko-title">제목: 경계</div>
+<div class="en-title">Title: Boundary</div>
+<div class="line"><span class="label">정리:</span> A의 경계는 A의 폐포와 A의 여집합의 폐포가 만나는 부분이다.</div>
+<div class="line"><span class="label">Theorem:</span> The boundary of A is the intersection of the closure of A and the closure of its complement.</div>
+<div class="example"><div><span class="label">예시:</span> R에서 (0,1)의 경계는 {0,1}이다.</div><div><span class="label">Example:</span> In R, the boundary of (0,1) is {0,1}.</div></div>
+</section>
+<section class="card" id="s21">
+<span class="num">021</span>
+<div class="ko-title">제목: 외부</div>
+<div class="en-title">Title: Exterior</div>
+<div class="line"><span class="label">정리:</span> A의 외부는 A의 여집합의 내부이다.</div>
+<div class="line"><span class="label">Theorem:</span> The exterior of A is the interior of the complement of A.</div>
+<div class="example"><div><span class="label">예시:</span> R에서 [0,1]의 외부는 (-∞,0)∪(1,∞)이다.</div><div><span class="label">Example:</span> In R, the exterior of [0,1] is (-∞,0)∪(1,∞).</div></div>
+</section>
+<section class="card" id="s22">
+<span class="num">022</span>
+<div class="ko-title">제목: 도집합</div>
+<div class="en-title">Title: Derived Set</div>
+<div class="line"><span class="label">정리:</span> A의 도집합은 A의 모든 극한점들의 집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> The derived set of A is the set of all limit points of A.</div>
+<div class="example"><div><span class="label">예시:</span> A={1/n | n∈N}이면 0은 A의 도집합에 속한다.</div><div><span class="label">Example:</span> If A={1/n | n∈N}, then 0 belongs to the derived set of A.</div></div>
+</section>
+<section class="card" id="s23">
+<span class="num">023</span>
+<div class="ko-title">제목: 극한점</div>
+<div class="en-title">Title: Limit Point</div>
+<div class="line"><span class="label">정리:</span> 점 x의 모든 근방이 A의 x와 다른 점을 포함하면 x는 A의 극한점이다.</div>
+<div class="line"><span class="label">Theorem:</span> A point x is a limit point of A if every neighborhood of x contains a point of A different from x.</div>
+<div class="example"><div><span class="label">예시:</span> 0은 {1/n}의 극한점이다.</div><div><span class="label">Example:</span> 0 is a limit point of {1/n}.</div></div>
+</section>
+<section class="card" id="s24">
+<span class="num">024</span>
+<div class="ko-title">제목: 고립점</div>
+<div class="en-title">Title: Isolated Point</div>
+<div class="line"><span class="label">정리:</span> 점 x가 A에 속하고 어떤 근방이 A와 x에서만 만나면 x는 고립점이다.</div>
+<div class="line"><span class="label">Theorem:</span> A point x in A is isolated if some neighborhood of x meets A only at x.</div>
+<div class="example"><div><span class="label">예시:</span> {1,2,3}에서 2는 고립점이다.</div><div><span class="label">Example:</span> In {1,2,3}, the point 2 is isolated.</div></div>
+</section>
+<section class="card" id="s25">
+<span class="num">025</span>
+<div class="ko-title">제목: 조밀집합</div>
+<div class="en-title">Title: Dense Set</div>
+<div class="line"><span class="label">정리:</span> A의 폐포가 X이면 A는 X에서 조밀하다.</div>
+<div class="line"><span class="label">Theorem:</span> A subset A is dense in X if its closure is X.</div>
+<div class="example"><div><span class="label">예시:</span> 유리수 Q는 R에서 조밀하다.</div><div><span class="label">Example:</span> The rational numbers Q are dense in R.</div></div>
+</section>
+<section class="card" id="s26">
+<span class="num">026</span>
+<div class="ko-title">제목: 연속함수의 열린집합 판정</div>
+<div class="en-title">Title: Continuity by Open Sets</div>
+<div class="line"><span class="label">정리:</span> f:X→Y가 연속이라는 것은 Y의 열린집합의 역상이 X에서 열린집합이라는 뜻이다.</div>
+<div class="line"><span class="label">Theorem:</span> A function f:X→Y is continuous if the preimage of every open set in Y is open in X.</div>
+<div class="example"><div><span class="label">예시:</span> f(x)=x²는 R에서 R로 연속이다.</div><div><span class="label">Example:</span> The function f(x)=x² from R to R is continuous.</div></div>
+</section>
+<section class="card" id="s27">
+<span class="num">027</span>
+<div class="ko-title">제목: 연속함수의 닫힌집합 판정</div>
+<div class="en-title">Title: Continuity by Closed Sets</div>
+<div class="line"><span class="label">정리:</span> f가 연속이면 Y의 닫힌집합의 역상은 X에서 닫힌집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> If f is continuous, the preimage of every closed set is closed.</div>
+<div class="example"><div><span class="label">예시:</span> f(x)=x²에서 [0,1]의 역상은 [-1,1]로 닫혀 있다.</div><div><span class="label">Example:</span> For f(x)=x², the preimage of [0,1] is [-1,1], which is closed.</div></div>
+</section>
+<section class="card" id="s28">
+<span class="num">028</span>
+<div class="ko-title">제목: 항등함수의 연속성</div>
+<div class="en-title">Title: Continuity of the Identity Map</div>
+<div class="line"><span class="label">정리:</span> 같은 위상공간에서 항등함수는 항상 연속이다.</div>
+<div class="line"><span class="label">Theorem:</span> The identity map on a topological space is always continuous.</div>
+<div class="example"><div><span class="label">예시:</span> id_R(x)=x는 R에서 연속이다.</div><div><span class="label">Example:</span> id_R(x)=x is continuous on R.</div></div>
+</section>
+<section class="card" id="s29">
+<span class="num">029</span>
+<div class="ko-title">제목: 상수함수의 연속성</div>
+<div class="en-title">Title: Continuity of Constant Maps</div>
+<div class="line"><span class="label">정리:</span> 상수함수는 항상 연속이다.</div>
+<div class="line"><span class="label">Theorem:</span> Every constant map is continuous.</div>
+<div class="example"><div><span class="label">예시:</span> f:R→R, f(x)=3은 연속이다.</div><div><span class="label">Example:</span> The function f:R→R, f(x)=3, is continuous.</div></div>
+</section>
+<section class="card" id="s30">
+<span class="num">030</span>
+<div class="ko-title">제목: 연속함수의 합성</div>
+<div class="en-title">Title: Composition of Continuous Maps</div>
+<div class="line"><span class="label">정리:</span> 연속함수들의 합성은 연속이다.</div>
+<div class="line"><span class="label">Theorem:</span> The composition of continuous maps is continuous.</div>
+<div class="example"><div><span class="label">예시:</span> f(x)=x², g(x)=x+1이면 g∘f=x²+1은 연속이다.</div><div><span class="label">Example:</span> If f(x)=x² and g(x)=x+1, then g∘f=x²+1 is continuous.</div></div>
+</section>
+<section class="card" id="s31">
+<span class="num">031</span>
+<div class="ko-title">제목: 위상동형</div>
+<div class="en-title">Title: Homeomorphism</div>
+<div class="line"><span class="label">정리:</span> 연속인 전단사 함수의 역함수도 연속이면 두 공간은 위상동형이다.</div>
+<div class="line"><span class="label">Theorem:</span> A bijection is a homeomorphism if it and its inverse are continuous.</div>
+<div class="example"><div><span class="label">예시:</span> (0,1)과 R은 적절한 함수로 위상동형이다.</div><div><span class="label">Example:</span> The interval (0,1) and R are homeomorphic.</div></div>
+</section>
+<section class="card" id="s32">
+<span class="num">032</span>
+<div class="ko-title">제목: 위상불변량</div>
+<div class="en-title">Title: Topological Invariant</div>
+<div class="line"><span class="label">정리:</span> 위상동형에서 보존되는 성질을 위상불변량이라고 한다.</div>
+<div class="line"><span class="label">Theorem:</span> A property preserved under homeomorphism is a topological invariant.</div>
+<div class="example"><div><span class="label">예시:</span> 연결성, 컴팩트성은 위상불변량이다.</div><div><span class="label">Example:</span> Connectedness and compactness are topological invariants.</div></div>
+</section>
+<section class="card" id="s33">
+<span class="num">033</span>
+<div class="ko-title">제목: 부분공간 위상</div>
+<div class="en-title">Title: Subspace Topology</div>
+<div class="line"><span class="label">정리:</span> Y⊆X일 때 Y의 열린집합은 X의 열린집합 U와 Y의 교집합으로 나타나는 집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> For Y⊆X, open sets in Y are intersections Y∩U where U is open in X.</div>
+<div class="example"><div><span class="label">예시:</span> [0,1]의 부분공간 위상에서 [0,1/2)는 열린집합이다.</div><div><span class="label">Example:</span> In [0,1], the set [0,1/2) is open in the subspace topology.</div></div>
+</section>
+<section class="card" id="s34">
+<span class="num">034</span>
+<div class="ko-title">제목: 부분공간의 닫힌집합</div>
+<div class="en-title">Title: Closed Sets in a Subspace</div>
+<div class="line"><span class="label">정리:</span> 부분공간 Y에서 닫힌집합은 X의 닫힌집합 F와 Y의 교집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> Closed sets in Y are intersections Y∩F where F is closed in X.</div>
+<div class="example"><div><span class="label">예시:</span> (0,1]은 (0,2) 안에서 닫힌집합이다.</div><div><span class="label">Example:</span> (0,1] is closed in the subspace (0,2).</div></div>
+</section>
+<section class="card" id="s35">
+<span class="num">035</span>
+<div class="ko-title">제목: 곱위상</div>
+<div class="en-title">Title: Product Topology</div>
+<div class="line"><span class="label">정리:</span> X×Y의 곱위상은 U×V 꼴의 집합들을 기저로 하는 위상이다.</div>
+<div class="line"><span class="label">Theorem:</span> The product topology on X×Y has basis elements of the form U×V.</div>
+<div class="example"><div><span class="label">예시:</span> R²의 보통위상은 열린 직사각형들을 기저로 가진다.</div><div><span class="label">Example:</span> The usual topology on R² has open rectangles as a basis.</div></div>
+</section>
+<section class="card" id="s36">
+<span class="num">036</span>
+<div class="ko-title">제목: 사영함수의 연속성</div>
+<div class="en-title">Title: Continuity of Projections</div>
+<div class="line"><span class="label">정리:</span> 곱공간에서 각 좌표로 보내는 사영함수는 연속이다.</div>
+<div class="line"><span class="label">Theorem:</span> Projection maps from a product space to its factors are continuous.</div>
+<div class="example"><div><span class="label">예시:</span> π1:R²→R, π1(x,y)=x는 연속이다.</div><div><span class="label">Example:</span> π1:R²→R, π1(x,y)=x, is continuous.</div></div>
+</section>
+<section class="card" id="s37">
+<span class="num">037</span>
+<div class="ko-title">제목: 곱공간으로의 연속성</div>
+<div class="en-title">Title: Continuity into a Product</div>
+<div class="line"><span class="label">정리:</span> f:Z→X×Y가 연속인 것은 각 성분함수 π1∘f, π2∘f가 연속인 것과 동치이다.</div>
+<div class="line"><span class="label">Theorem:</span> A map into X×Y is continuous iff each component map is continuous.</div>
+<div class="example"><div><span class="label">예시:</span> f(t)=(t,t²)는 두 성분이 연속이므로 R→R²에서 연속이다.</div><div><span class="label">Example:</span> f(t)=(t,t²) is continuous because both components are continuous.</div></div>
+</section>
+<section class="card" id="s38">
+<span class="num">038</span>
+<div class="ko-title">제목: 몫위상</div>
+<div class="en-title">Title: Quotient Topology</div>
+<div class="line"><span class="label">정리:</span> 전사함수 q:X→Y에 대해 U⊆Y가 열림인 것을 q⁻¹(U)가 X에서 열림으로 정하면 몫위상이다.</div>
+<div class="line"><span class="label">Theorem:</span> For a surjection q:X→Y, U is open in Y iff q⁻¹(U) is open in X.</div>
+<div class="example"><div><span class="label">예시:</span> 구간 [0,1]의 양 끝점을 붙이면 원 S¹을 얻는다.</div><div><span class="label">Example:</span> Identifying the endpoints of [0,1] produces the circle S¹.</div></div>
+</section>
+<section class="card" id="s39">
+<span class="num">039</span>
+<div class="ko-title">제목: 상대위상과 포함사상</div>
+<div class="en-title">Title: Inclusion Map</div>
+<div class="line"><span class="label">정리:</span> 부분공간 Y⊆X에서 포함사상 i:Y→X는 연속이다.</div>
+<div class="line"><span class="label">Theorem:</span> The inclusion map from a subspace Y into X is continuous.</div>
+<div class="example"><div><span class="label">예시:</span> i:(0,1)→R는 연속이다.</div><div><span class="label">Example:</span> The inclusion i:(0,1)→R is continuous.</div></div>
+</section>
+<section class="card" id="s40">
+<span class="num">040</span>
+<div class="ko-title">제목: 열린사상</div>
+<div class="en-title">Title: Open Map</div>
+<div class="line"><span class="label">정리:</span> 열린집합의 상을 열린집합으로 보내는 함수를 열린사상이라고 한다.</div>
+<div class="line"><span class="label">Theorem:</span> A map is open if it sends open sets to open sets.</div>
+<div class="example"><div><span class="label">예시:</span> 사영 π1:R²→R은 열린사상이다.</div><div><span class="label">Example:</span> The projection π1:R²→R is an open map.</div></div>
+</section>
+<section class="card" id="s41">
+<span class="num">041</span>
+<div class="ko-title">제목: 닫힌사상</div>
+<div class="en-title">Title: Closed Map</div>
+<div class="line"><span class="label">정리:</span> 닫힌집합의 상을 닫힌집합으로 보내는 함수를 닫힌사상이라고 한다.</div>
+<div class="line"><span class="label">Theorem:</span> A map is closed if it sends closed sets to closed sets.</div>
+<div class="example"><div><span class="label">예시:</span> 컴팩트공간에서 하우스도르프공간으로 가는 연속함수는 닫힌사상이다.</div><div><span class="label">Example:</span> A continuous map from a compact space to a Hausdorff space is closed.</div></div>
+</section>
+<section class="card" id="s42">
+<span class="num">042</span>
+<div class="ko-title">제목: 수열수렴</div>
+<div class="en-title">Title: Sequential Convergence</div>
+<div class="line"><span class="label">정리:</span> 위상공간에서 수열이 x로 수렴한다는 것은 x의 모든 근방이 결국 수열의 항들을 포함한다는 뜻이다.</div>
+<div class="line"><span class="label">Theorem:</span> A sequence converges to x if every neighborhood of x eventually contains the sequence.</div>
+<div class="example"><div><span class="label">예시:</span> 1/n은 R에서 0으로 수렴한다.</div><div><span class="label">Example:</span> The sequence 1/n converges to 0 in R.</div></div>
+</section>
+<section class="card" id="s43">
+<span class="num">043</span>
+<div class="ko-title">제목: 하우스도르프공간</div>
+<div class="en-title">Title: Hausdorff Space</div>
+<div class="line"><span class="label">정리:</span> 서로 다른 두 점을 서로소인 열린근방으로 분리할 수 있으면 하우스도르프공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is Hausdorff if any two distinct points have disjoint open neighborhoods.</div>
+<div class="example"><div><span class="label">예시:</span> R은 하우스도르프공간이다.</div><div><span class="label">Example:</span> R is a Hausdorff space.</div></div>
+</section>
+<section class="card" id="s44">
+<span class="num">044</span>
+<div class="ko-title">제목: 하우스도르프공간의 수열극한 유일성</div>
+<div class="en-title">Title: Uniqueness of Sequential Limits in Hausdorff Spaces</div>
+<div class="line"><span class="label">정리:</span> 하우스도르프공간에서 수열의 극한은 유일하다.</div>
+<div class="line"><span class="label">Theorem:</span> In a Hausdorff space, a sequence has at most one limit.</div>
+<div class="example"><div><span class="label">예시:</span> R에서 한 수열이 0과 1에 동시에 수렴할 수 없다.</div><div><span class="label">Example:</span> In R, a sequence cannot converge to both 0 and 1.</div></div>
+</section>
+<section class="card" id="s45">
+<span class="num">045</span>
+<div class="ko-title">제목: T1 공간</div>
+<div class="en-title">Title: T1 Space</div>
+<div class="line"><span class="label">정리:</span> 모든 한원소집합이 닫힌집합이면 T1 공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is T1 if every singleton is closed.</div>
+<div class="example"><div><span class="label">예시:</span> R의 보통위상은 T1 공간이다.</div><div><span class="label">Example:</span> The usual topology on R is T1.</div></div>
+</section>
+<section class="card" id="s46">
+<span class="num">046</span>
+<div class="ko-title">제목: T0 공간</div>
+<div class="en-title">Title: T0 Space</div>
+<div class="line"><span class="label">정리:</span> 서로 다른 두 점 중 적어도 하나를 구별하는 열린집합이 있으면 T0 공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is T0 if any two distinct points can be topologically distinguished by an open set.</div>
+<div class="example"><div><span class="label">예시:</span> 시에르핀스키 공간은 T0이지만 T1은 아니다.</div><div><span class="label">Example:</span> The Sierpinski space is T0 but not T1.</div></div>
+</section>
+<section class="card" id="s47">
+<span class="num">047</span>
+<div class="ko-title">제목: 정칙공간</div>
+<div class="en-title">Title: Regular Space</div>
+<div class="line"><span class="label">정리:</span> 점과 그 점을 포함하지 않는 닫힌집합을 서로소 열린집합으로 분리할 수 있으면 정칙공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is regular if points and disjoint closed sets can be separated by disjoint open sets.</div>
+<div class="example"><div><span class="label">예시:</span> 거리공간은 정칙공간이다.</div><div><span class="label">Example:</span> Every metric space is regular.</div></div>
+</section>
+<section class="card" id="s48">
+<span class="num">048</span>
+<div class="ko-title">제목: 정규공간</div>
+<div class="en-title">Title: Normal Space</div>
+<div class="line"><span class="label">정리:</span> 서로소인 두 닫힌집합을 서로소 열린집합으로 분리할 수 있으면 정규공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is normal if disjoint closed sets can be separated by disjoint open sets.</div>
+<div class="example"><div><span class="label">예시:</span> 거리공간은 정규공간이다.</div><div><span class="label">Example:</span> Every metric space is normal.</div></div>
+</section>
+<section class="card" id="s49">
+<span class="num">049</span>
+<div class="ko-title">제목: 거리공간</div>
+<div class="en-title">Title: Metric Space</div>
+<div class="line"><span class="label">정리:</span> 거리함수 d가 비음성, 동일성, 대칭성, 삼각부등식을 만족하면 거리공간이 된다.</div>
+<div class="line"><span class="label">Theorem:</span> A metric space is a set with a distance function satisfying nonnegativity, identity, symmetry, and the triangle inequality.</div>
+<div class="example"><div><span class="label">예시:</span> R에서 d(x,y)=|x−y|는 거리이다.</div><div><span class="label">Example:</span> On R, d(x,y)=|x−y| is a metric.</div></div>
+</section>
+<section class="card" id="s50">
+<span class="num">050</span>
+<div class="ko-title">제목: 거리위상</div>
+<div class="en-title">Title: Metric Topology</div>
+<div class="line"><span class="label">정리:</span> 거리공간에서 열린공들을 기저로 하여 위상을 만들 수 있다.</div>
+<div class="line"><span class="label">Theorem:</span> A metric induces a topology whose basis consists of open balls.</div>
+<div class="example"><div><span class="label">예시:</span> R²에서 원판 모양의 열린공들이 보통위상을 만든다.</div><div><span class="label">Example:</span> In R², open disks generate the usual topology.</div></div>
+</section>
+<section class="card" id="s51">
+<span class="num">051</span>
+<div class="ko-title">제목: 열린공</div>
+<div class="en-title">Title: Open Ball</div>
+<div class="line"><span class="label">정리:</span> 거리공간에서 중심 x와 반지름 r의 열린공은 d(x,y)&lt;r인 y들의 집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> In a metric space, the open ball centered at x with radius r consists of points y with d(x,y)&lt;r.</div>
+<div class="example"><div><span class="label">예시:</span> R에서 B(0,1)=(-1,1)이다.</div><div><span class="label">Example:</span> In R, B(0,1)=(-1,1).</div></div>
+</section>
+<section class="card" id="s52">
+<span class="num">052</span>
+<div class="ko-title">제목: 거리공간은 하우스도르프</div>
+<div class="en-title">Title: Metric Spaces Are Hausdorff</div>
+<div class="line"><span class="label">정리:</span> 모든 거리공간은 하우스도르프공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> Every metric space is Hausdorff.</div>
+<div class="example"><div><span class="label">예시:</span> R, R², 이산거리공간은 모두 하우스도르프이다.</div><div><span class="label">Example:</span> R, R², and discrete metric spaces are Hausdorff.</div></div>
+</section>
+<section class="card" id="s53">
+<span class="num">053</span>
+<div class="ko-title">제목: 동치거리</div>
+<div class="en-title">Title: Equivalent Metrics</div>
+<div class="line"><span class="label">정리:</span> 두 거리가 같은 위상을 만들면 위상적으로 동치인 거리라고 한다.</div>
+<div class="line"><span class="label">Theorem:</span> Two metrics are topologically equivalent if they generate the same topology.</div>
+<div class="example"><div><span class="label">예시:</span> R에서 d와 min(d,1)은 같은 위상을 만든다.</div><div><span class="label">Example:</span> On R, d and min(d,1) generate the same topology.</div></div>
+</section>
+<section class="card" id="s54">
+<span class="num">054</span>
+<div class="ko-title">제목: 연결공간</div>
+<div class="en-title">Title: Connected Space</div>
+<div class="line"><span class="label">정리:</span> 공간을 서로소인 두 비공집합 열린집합으로 나눌 수 없으면 연결공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is connected if it cannot be separated into two disjoint nonempty open sets.</div>
+<div class="example"><div><span class="label">예시:</span> 구간 [0,1]은 연결공간이다.</div><div><span class="label">Example:</span> The interval [0,1] is connected.</div></div>
+</section>
+<section class="card" id="s55">
+<span class="num">055</span>
+<div class="ko-title">제목: 분리</div>
+<div class="en-title">Title: Separation</div>
+<div class="line"><span class="label">정리:</span> 공간 X가 서로소인 두 비공집합 열린집합의 합으로 표현되면 분리되어 있다고 한다.</div>
+<div class="line"><span class="label">Theorem:</span> A separation of X is a union of two disjoint nonempty open sets.</div>
+<div class="example"><div><span class="label">예시:</span> (0,1)∪(2,3)은 R의 부분공간으로 분리되어 있다.</div><div><span class="label">Example:</span> (0,1)∪(2,3) is disconnected as a subspace of R.</div></div>
+</section>
+<section class="card" id="s56">
+<span class="num">056</span>
+<div class="ko-title">제목: 연결성의 연속상</div>
+<div class="en-title">Title: Continuous Image of a Connected Space</div>
+<div class="line"><span class="label">정리:</span> 연결공간의 연속상은 연결공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> The continuous image of a connected space is connected.</div>
+<div class="example"><div><span class="label">예시:</span> [0,1]의 연속함수상은 R에서 구간 형태가 된다.</div><div><span class="label">Example:</span> A continuous image of [0,1] in R is an interval.</div></div>
+</section>
+<section class="card" id="s57">
+<span class="num">057</span>
+<div class="ko-title">제목: 구간의 연결성</div>
+<div class="en-title">Title: Connectedness of Intervals</div>
+<div class="line"><span class="label">정리:</span> 실수의 구간은 연결공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> Every interval in R is connected.</div>
+<div class="example"><div><span class="label">예시:</span> (0,1), [0,1], [0,∞)는 모두 연결이다.</div><div><span class="label">Example:</span> (0,1), [0,1], and [0,∞) are connected.</div></div>
+</section>
+<section class="card" id="s58">
+<span class="num">058</span>
+<div class="ko-title">제목: 경로연결</div>
+<div class="en-title">Title: Path Connectedness</div>
+<div class="line"><span class="label">정리:</span> 임의의 두 점을 연속경로로 이을 수 있으면 경로연결공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is path connected if any two points can be joined by a continuous path.</div>
+<div class="example"><div><span class="label">예시:</span> R²는 두 점을 직선 경로로 이을 수 있으므로 경로연결이다.</div><div><span class="label">Example:</span> R² is path connected because two points can be joined by a line segment.</div></div>
+</section>
+<section class="card" id="s59">
+<span class="num">059</span>
+<div class="ko-title">제목: 경로연결이면 연결</div>
+<div class="en-title">Title: Path Connected Implies Connected</div>
+<div class="line"><span class="label">정리:</span> 경로연결공간은 연결공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> Every path connected space is connected.</div>
+<div class="example"><div><span class="label">예시:</span> 원 S¹은 경로연결이므로 연결이다.</div><div><span class="label">Example:</span> The circle S¹ is connected because it is path connected.</div></div>
+</section>
+<section class="card" id="s60">
+<span class="num">060</span>
+<div class="ko-title">제목: 연결이지만 경로연결이 아닐 수 있음</div>
+<div class="en-title">Title: Connected Need Not Be Path Connected</div>
+<div class="line"><span class="label">정리:</span> 연결공간이 항상 경로연결인 것은 아니다.</div>
+<div class="line"><span class="label">Theorem:</span> A connected space need not be path connected.</div>
+<div class="example"><div><span class="label">예시:</span> 위상수학자의 사인곡선 폐포는 연결이지만 경로연결이 아니다.</div><div><span class="label">Example:</span> The topologist&#x27;s sine curve closure is connected but not path connected.</div></div>
+</section>
+<section class="card" id="s61">
+<span class="num">061</span>
+<div class="ko-title">제목: 성분</div>
+<div class="en-title">Title: Component</div>
+<div class="line"><span class="label">정리:</span> 한 점을 포함하는 최대 연결 부분집합을 연결성분이라고 한다.</div>
+<div class="line"><span class="label">Theorem:</span> A component is a maximal connected subset containing a given point.</div>
+<div class="example"><div><span class="label">예시:</span> Q의 각 점은 자기 자신만으로 된 연결성분을 가진다.</div><div><span class="label">Example:</span> In Q, each point is its own component.</div></div>
+</section>
+<section class="card" id="s62">
+<span class="num">062</span>
+<div class="ko-title">제목: 경로성분</div>
+<div class="en-title">Title: Path Component</div>
+<div class="line"><span class="label">정리:</span> 한 점과 경로로 연결되는 모든 점의 집합을 경로성분이라고 한다.</div>
+<div class="line"><span class="label">Theorem:</span> A path component is the set of all points path connected to a given point.</div>
+<div class="example"><div><span class="label">예시:</span> R²에서 전체 공간은 하나의 경로성분이다.</div><div><span class="label">Example:</span> In R², the whole space is one path component.</div></div>
+</section>
+<section class="card" id="s63">
+<span class="num">063</span>
+<div class="ko-title">제목: 컴팩트공간</div>
+<div class="en-title">Title: Compact Space</div>
+<div class="line"><span class="label">정리:</span> 모든 열린덮개가 유한 부분덮개를 가지면 컴팩트공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is compact if every open cover has a finite subcover.</div>
+<div class="example"><div><span class="label">예시:</span> [0,1]은 R에서 컴팩트하다.</div><div><span class="label">Example:</span> [0,1] is compact in R.</div></div>
+</section>
+<section class="card" id="s64">
+<span class="num">064</span>
+<div class="ko-title">제목: 열린덮개</div>
+<div class="en-title">Title: Open Cover</div>
+<div class="line"><span class="label">정리:</span> 공간 X가 열린집합들의 합집합에 포함되면 그 모임은 열린덮개이다.</div>
+<div class="line"><span class="label">Theorem:</span> A collection of open sets is an open cover of X if their union contains X.</div>
+<div class="example"><div><span class="label">예시:</span> {(-n,n) | n∈N}은 R의 열린덮개이다.</div><div><span class="label">Example:</span> {(-n,n) | n∈N} is an open cover of R.</div></div>
+</section>
+<section class="card" id="s65">
+<span class="num">065</span>
+<div class="ko-title">제목: 유한 부분덮개</div>
+<div class="en-title">Title: Finite Subcover</div>
+<div class="line"><span class="label">정리:</span> 열린덮개 중 유한개만 골라도 전체를 덮으면 유한 부분덮개이다.</div>
+<div class="line"><span class="label">Theorem:</span> A finite subcover is a finite subcollection that still covers the space.</div>
+<div class="example"><div><span class="label">예시:</span> [0,1]을 덮는 많은 열린구간 중 유한개로도 덮을 수 있다.</div><div><span class="label">Example:</span> From many open intervals covering [0,1], finitely many can still cover it.</div></div>
+</section>
+<section class="card" id="s66">
+<span class="num">066</span>
+<div class="ko-title">제목: 컴팩트성의 연속상</div>
+<div class="en-title">Title: Continuous Image of Compact Space</div>
+<div class="line"><span class="label">정리:</span> 컴팩트공간의 연속상은 컴팩트하다.</div>
+<div class="line"><span class="label">Theorem:</span> The continuous image of a compact space is compact.</div>
+<div class="example"><div><span class="label">예시:</span> 연속함수 f:[0,1]→R의 상 f([0,1])은 컴팩트하다.</div><div><span class="label">Example:</span> For continuous f:[0,1]→R, the image f([0,1]) is compact.</div></div>
+</section>
+<section class="card" id="s67">
+<span class="num">067</span>
+<div class="ko-title">제목: 하우스도르프공간에서 컴팩트집합은 닫힘</div>
+<div class="en-title">Title: Compact Subsets of Hausdorff Spaces Are Closed</div>
+<div class="line"><span class="label">정리:</span> 하우스도르프공간의 컴팩트 부분집합은 닫힌집합이다.</div>
+<div class="line"><span class="label">Theorem:</span> In a Hausdorff space, compact subsets are closed.</div>
+<div class="example"><div><span class="label">예시:</span> R에서 컴팩트 부분집합은 닫혀 있다.</div><div><span class="label">Example:</span> Compact subsets of R are closed.</div></div>
+</section>
+<section class="card" id="s68">
+<span class="num">068</span>
+<div class="ko-title">제목: 닫힌 부분집합의 컴팩트성</div>
+<div class="en-title">Title: Closed Subset of a Compact Space</div>
+<div class="line"><span class="label">정리:</span> 컴팩트공간의 닫힌 부분집합은 컴팩트하다.</div>
+<div class="line"><span class="label">Theorem:</span> A closed subset of a compact space is compact.</div>
+<div class="example"><div><span class="label">예시:</span> [0,1] 안의 [1/3,2/3]은 컴팩트하다.</div><div><span class="label">Example:</span> [1/3,2/3] is compact as a closed subset of [0,1].</div></div>
+</section>
+<section class="card" id="s69">
+<span class="num">069</span>
+<div class="ko-title">제목: 컴팩트성과 유계닫힘</div>
+<div class="en-title">Title: Heine-Borel Theorem</div>
+<div class="line"><span class="label">정리:</span> Rⁿ에서 집합이 컴팩트인 것은 닫히고 유계인 것과 동치이다.</div>
+<div class="line"><span class="label">Theorem:</span> In Rⁿ, a set is compact iff it is closed and bounded.</div>
+<div class="example"><div><span class="label">예시:</span> [0,1]×[0,1]은 R²에서 컴팩트하다.</div><div><span class="label">Example:</span> [0,1]×[0,1] is compact in R².</div></div>
+</section>
+<section class="card" id="s70">
+<span class="num">070</span>
+<div class="ko-title">제목: 컴팩트공간에서 연속함수의 최대최소</div>
+<div class="en-title">Title: Extreme Value Theorem</div>
+<div class="line"><span class="label">정리:</span> 컴팩트공간에서 실수값 연속함수는 최댓값과 최솟값을 가진다.</div>
+<div class="line"><span class="label">Theorem:</span> A real-valued continuous function on a compact space attains a maximum and a minimum.</div>
+<div class="example"><div><span class="label">예시:</span> f(x)=x²은 [−1,2]에서 최솟값 0, 최댓값 4를 가진다.</div><div><span class="label">Example:</span> f(x)=x² on [−1,2] has minimum 0 and maximum 4.</div></div>
+</section>
+<section class="card" id="s71">
+<span class="num">071</span>
+<div class="ko-title">제목: 순차컴팩트성</div>
+<div class="en-title">Title: Sequential Compactness</div>
+<div class="line"><span class="label">정리:</span> 모든 수열이 수렴부분수열을 가지면 순차컴팩트하다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is sequentially compact if every sequence has a convergent subsequence.</div>
+<div class="example"><div><span class="label">예시:</span> [0,1]의 모든 수열은 수렴부분수열을 가진다.</div><div><span class="label">Example:</span> Every sequence in [0,1] has a convergent subsequence.</div></div>
+</section>
+<section class="card" id="s72">
+<span class="num">072</span>
+<div class="ko-title">제목: 거리공간의 컴팩트성과 순차컴팩트성</div>
+<div class="en-title">Title: Compactness and Sequential Compactness in Metric Spaces</div>
+<div class="line"><span class="label">정리:</span> 거리공간에서는 컴팩트성과 순차컴팩트성이 동치이다.</div>
+<div class="line"><span class="label">Theorem:</span> In metric spaces, compactness and sequential compactness are equivalent.</div>
+<div class="example"><div><span class="label">예시:</span> [0,1]은 컴팩트하고 순차컴팩트하다.</div><div><span class="label">Example:</span> [0,1] is both compact and sequentially compact.</div></div>
+</section>
+<section class="card" id="s73">
+<span class="num">073</span>
+<div class="ko-title">제목: 국소컴팩트성</div>
+<div class="en-title">Title: Local Compactness</div>
+<div class="line"><span class="label">정리:</span> 각 점이 컴팩트한 근방을 가지면 국소컴팩트공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is locally compact if every point has a compact neighborhood.</div>
+<div class="example"><div><span class="label">예시:</span> R은 각 점 주변의 닫힌구간 근방을 가지므로 국소컴팩트하다.</div><div><span class="label">Example:</span> R is locally compact because points have compact interval neighborhoods.</div></div>
+</section>
+<section class="card" id="s74">
+<span class="num">074</span>
+<div class="ko-title">제목: 제1가산공간</div>
+<div class="en-title">Title: First Countable Space</div>
+<div class="line"><span class="label">정리:</span> 각 점마다 가산개의 국소기저가 있으면 제1가산공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is first countable if each point has a countable local basis.</div>
+<div class="example"><div><span class="label">예시:</span> 거리공간은 반지름 1/n 열린공들로 제1가산성을 가진다.</div><div><span class="label">Example:</span> Metric spaces are first countable using balls of radius 1/n.</div></div>
+</section>
+<section class="card" id="s75">
+<span class="num">075</span>
+<div class="ko-title">제목: 제2가산공간</div>
+<div class="en-title">Title: Second Countable Space</div>
+<div class="line"><span class="label">정리:</span> 위상 전체에 대한 가산 기저가 있으면 제2가산공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is second countable if it has a countable basis.</div>
+<div class="example"><div><span class="label">예시:</span> R은 유리수 끝점을 갖는 열린구간들로 제2가산이다.</div><div><span class="label">Example:</span> R is second countable using intervals with rational endpoints.</div></div>
+</section>
+<section class="card" id="s76">
+<span class="num">076</span>
+<div class="ko-title">제목: 분리가능공간</div>
+<div class="en-title">Title: Separable Space</div>
+<div class="line"><span class="label">정리:</span> 가산 조밀 부분집합이 있으면 분리가능공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is separable if it has a countable dense subset.</div>
+<div class="example"><div><span class="label">예시:</span> Q가 R에서 조밀하므로 R은 분리가능하다.</div><div><span class="label">Example:</span> R is separable because Q is dense in R.</div></div>
+</section>
+<section class="card" id="s77">
+<span class="num">077</span>
+<div class="ko-title">제목: 제2가산이면 분리가능</div>
+<div class="en-title">Title: Second Countable Implies Separable</div>
+<div class="line"><span class="label">정리:</span> 제2가산공간은 분리가능이다.</div>
+<div class="line"><span class="label">Theorem:</span> Every second countable space is separable.</div>
+<div class="example"><div><span class="label">예시:</span> R은 제2가산이므로 분리가능하다.</div><div><span class="label">Example:</span> R is separable because it is second countable.</div></div>
+</section>
+<section class="card" id="s78">
+<span class="num">078</span>
+<div class="ko-title">제목: 린델뢰프 성질</div>
+<div class="en-title">Title: Lindelof Property</div>
+<div class="line"><span class="label">정리:</span> 모든 열린덮개가 가산 부분덮개를 가지면 린델뢰프공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is Lindelof if every open cover has a countable subcover.</div>
+<div class="example"><div><span class="label">예시:</span> 제2가산공간은 린델뢰프이다.</div><div><span class="label">Example:</span> Every second countable space is Lindelof.</div></div>
+</section>
+<section class="card" id="s79">
+<span class="num">079</span>
+<div class="ko-title">제목: 제2가산이면 린델뢰프</div>
+<div class="en-title">Title: Second Countable Implies Lindelof</div>
+<div class="line"><span class="label">정리:</span> 제2가산공간의 모든 열린덮개는 가산 부분덮개를 가진다.</div>
+<div class="line"><span class="label">Theorem:</span> Every second countable space is Lindelof.</div>
+<div class="example"><div><span class="label">예시:</span> R의 열린덮개는 가산 부분덮개를 가진다.</div><div><span class="label">Example:</span> Every open cover of R has a countable subcover.</div></div>
+</section>
+<section class="card" id="s80">
+<span class="num">080</span>
+<div class="ko-title">제목: 바이어 범주 정리</div>
+<div class="en-title">Title: Baire Category Theorem</div>
+<div class="line"><span class="label">정리:</span> 완비거리공간에서 조밀한 열린집합들의 가산 교집합은 조밀하다.</div>
+<div class="line"><span class="label">Theorem:</span> In a complete metric space, the countable intersection of dense open sets is dense.</div>
+<div class="example"><div><span class="label">예시:</span> R은 완비거리공간이므로 바이어공간이다.</div><div><span class="label">Example:</span> R is a Baire space because it is complete.</div></div>
+</section>
+<section class="card" id="s81">
+<span class="num">081</span>
+<div class="ko-title">제목: 완비거리공간</div>
+<div class="en-title">Title: Complete Metric Space</div>
+<div class="line"><span class="label">정리:</span> 모든 코시수열이 수렴하면 완비거리공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> A metric space is complete if every Cauchy sequence converges in the space.</div>
+<div class="example"><div><span class="label">예시:</span> R은 완비이지만 Q는 보통거리에서 완비가 아니다.</div><div><span class="label">Example:</span> R is complete, while Q is not complete under the usual metric.</div></div>
+</section>
+<section class="card" id="s82">
+<span class="num">082</span>
+<div class="ko-title">제목: 코시수열</div>
+<div class="en-title">Title: Cauchy Sequence</div>
+<div class="line"><span class="label">정리:</span> 수열의 항들이 서로 점점 가까워지면 코시수열이다.</div>
+<div class="line"><span class="label">Theorem:</span> A sequence is Cauchy if its terms eventually become arbitrarily close to one another.</div>
+<div class="example"><div><span class="label">예시:</span> 1/n은 R에서 코시수열이다.</div><div><span class="label">Example:</span> The sequence 1/n is Cauchy in R.</div></div>
+</section>
+<section class="card" id="s83">
+<span class="num">083</span>
+<div class="ko-title">제목: 완비화</div>
+<div class="en-title">Title: Completion</div>
+<div class="line"><span class="label">정리:</span> 거리공간을 조밀하게 포함하는 완비거리공간으로 확장할 수 있다.</div>
+<div class="line"><span class="label">Theorem:</span> A metric space can be embedded densely into a complete metric space called its completion.</div>
+<div class="example"><div><span class="label">예시:</span> Q의 완비화는 R이다.</div><div><span class="label">Example:</span> The completion of Q is R.</div></div>
+</section>
+<section class="card" id="s84">
+<span class="num">084</span>
+<div class="ko-title">제목: 균등연속성</div>
+<div class="en-title">Title: Uniform Continuity</div>
+<div class="line"><span class="label">정리:</span> 한 델타가 모든 점에서 동시에 작동하면 균등연속이다.</div>
+<div class="line"><span class="label">Theorem:</span> A function is uniformly continuous if one delta works for all points in the domain.</div>
+<div class="example"><div><span class="label">예시:</span> f(x)=x²는 [0,1]에서 균등연속이다.</div><div><span class="label">Example:</span> f(x)=x² is uniformly continuous on [0,1].</div></div>
+</section>
+<section class="card" id="s85">
+<span class="num">085</span>
+<div class="ko-title">제목: 컴팩트공간에서 연속이면 균등연속</div>
+<div class="en-title">Title: Continuous on Compact Implies Uniformly Continuous</div>
+<div class="line"><span class="label">정리:</span> 컴팩트 거리공간에서 실수값 연속함수는 균등연속이다.</div>
+<div class="line"><span class="label">Theorem:</span> A continuous function on a compact metric space is uniformly continuous.</div>
+<div class="example"><div><span class="label">예시:</span> sin x는 [0,100]에서 균등연속이다.</div><div><span class="label">Example:</span> sin x is uniformly continuous on [0,100].</div></div>
+</section>
+<section class="card" id="s86">
+<span class="num">086</span>
+<div class="ko-title">제목: 연결공간에서 연속실수함수의 중간값 성질</div>
+<div class="en-title">Title: Intermediate Value Property</div>
+<div class="line"><span class="label">정리:</span> 연결공간에서 R로 가는 연속함수의 상은 구간이므로 중간값 성질을 가진다.</div>
+<div class="line"><span class="label">Theorem:</span> A continuous real-valued function on a connected space has connected image, hence the intermediate value property.</div>
+<div class="example"><div><span class="label">예시:</span> f:[0,1]→R가 연속이고 f(0)&lt;0&lt;f(1)이면 어떤 c에서 f(c)=0이다.</div><div><span class="label">Example:</span> If f:[0,1]→R is continuous and f(0)&lt;0&lt;f(1), then f(c)=0 for some c.</div></div>
+</section>
+<section class="card" id="s87">
+<span class="num">087</span>
+<div class="ko-title">제목: 곱공간의 연결성</div>
+<div class="en-title">Title: Product of Connected Spaces</div>
+<div class="line"><span class="label">정리:</span> 연결공간들의 곱은 연결공간이다.</div>
+<div class="line"><span class="label">Theorem:</span> The product of connected spaces is connected.</div>
+<div class="example"><div><span class="label">예시:</span> [0,1]×[0,1]은 연결이다.</div><div><span class="label">Example:</span> [0,1]×[0,1] is connected.</div></div>
+</section>
+<section class="card" id="s88">
+<span class="num">088</span>
+<div class="ko-title">제목: 곱공간의 컴팩트성</div>
+<div class="en-title">Title: Product of Compact Spaces</div>
+<div class="line"><span class="label">정리:</span> 컴팩트공간들의 곱은 컴팩트하다.</div>
+<div class="line"><span class="label">Theorem:</span> The product of compact spaces is compact.</div>
+<div class="example"><div><span class="label">예시:</span> [0,1]×[0,1]은 컴팩트하다.</div><div><span class="label">Example:</span> [0,1]×[0,1] is compact.</div></div>
+</section>
+<section class="card" id="s89">
+<span class="num">089</span>
+<div class="ko-title">제목: 튜브 보조정리</div>
+<div class="en-title">Title: Tube Lemma</div>
+<div class="line"><span class="label">정리:</span> 곱공간에서 컴팩트한 한쪽 인자를 가진 열린집합은 적절한 튜브 근방을 포함한다.</div>
+<div class="line"><span class="label">Theorem:</span> If one factor is compact, an open set containing a slice contains a tube around that slice.</div>
+<div class="example"><div><span class="label">예시:</span> N이 X×Y에서 {x0}×Y를 포함하고 Y가 컴팩트이면 x0 주변 U에 대해 U×Y⊆N이 된다.</div><div><span class="label">Example:</span> If N contains {x0}×Y and Y is compact, then U×Y⊆N for some neighborhood U of x0.</div></div>
+</section>
+<section class="card" id="s90">
+<span class="num">090</span>
+<div class="ko-title">제목: 티호노프 정리</div>
+<div class="en-title">Title: Tychonoff Theorem</div>
+<div class="line"><span class="label">정리:</span> 임의개의 컴팩트공간의 곱은 곱위상에서 컴팩트하다.</div>
+<div class="line"><span class="label">Theorem:</span> An arbitrary product of compact spaces is compact in the product topology.</div>
+<div class="example"><div><span class="label">예시:</span> 무한곱 [0,1]^I는 컴팩트하다.</div><div><span class="label">Example:</span> The product [0,1]^I is compact.</div></div>
+</section>
+<section class="card" id="s91">
+<span class="num">091</span>
+<div class="ko-title">제목: 알렉산드로프 일점 컴팩트화</div>
+<div class="en-title">Title: Alexandroff One-Point Compactification</div>
+<div class="line"><span class="label">정리:</span> 비컴팩트 국소컴팩트 하우스도르프공간에 한 점을 추가해 컴팩트공간을 만들 수 있다.</div>
+<div class="line"><span class="label">Theorem:</span> A noncompact locally compact Hausdorff space can be compactified by adding one point.</div>
+<div class="example"><div><span class="label">예시:</span> R에 무한원점을 하나 붙이면 원 S¹과 위상동형이 된다.</div><div><span class="label">Example:</span> Adding a point at infinity to R gives a space homeomorphic to S¹.</div></div>
+</section>
+<section class="card" id="s92">
+<span class="num">092</span>
+<div class="ko-title">제목: 망</div>
+<div class="en-title">Title: Net</div>
+<div class="line"><span class="label">정리:</span> 일반 위상공간에서 수열 대신 방향집합으로 색인된 점들의 모임을 망이라고 한다.</div>
+<div class="line"><span class="label">Theorem:</span> A net is a generalized sequence indexed by a directed set.</div>
+<div class="example"><div><span class="label">예시:</span> 제1가산이 아닌 공간에서는 망이 폐포를 설명하는 데 유용하다.</div><div><span class="label">Example:</span> In non-first-countable spaces, nets help describe closure.</div></div>
+</section>
+<section class="card" id="s93">
+<span class="num">093</span>
+<div class="ko-title">제목: 필터</div>
+<div class="en-title">Title: Filter</div>
+<div class="line"><span class="label">정리:</span> 필터는 큰 집합들의 모임을 통해 수렴을 일반화하는 도구이다.</div>
+<div class="line"><span class="label">Theorem:</span> A filter is a collection of large sets used to generalize convergence.</div>
+<div class="example"><div><span class="label">예시:</span> 한 점의 모든 근방들의 모임은 필터의 예이다.</div><div><span class="label">Example:</span> The collection of all neighborhoods of a point is an example of a filter.</div></div>
+</section>
+<section class="card" id="s94">
+<span class="num">094</span>
+<div class="ko-title">제목: 망에 의한 폐포 판정</div>
+<div class="en-title">Title: Closure by Nets</div>
+<div class="line"><span class="label">정리:</span> 점 x가 A의 폐포에 속하는 것은 A 안의 어떤 망이 x로 수렴하는 것과 동치이다.</div>
+<div class="line"><span class="label">Theorem:</span> A point x lies in the closure of A iff some net in A converges to x.</div>
+<div class="example"><div><span class="label">예시:</span> 0은 {1/n}의 폐포에 있으므로 그 안의 수열 1/n이 0으로 수렴한다.</div><div><span class="label">Example:</span> Since 0 lies in the closure of {1/n}, the sequence 1/n converges to 0.</div></div>
+</section>
+<section class="card" id="s95">
+<span class="num">095</span>
+<div class="ko-title">제목: 컴팩트성의 망 판정</div>
+<div class="en-title">Title: Compactness by Nets</div>
+<div class="line"><span class="label">정리:</span> 공간이 컴팩트인 것은 모든 망이 수렴하는 부분망을 가지는 것과 동치이다.</div>
+<div class="line"><span class="label">Theorem:</span> A space is compact iff every net has a convergent subnet.</div>
+<div class="example"><div><span class="label">예시:</span> [0,1]의 모든 망은 수렴부분망을 가진다.</div><div><span class="label">Example:</span> Every net in [0,1] has a convergent subnet.</div></div>
+</section>
+<section class="card" id="s96">
+<span class="num">096</span>
+<div class="ko-title">제목: 범함수적 관점의 위상동형</div>
+<div class="en-title">Title: Homeomorphism as Structural Equivalence</div>
+<div class="line"><span class="label">정리:</span> 위상동형은 열린집합 구조를 완전히 보존하는 동형이다.</div>
+<div class="line"><span class="label">Theorem:</span> A homeomorphism is an isomorphism preserving the open-set structure completely.</div>
+<div class="example"><div><span class="label">예시:</span> 커피잔과 도넛 모양은 구멍 수를 보존하는 관점에서 자주 비유된다.</div><div><span class="label">Example:</span> A mug and a torus are often used as an informal analogy of preserved hole structure.</div></div>
+</section>
+<section class="card" id="s97">
+<span class="num">097</span>
+<div class="ko-title">제목: 약위상</div>
+<div class="en-title">Title: Weak Topology</div>
+<div class="line"><span class="label">정리:</span> 함수족이 모두 연속이 되게 하는 가장 약한 위상을 약위상이라고 한다.</div>
+<div class="line"><span class="label">Theorem:</span> The weak topology is the coarsest topology making a given family of functions continuous.</div>
+<div class="example"><div><span class="label">예시:</span> 벡터공간의 약위상은 모든 연속선형범함수가 연속이 되도록 정의된다.</div><div><span class="label">Example:</span> On a vector space, the weak topology makes all continuous linear functionals continuous.</div></div>
+</section>
+<section class="card" id="s98">
+<span class="num">098</span>
+<div class="ko-title">제목: 최종위상</div>
+<div class="en-title">Title: Final Topology</div>
+<div class="line"><span class="label">정리:</span> 함수족의 공역에 주어지는 가장 강한 위상으로, 주어진 함수들이 연속이 되게 한다.</div>
+<div class="line"><span class="label">Theorem:</span> The final topology is the finest topology on a codomain making a given family of maps continuous.</div>
+<div class="example"><div><span class="label">예시:</span> 몫위상은 최종위상의 대표적인 예이다.</div><div><span class="label">Example:</span> The quotient topology is a standard example of a final topology.</div></div>
+</section>
+<section class="card" id="s99">
+<span class="num">099</span>
+<div class="ko-title">제목: 초기위상</div>
+<div class="en-title">Title: Initial Topology</div>
+<div class="line"><span class="label">정리:</span> 함수족의 정의역에 주어지는 가장 약한 위상으로, 주어진 함수들이 연속이 되게 한다.</div>
+<div class="line"><span class="label">Theorem:</span> The initial topology is the coarsest topology on a domain making a given family of maps continuous.</div>
+<div class="example"><div><span class="label">예시:</span> 곱위상은 사영함수들에 대한 초기위상이다.</div><div><span class="label">Example:</span> The product topology is the initial topology with respect to projection maps.</div></div>
+</section>
+<section class="card" id="s100">
+<span class="num">100</span>
+<div class="ko-title">제목: 부분공간 위상은 초기위상</div>
+<div class="en-title">Title: Subspace Topology as Initial Topology</div>
+<div class="line"><span class="label">정리:</span> 부분공간 위상은 포함사상을 연속으로 만드는 가장 약한 위상이다.</div>
+<div class="line"><span class="label">Theorem:</span> The subspace topology is the initial topology induced by the inclusion map.</div>
+<div class="example"><div><span class="label">예시:</span> Y⊆X일 때 Y의 위상은 포함사상 i:Y→X에 대한 초기위상이다.</div><div><span class="label">Example:</span> For Y⊆X, the topology on Y is initial with respect to i:Y→X.</div></div>
+</section>
+</main>
+<a class="top" href="#top">▲ 위로</a>
+<footer>General Topology 100 Theorems · Korean & English · No Table</footer>
+</body>
+</html>

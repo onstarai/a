@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Vector Analysis 정리 100개</title>
+<style>
+body{font-family:'Malgun Gothic','Nanum Gothic',Arial,sans-serif;line-height:1.75;margin:0;background:#f4f7fb;color:#1f2937}
+header{background:linear-gradient(135deg,#1d4ed8,#0f766e);color:white;padding:36px 28px;text-align:center}
+main{max-width:1000px;margin:30px auto;padding:0 20px 40px}
+.card{background:white;border-radius:16px;padding:22px 24px;margin:18px 0;box-shadow:0 6px 18px rgba(15,23,42,.08);border-left:7px solid #2563eb}
+.num{color:#2563eb;font-weight:bold;font-size:1.05em}
+h1{margin:0 0 10px;font-size:2.1em}
+h2{margin:8px 0 14px;color:#111827}
+.label{font-weight:bold;color:#0f766e}
+.example{background:#eef6ff;border-radius:10px;padding:10px 12px;margin-top:10px}
+.small{color:#e0f2fe}
+footer{text-align:center;color:#6b7280;padding:30px}
+</style>
+</head>
+<body>
+<header>
+<h1>Vector Analysis 정리 100개</h1>
+<div class="small">각각 한국어 · English · 예시 포함 / 표 없이 구성</div>
+</header>
+<main>
+
+<section class="card">
+<div class="num">001</div>
+<h2>벡터의 정의 / Vector Definition</h2>
+<p><span class="label">한국어:</span> 벡터의 정의는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Vector Definition is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 힘 F=(3,4)는 x방향 3, y방향 4의 성분을 가진다.</div>
+</section>
+
+<section class="card">
+<div class="num">002</div>
+<h2>스칼라의 정의 / Scalar Definition</h2>
+<p><span class="label">한국어:</span> 스칼라의 정의는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Scalar Definition is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 온도 25℃, 질량 10kg은 스칼라이다.</div>
+</section>
+
+<section class="card">
+<div class="num">003</div>
+<h2>벡터의 성분 표현 / Vector Components</h2>
+<p><span class="label">한국어:</span> 벡터의 성분 표현는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Vector Components is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: a=2i+3j+k=(2,3,1).</div>
+</section>
+
+<section class="card">
+<div class="num">004</div>
+<h2>벡터의 크기 / Magnitude of a Vector</h2>
+<p><span class="label">한국어:</span> 벡터의 크기는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Magnitude of a Vector is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: |(3,4)|=5.</div>
+</section>
+
+<section class="card">
+<div class="num">005</div>
+<h2>단위벡터 / Unit Vector</h2>
+<p><span class="label">한국어:</span> 단위벡터는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Unit Vector is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: (3,4)의 단위벡터는 (3/5,4/5).</div>
+</section>
+
+<section class="card">
+<div class="num">006</div>
+<h2>영벡터 / Zero Vector</h2>
+<p><span class="label">한국어:</span> 영벡터는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Zero Vector is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 0=(0,0,0).</div>
+</section>
+
+<section class="card">
+<div class="num">007</div>
+<h2>벡터의 덧셈 / Vector Addition</h2>
+<p><span class="label">한국어:</span> 벡터의 덧셈는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Vector Addition is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: (1,2)+(3,4)=(4,6).</div>
+</section>
+
+<section class="card">
+<div class="num">008</div>
+<h2>벡터의 뺄셈 / Vector Subtraction</h2>
+<p><span class="label">한국어:</span> 벡터의 뺄셈는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Vector Subtraction is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: (5,3)-(2,1)=(3,2).</div>
+</section>
+
+<section class="card">
+<div class="num">009</div>
+<h2>스칼라배 / Scalar Multiplication</h2>
+<p><span class="label">한국어:</span> 스칼라배는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Scalar Multiplication is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 2(1,3)=(2,6).</div>
+</section>
+
+<section class="card">
+<div class="num">010</div>
+<h2>위치벡터 / Position Vector</h2>
+<p><span class="label">한국어:</span> 위치벡터는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Position Vector is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 점 P(2,3)의 위치벡터는 (2,3).</div>
+</section>
+
+<section class="card">
+<div class="num">011</div>
+<h2>두 점 사이의 벡터 / Vector Between Two Points</h2>
+<p><span class="label">한국어:</span> 두 점 사이의 벡터는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Vector Between Two Points is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: A(1,2), B(4,6)이면 AB=(3,4).</div>
+</section>
+
+<section class="card">
+<div class="num">012</div>
+<h2>거리 공식 / Distance Formula</h2>
+<p><span class="label">한국어:</span> 거리 공식는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Distance Formula is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: A(1,2), B(4,6)의 거리는 5.</div>
+</section>
+
+<section class="card">
+<div class="num">013</div>
+<h2>내적 / Dot Product</h2>
+<p><span class="label">한국어:</span> 내적는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Dot Product is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: (1,2,3)·(4,5,6)=32.</div>
+</section>
+
+<section class="card">
+<div class="num">014</div>
+<h2>내적의 기하적 의미 / Geometric Meaning of Dot Product</h2>
+<p><span class="label">한국어:</span> 내적의 기하적 의미는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Geometric Meaning of Dot Product is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: a·b=|a||b|cosθ.</div>
+</section>
+
+<section class="card">
+<div class="num">015</div>
+<h2>직교 조건 / Orthogonality</h2>
+<p><span class="label">한국어:</span> 직교 조건는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Orthogonality is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: (1,0)·(0,1)=0.</div>
+</section>
+
+<section class="card">
+<div class="num">016</div>
+<h2>벡터의 사영 / Projection</h2>
+<p><span class="label">한국어:</span> 벡터의 사영는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Projection is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: proj_b a=((a·b)/(b·b))b.</div>
+</section>
+
+<section class="card">
+<div class="num">017</div>
+<h2>벡터 사이의 각 / Angle Between Vectors</h2>
+<p><span class="label">한국어:</span> 벡터 사이의 각는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Angle Between Vectors is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: cosθ=(a·b)/(|a||b|).</div>
+</section>
+
+<section class="card">
+<div class="num">018</div>
+<h2>외적 / Cross Product</h2>
+<p><span class="label">한국어:</span> 외적는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Cross Product is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: i×j=k.</div>
+</section>
+
+<section class="card">
+<div class="num">019</div>
+<h2>외적의 크기 / Magnitude of Cross Product</h2>
+<p><span class="label">한국어:</span> 외적의 크기는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Magnitude of Cross Product is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: |a×b|=|a||b|sinθ.</div>
+</section>
+
+<section class="card">
+<div class="num">020</div>
+<h2>평행 벡터 / Parallel Vectors</h2>
+<p><span class="label">한국어:</span> 평행 벡터는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Parallel Vectors is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: (1,2,3)과 (2,4,6)은 평행이다.</div>
+</section>
+
+<section class="card">
+<div class="num">021</div>
+<h2>오른손 법칙 / Right-Hand Rule</h2>
+<p><span class="label">한국어:</span> 오른손 법칙는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Right-Hand Rule is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: i×j=k, j×i=-k.</div>
+</section>
+
+<section class="card">
+<div class="num">022</div>
+<h2>스칼라 삼중곱 / Scalar Triple Product</h2>
+<p><span class="label">한국어:</span> 스칼라 삼중곱는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Scalar Triple Product is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: i·(j×k)=1.</div>
+</section>
+
+<section class="card">
+<div class="num">023</div>
+<h2>벡터 삼중곱 / Vector Triple Product</h2>
+<p><span class="label">한국어:</span> 벡터 삼중곱는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Vector Triple Product is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: a×(b×c)=b(a·c)-c(a·b).</div>
+</section>
+
+<section class="card">
+<div class="num">024</div>
+<h2>선형 결합 / Linear Combination</h2>
+<p><span class="label">한국어:</span> 선형 결합는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Linear Combination is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 2u-3v+w.</div>
+</section>
+
+<section class="card">
+<div class="num">025</div>
+<h2>선형 독립 / Linear Independence</h2>
+<p><span class="label">한국어:</span> 선형 독립는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Linear Independence is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: i,j,k는 R³에서 선형 독립이다.</div>
+</section>
+
+<section class="card">
+<div class="num">026</div>
+<h2>기저 / Basis</h2>
+<p><span class="label">한국어:</span> 기저는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Basis is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: R³의 표준기저는 i,j,k.</div>
+</section>
+
+<section class="card">
+<div class="num">027</div>
+<h2>좌표계 / Coordinate System</h2>
+<p><span class="label">한국어:</span> 좌표계는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Coordinate System is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 직교좌표, 원통좌표, 구면좌표.</div>
+</section>
+
+<section class="card">
+<div class="num">028</div>
+<h2>직교좌표계 / Cartesian Coordinates</h2>
+<p><span class="label">한국어:</span> 직교좌표계는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Cartesian Coordinates is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 점 P=(x,y,z).</div>
+</section>
+
+<section class="card">
+<div class="num">029</div>
+<h2>원통좌표계 / Cylindrical Coordinates</h2>
+<p><span class="label">한국어:</span> 원통좌표계는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Cylindrical Coordinates is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: x=r cosθ, y=r sinθ.</div>
+</section>
+
+<section class="card">
+<div class="num">030</div>
+<h2>구면좌표계 / Spherical Coordinates</h2>
+<p><span class="label">한국어:</span> 구면좌표계는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Spherical Coordinates is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ρ는 원점에서 점까지의 거리이다.</div>
+</section>
+
+<section class="card">
+<div class="num">031</div>
+<h2>벡터 함수 / Vector Function</h2>
+<p><span class="label">한국어:</span> 벡터 함수는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Vector Function is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: r(t)=(cos t, sin t, t).</div>
+</section>
+
+<section class="card">
+<div class="num">032</div>
+<h2>공간 곡선 / Space Curve</h2>
+<p><span class="label">한국어:</span> 공간 곡선는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Space Curve is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 나선은 공간 곡선이다.</div>
+</section>
+
+<section class="card">
+<div class="num">033</div>
+<h2>속도 벡터 / Velocity Vector</h2>
+<p><span class="label">한국어:</span> 속도 벡터는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Velocity Vector is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: r(t)=(t²,t)이면 v(t)=(2t,1).</div>
+</section>
+
+<section class="card">
+<div class="num">034</div>
+<h2>가속도 벡터 / Acceleration Vector</h2>
+<p><span class="label">한국어:</span> 가속도 벡터는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Acceleration Vector is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: v(t)=(2t,1)이면 a(t)=(2,0).</div>
+</section>
+
+<section class="card">
+<div class="num">035</div>
+<h2>접선 벡터 / Tangent Vector</h2>
+<p><span class="label">한국어:</span> 접선 벡터는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Tangent Vector is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: r&#x27;(t)가 접선 벡터이다.</div>
+</section>
+
+<section class="card">
+<div class="num">036</div>
+<h2>단위 접선 벡터 / Unit Tangent Vector</h2>
+<p><span class="label">한국어:</span> 단위 접선 벡터는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Unit Tangent Vector is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: T=r&#x27;(t)/|r&#x27;(t)|.</div>
+</section>
+
+<section class="card">
+<div class="num">037</div>
+<h2>법선 벡터 / Normal Vector</h2>
+<p><span class="label">한국어:</span> 법선 벡터는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Normal Vector is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ax+by+cz=d의 법선은 (a,b,c).</div>
+</section>
+
+<section class="card">
+<div class="num">038</div>
+<h2>곡률 / Curvature</h2>
+<p><span class="label">한국어:</span> 곡률는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Curvature is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 반지름 R인 원의 곡률은 1/R.</div>
+</section>
+
+<section class="card">
+<div class="num">039</div>
+<h2>호의 길이 / Arc Length</h2>
+<p><span class="label">한국어:</span> 호의 길이는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Arc Length is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: L=∫|r&#x27;(t)|dt.</div>
+</section>
+
+<section class="card">
+<div class="num">040</div>
+<h2>스칼라장 / Scalar Field</h2>
+<p><span class="label">한국어:</span> 스칼라장는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Scalar Field is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 온도장 T(x,y,z).</div>
+</section>
+
+<section class="card">
+<div class="num">041</div>
+<h2>벡터장 / Vector Field</h2>
+<p><span class="label">한국어:</span> 벡터장는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Vector Field is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 바람장 F(x,y)=(-y,x).</div>
+</section>
+
+<section class="card">
+<div class="num">042</div>
+<h2>그래디언트 / Gradient</h2>
+<p><span class="label">한국어:</span> 그래디언트는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Gradient is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: f=x²+y²이면 ∇f=(2x,2y).</div>
+</section>
+
+<section class="card">
+<div class="num">043</div>
+<h2>방향도함수 / Directional Derivative</h2>
+<p><span class="label">한국어:</span> 방향도함수는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Directional Derivative is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: D_u f=∇f·u.</div>
+</section>
+
+<section class="card">
+<div class="num">044</div>
+<h2>등위면 / Level Surface</h2>
+<p><span class="label">한국어:</span> 등위면는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Level Surface is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: x²+y²+z²=1은 등위면이다.</div>
+</section>
+
+<section class="card">
+<div class="num">045</div>
+<h2>그래디언트와 등위면 / Gradient and Level Surface</h2>
+<p><span class="label">한국어:</span> 그래디언트와 등위면는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Gradient and Level Surface is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 구면에서 ∇f는 반지름 방향이다.</div>
+</section>
+
+<section class="card">
+<div class="num">046</div>
+<h2>발산 / Divergence</h2>
+<p><span class="label">한국어:</span> 발산는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Divergence is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: F=(x,y,z)이면 ∇·F=3.</div>
+</section>
+
+<section class="card">
+<div class="num">047</div>
+<h2>회전 / Curl</h2>
+<p><span class="label">한국어:</span> 회전는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Curl is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: F=(-y,x,0)이면 ∇×F=(0,0,2).</div>
+</section>
+
+<section class="card">
+<div class="num">048</div>
+<h2>라플라시안 / Laplacian</h2>
+<p><span class="label">한국어:</span> 라플라시안는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Laplacian is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∇²f=f_xx+f_yy+f_zz.</div>
+</section>
+
+<section class="card">
+<div class="num">049</div>
+<h2>해밀턴 연산자 / Del Operator</h2>
+<p><span class="label">한국어:</span> 해밀턴 연산자는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Del Operator is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∇=(∂/∂x,∂/∂y,∂/∂z).</div>
+</section>
+
+<section class="card">
+<div class="num">050</div>
+<h2>보존장 / Conservative Field</h2>
+<p><span class="label">한국어:</span> 보존장는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Conservative Field is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: F=∇φ.</div>
+</section>
+
+<section class="card">
+<div class="num">051</div>
+<h2>퍼텐셜 함수 / Potential Function</h2>
+<p><span class="label">한국어:</span> 퍼텐셜 함수는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Potential Function is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: F=(2x,2y)이면 φ=x²+y².</div>
+</section>
+
+<section class="card">
+<div class="num">052</div>
+<h2>선적분 / Line Integral</h2>
+<p><span class="label">한국어:</span> 선적분는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Line Integral is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∫C F·dr.</div>
+</section>
+
+<section class="card">
+<div class="num">053</div>
+<h2>일 적분 / Work Integral</h2>
+<p><span class="label">한국어:</span> 일 적분는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Work Integral is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: W=∫C F·dr.</div>
+</section>
+
+<section class="card">
+<div class="num">054</div>
+<h2>경로 독립성 / Path Independence</h2>
+<p><span class="label">한국어:</span> 경로 독립성는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Path Independence is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 보존장에서는 적분값이 시작점과 끝점만으로 결정된다.</div>
+</section>
+
+<section class="card">
+<div class="num">055</div>
+<h2>선적분의 기본정리 / Fundamental Theorem for Line Integrals</h2>
+<p><span class="label">한국어:</span> 선적분의 기본정리는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Fundamental Theorem for Line Integrals is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∫C ∇φ·dr=φ(B)-φ(A).</div>
+</section>
+
+<section class="card">
+<div class="num">056</div>
+<h2>면적분 / Surface Integral</h2>
+<p><span class="label">한국어:</span> 면적분는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Surface Integral is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∫∫S f dS.</div>
+</section>
+
+<section class="card">
+<div class="num">057</div>
+<h2>플럭스 / Flux</h2>
+<p><span class="label">한국어:</span> 플럭스는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Flux is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∫∫S F·n dS.</div>
+</section>
+
+<section class="card">
+<div class="num">058</div>
+<h2>곡면의 법선 / Surface Normal</h2>
+<p><span class="label">한국어:</span> 곡면의 법선는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Surface Normal is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: z=f(x,y)의 법선은 (-f_x,-f_y,1).</div>
+</section>
+
+<section class="card">
+<div class="num">059</div>
+<h2>야코비안 / Jacobian</h2>
+<p><span class="label">한국어:</span> 야코비안는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Jacobian is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 극좌표 야코비안은 r이다.</div>
+</section>
+
+<section class="card">
+<div class="num">060</div>
+<h2>그린 정리 / Green&#x27;s Theorem</h2>
+<p><span class="label">한국어:</span> 그린 정리는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Green&#x27;s Theorem is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∮C Pdx+Qdy=∫∫D(Q_x-P_y)dA.</div>
+</section>
+
+<section class="card">
+<div class="num">061</div>
+<h2>발산 정리 / Divergence Theorem</h2>
+<p><span class="label">한국어:</span> 발산 정리는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Divergence Theorem is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∫∫S F·n dS=∫∫∫V ∇·F dV.</div>
+</section>
+
+<section class="card">
+<div class="num">062</div>
+<h2>스토크스 정리 / Stokes&#x27; Theorem</h2>
+<p><span class="label">한국어:</span> 스토크스 정리는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Stokes&#x27; Theorem is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∮C F·dr=∫∫S (∇×F)·n dS.</div>
+</section>
+
+<section class="card">
+<div class="num">063</div>
+<h2>그린 정리의 순환형 / Circulation Form of Green&#x27;s Theorem</h2>
+<p><span class="label">한국어:</span> 그린 정리의 순환형는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Circulation Form of Green&#x27;s Theorem is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 닫힌 경계의 순환을 내부 회전량으로 계산한다.</div>
+</section>
+
+<section class="card">
+<div class="num">064</div>
+<h2>그린 정리의 플럭스형 / Flux Form of Green&#x27;s Theorem</h2>
+<p><span class="label">한국어:</span> 그린 정리의 플럭스형는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Flux Form of Green&#x27;s Theorem is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 닫힌 경계의 플럭스를 내부 발산으로 계산한다.</div>
+</section>
+
+<section class="card">
+<div class="num">065</div>
+<h2>연속 방정식 / Continuity Equation</h2>
+<p><span class="label">한국어:</span> 연속 방정식는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Continuity Equation is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∂ρ/∂t+∇·(ρv)=0.</div>
+</section>
+
+<section class="card">
+<div class="num">066</div>
+<h2>라플라스 방정식 / Laplace Equation</h2>
+<p><span class="label">한국어:</span> 라플라스 방정식는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Laplace Equation is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∇²φ=0.</div>
+</section>
+
+<section class="card">
+<div class="num">067</div>
+<h2>푸아송 방정식 / Poisson Equation</h2>
+<p><span class="label">한국어:</span> 푸아송 방정식는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Poisson Equation is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∇²φ=f.</div>
+</section>
+
+<section class="card">
+<div class="num">068</div>
+<h2>무회전장 / Irrotational Field</h2>
+<p><span class="label">한국어:</span> 무회전장는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Irrotational Field is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∇×F=0.</div>
+</section>
+
+<section class="card">
+<div class="num">069</div>
+<h2>솔레노이드장 / Solenoidal Field</h2>
+<p><span class="label">한국어:</span> 솔레노이드장는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Solenoidal Field is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∇·F=0.</div>
+</section>
+
+<section class="card">
+<div class="num">070</div>
+<h2>조화함수 / Harmonic Function</h2>
+<p><span class="label">한국어:</span> 조화함수는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Harmonic Function is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: f=x²-y²는 조화함수이다.</div>
+</section>
+
+<section class="card">
+<div class="num">071</div>
+<h2>접평면 / Tangent Plane</h2>
+<p><span class="label">한국어:</span> 접평면는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Tangent Plane is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: z-z0=f_x(x-x0)+f_y(y-y0).</div>
+</section>
+
+<section class="card">
+<div class="num">072</div>
+<h2>방향장 / Direction Field</h2>
+<p><span class="label">한국어:</span> 방향장는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Direction Field is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: y&#x27;=x+y의 각 점 기울기 표시.</div>
+</section>
+
+<section class="card">
+<div class="num">073</div>
+<h2>흐름선 / Flow Line</h2>
+<p><span class="label">한국어:</span> 흐름선는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Flow Line is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: dr/dt=F(r).</div>
+</section>
+
+<section class="card">
+<div class="num">074</div>
+<h2>순환 / Circulation</h2>
+<p><span class="label">한국어:</span> 순환는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Circulation is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∮C F·dr.</div>
+</section>
+
+<section class="card">
+<div class="num">075</div>
+<h2>회전과 순환 / Curl and Circulation</h2>
+<p><span class="label">한국어:</span> 회전과 순환는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Curl and Circulation is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 작은 원의 순환/면적은 curl 성분에 가까워진다.</div>
+</section>
+
+<section class="card">
+<div class="num">076</div>
+<h2>발산과 플럭스 / Divergence and Flux</h2>
+<p><span class="label">한국어:</span> 발산과 플럭스는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Divergence and Flux is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 작은 구면의 플럭스/부피는 ∇·F에 가까워진다.</div>
+</section>
+
+<section class="card">
+<div class="num">077</div>
+<h2>곡선 방향 / Curve Orientation</h2>
+<p><span class="label">한국어:</span> 곡선 방향는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Curve Orientation is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 반대 방향으로 적분하면 부호가 바뀐다.</div>
+</section>
+
+<section class="card">
+<div class="num">078</div>
+<h2>곡면 방향 / Surface Orientation</h2>
+<p><span class="label">한국어:</span> 곡면 방향는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Surface Orientation is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 닫힌 곡면은 보통 바깥쪽 법선을 사용한다.</div>
+</section>
+
+<section class="card">
+<div class="num">079</div>
+<h2>매개곡면 / Parametric Surface</h2>
+<p><span class="label">한국어:</span> 매개곡면는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Parametric Surface is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: r(u,v)=(u,v,u²+v²).</div>
+</section>
+
+<section class="card">
+<div class="num">080</div>
+<h2>곡면 요소 / Surface Element</h2>
+<p><span class="label">한국어:</span> 곡면 요소는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Surface Element is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: dS=|r_u×r_v|dudv.</div>
+</section>
+
+<section class="card">
+<div class="num">081</div>
+<h2>체적 요소 / Volume Element</h2>
+<p><span class="label">한국어:</span> 체적 요소는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Volume Element is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 직교좌표 dV=dxdydz.</div>
+</section>
+
+<section class="card">
+<div class="num">082</div>
+<h2>극좌표 면적요소 / Polar Area Element</h2>
+<p><span class="label">한국어:</span> 극좌표 면적요소는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Polar Area Element is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: dA=r dr dθ.</div>
+</section>
+
+<section class="card">
+<div class="num">083</div>
+<h2>원통좌표 체적요소 / Cylindrical Volume Element</h2>
+<p><span class="label">한국어:</span> 원통좌표 체적요소는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Cylindrical Volume Element is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: dV=r dr dθ dz.</div>
+</section>
+
+<section class="card">
+<div class="num">084</div>
+<h2>구면좌표 체적요소 / Spherical Volume Element</h2>
+<p><span class="label">한국어:</span> 구면좌표 체적요소는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Spherical Volume Element is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: dV=ρ²sinφ dρ dφ dθ.</div>
+</section>
+
+<section class="card">
+<div class="num">085</div>
+<h2>그래디언트의 회전 / Curl of Gradient</h2>
+<p><span class="label">한국어:</span> 그래디언트의 회전는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Curl of Gradient is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∇×(∇f)=0.</div>
+</section>
+
+<section class="card">
+<div class="num">086</div>
+<h2>회전의 발산 / Divergence of Curl</h2>
+<p><span class="label">한국어:</span> 회전의 발산는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Divergence of Curl is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∇·(∇×F)=0.</div>
+</section>
+
+<section class="card">
+<div class="num">087</div>
+<h2>곱의 그래디언트 / Gradient Product Rule</h2>
+<p><span class="label">한국어:</span> 곱의 그래디언트는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Gradient Product Rule is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∇(fg)=f∇g+g∇f.</div>
+</section>
+
+<section class="card">
+<div class="num">088</div>
+<h2>스칼라배 벡터장의 발산 / Divergence Product Rule</h2>
+<p><span class="label">한국어:</span> 스칼라배 벡터장의 발산는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Divergence Product Rule is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∇·(fF)=∇f·F+f∇·F.</div>
+</section>
+
+<section class="card">
+<div class="num">089</div>
+<h2>스칼라배 벡터장의 회전 / Curl Product Rule</h2>
+<p><span class="label">한국어:</span> 스칼라배 벡터장의 회전는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Curl Product Rule is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∇×(fF)=∇f×F+f∇×F.</div>
+</section>
+
+<section class="card">
+<div class="num">090</div>
+<h2>좌표변환 / Coordinate Transformation</h2>
+<p><span class="label">한국어:</span> 좌표변환는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Coordinate Transformation is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 원형 영역은 극좌표가 편하다.</div>
+</section>
+
+<section class="card">
+<div class="num">091</div>
+<h2>대칭성 활용 / Use of Symmetry</h2>
+<p><span class="label">한국어:</span> 대칭성 활용는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Use of Symmetry is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 홀함수의 대칭구간 적분은 0이다.</div>
+</section>
+
+<section class="card">
+<div class="num">092</div>
+<h2>중심장 / Central Field</h2>
+<p><span class="label">한국어:</span> 중심장는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Central Field is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: F(r)=k r/|r|³.</div>
+</section>
+
+<section class="card">
+<div class="num">093</div>
+<h2>역제곱장 / Inverse-Square Field</h2>
+<p><span class="label">한국어:</span> 역제곱장는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Inverse-Square Field is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 중력장과 전기장은 역제곱장이다.</div>
+</section>
+
+<section class="card">
+<div class="num">094</div>
+<h2>가우스 법칙의 수학형 / Gauss Law Form</h2>
+<p><span class="label">한국어:</span> 가우스 법칙의 수학형는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Gauss Law Form is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∫∫S E·n dS=Q/ε₀.</div>
+</section>
+
+<section class="card">
+<div class="num">095</div>
+<h2>켈빈-스토크스 관점 / Kelvin-Stokes View</h2>
+<p><span class="label">한국어:</span> 켈빈-스토크스 관점는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Kelvin-Stokes View is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 소용돌이 흐름 분석에 사용한다.</div>
+</section>
+
+<section class="card">
+<div class="num">096</div>
+<h2>라플라시안과 확산 / Laplacian and Diffusion</h2>
+<p><span class="label">한국어:</span> 라플라시안과 확산는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Laplacian and Diffusion is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 열방정식 u_t=α∇²u.</div>
+</section>
+
+<section class="card">
+<div class="num">097</div>
+<h2>그래디언트 하강 / Gradient Descent</h2>
+<p><span class="label">한국어:</span> 그래디언트 하강는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Gradient Descent is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: x_new=x-η∇f(x).</div>
+</section>
+
+<section class="card">
+<div class="num">098</div>
+<h2>헬름홀츠 분해 / Helmholtz Decomposition</h2>
+<p><span class="label">한국어:</span> 헬름홀츠 분해는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Helmholtz Decomposition is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 유체 속도장을 퍼텐셜 성분과 소용돌이 성분으로 나눈다.</div>
+</section>
+
+<section class="card">
+<div class="num">099</div>
+<h2>벡터 해석의 물리적 의미 / Physical Meaning of Vector Analysis</h2>
+<p><span class="label">한국어:</span> 벡터 해석의 물리적 의미는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Physical Meaning of Vector Analysis is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: 바람장, 전기장, 자기장 분석.</div>
+</section>
+
+<section class="card">
+<div class="num">100</div>
+<h2>벡터 해석의 종합정리 / Summary of Vector Analysis</h2>
+<p><span class="label">한국어:</span> 벡터 해석의 종합정리는 벡터 해석에서 공간의 방향, 변화율, 흐름, 회전, 적분 관계를 이해하는 데 중요한 개념 또는 정리이다.</p>
+<p><span class="label">English:</span> Summary of Vector Analysis is an important concept or theorem in vector analysis for understanding direction, rate of change, flow, rotation, and integral relationships in space.</p>
+<div class="example"><span class="label">예시:</span> 예: ∇, Green, Stokes, Divergence theorem을 함께 사용한다.</div>
+</section>
+
+</main>
+<footer>Vector Analysis 100 Theorems and Concepts · Korean & English · No Tables</footer>
+</body>
+</html>

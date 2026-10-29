@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>집합론 정리와 예시 - 제목 정리 예시 줄 나누기</title>
+<style>
+body{font-family:'Malgun Gothic',Arial,sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.7;margin:0;padding:0}
+header{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:white;padding:34px 20px;text-align:center}
+header h1{margin:0;font-size:32px} header p{margin:10px 0 0;font-size:16px}
+main{max-width:1100px;margin:0 auto;padding:24px}
+.card{background:white;border-radius:16px;margin:18px 0;padding:22px;box-shadow:0 4px 14px rgba(0,0,0,.08);border-left:8px solid #2563eb}
+.num{display:inline-block;background:#dbeafe;color:#1e40af;padding:4px 10px;border-radius:999px;font-weight:700;margin-bottom:10px}
+.block{margin:12px 0;padding:14px;border-radius:12px;background:#f8fafc}
+.ko{border-left:5px solid #f97316}.en{border-left:5px solid #2563eb;background:#eff6ff}
+.line{margin:7px 0;font-size:17px}.title{font-size:20px;font-weight:800;color:#111827}.label{font-weight:800;color:#1d4ed8;margin-right:6px}.ko .label{color:#c2410c}.en .label{color:#1d4ed8}
+.top{position:fixed;right:18px;bottom:18px;background:#2563eb;color:white;text-decoration:none;padding:10px 14px;border-radius:999px}
+footer{text-align:center;padding:28px;color:#6b7280}
+</style>
+</head>
+<body id="top">
+<header><h1>집합론 정리와 예시</h1><p>제목, 정리, 예시를 각각 줄 나누기 · 한글/영어 구성 · 표 없는 HTML</p></header>
+<main>
+<section class="card" id="s1">
+<span class="num">001</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 001. 집합의 원소 판정</p>
+<p class="line"><span class="label">정리:</span>어떤 대상 x가 집합 A에 들어 있으면 x∈A, 들어 있지 않으면 x∉A라고 쓴다.</p>
+<p class="line"><span class="label">예시:</span>A={1,2,3}이면 2∈A, 5∉A이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Membership test</p>
+<p class="line"><span class="label">Theorem:</span>If an object x is in a set A, write x∈A; if not, write x∉A.</p>
+<p class="line"><span class="label">Example:</span>If A={1,2,3}, then 2∈A and 5∉A.</p>
+</div>
+</section>
+<section class="card" id="s2">
+<span class="num">002</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 002. 공집합의 정의</p>
+<p class="line"><span class="label">정리:</span>원소가 하나도 없는 집합을 공집합이라 하고 ∅로 나타낸다.</p>
+<p class="line"><span class="label">예시:</span>10보다 크고 10보다 작은 자연수의 집합은 ∅이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Definition of the empty set</p>
+<p class="line"><span class="label">Theorem:</span>A set with no elements is called the empty set and is written ∅.</p>
+<p class="line"><span class="label">Example:</span>The set of natural numbers greater than 10 and less than 10 is ∅.</p>
+</div>
+</section>
+<section class="card" id="s3">
+<span class="num">003</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 003. 집합의 동일성</p>
+<p class="line"><span class="label">정리:</span>두 집합 A, B가 같은 원소를 정확히 가지고 있으면 A=B이다.</p>
+<p class="line"><span class="label">예시:</span>{1,2,3}={3,2,1}이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Equality of sets</p>
+<p class="line"><span class="label">Theorem:</span>Two sets A and B are equal if they have exactly the same elements.</p>
+<p class="line"><span class="label">Example:</span>{1,2,3}={3,2,1}.</p>
+</div>
+</section>
+<section class="card" id="s4">
+<span class="num">004</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 004. 원소 순서 무관성</p>
+<p class="line"><span class="label">정리:</span>집합에서는 원소의 순서가 의미를 가지지 않는다.</p>
+<p class="line"><span class="label">예시:</span>{a,b,c}와 {c,a,b}는 같은 집합이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Order does not matter</p>
+<p class="line"><span class="label">Theorem:</span>In a set, the order of elements has no meaning.</p>
+<p class="line"><span class="label">Example:</span>{a,b,c} and {c,a,b} are the same set.</p>
+</div>
+</section>
+<section class="card" id="s5">
+<span class="num">005</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 005. 원소 중복 무시</p>
+<p class="line"><span class="label">정리:</span>집합에서는 같은 원소를 여러 번 써도 한 번만 인정된다.</p>
+<p class="line"><span class="label">예시:</span>{1,1,2,2,3}={1,2,3}이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Repeated elements are ignored</p>
+<p class="line"><span class="label">Theorem:</span>Writing the same element several times counts as one element.</p>
+<p class="line"><span class="label">Example:</span>{1,1,2,2,3}={1,2,3}.</p>
+</div>
+</section>
+<section class="card" id="s6">
+<span class="num">006</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 006. 부분집합의 정의</p>
+<p class="line"><span class="label">정리:</span>A의 모든 원소가 B에도 들어 있으면 A는 B의 부분집합이다.</p>
+<p class="line"><span class="label">예시:</span>A={1,2}, B={1,2,3}이면 A⊆B이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Subset definition</p>
+<p class="line"><span class="label">Theorem:</span>A is a subset of B if every element of A is also in B.</p>
+<p class="line"><span class="label">Example:</span>If A={1,2} and B={1,2,3}, then A⊆B.</p>
+</div>
+</section>
+<section class="card" id="s7">
+<span class="num">007</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 007. 진부분집합</p>
+<p class="line"><span class="label">정리:</span>A⊆B이고 A≠B이면 A는 B의 진부분집합이다.</p>
+<p class="line"><span class="label">예시:</span>{1,2}는 {1,2,3}의 진부분집합이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Proper subset</p>
+<p class="line"><span class="label">Theorem:</span>If A⊆B and A≠B, then A is a proper subset of B.</p>
+<p class="line"><span class="label">Example:</span>{1,2} is a proper subset of {1,2,3}.</p>
+</div>
+</section>
+<section class="card" id="s8">
+<span class="num">008</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 008. 자기 자신은 부분집합</p>
+<p class="line"><span class="label">정리:</span>모든 집합 A에 대해 A⊆A이다.</p>
+<p class="line"><span class="label">예시:</span>{a,b}⊆{a,b}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Every set is a subset of itself</p>
+<p class="line"><span class="label">Theorem:</span>For every set A, A⊆A.</p>
+<p class="line"><span class="label">Example:</span>{a,b}⊆{a,b}.</p>
+</div>
+</section>
+<section class="card" id="s9">
+<span class="num">009</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 009. 공집합은 모든 집합의 부분집합</p>
+<p class="line"><span class="label">정리:</span>공집합은 어떤 집합에도 부분집합으로 포함된다.</p>
+<p class="line"><span class="label">예시:</span>∅⊆{1,2,3}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: The empty set is a subset of every set</p>
+<p class="line"><span class="label">Theorem:</span>∅ is contained as a subset of any set.</p>
+<p class="line"><span class="label">Example:</span>∅⊆{1,2,3}.</p>
+</div>
+</section>
+<section class="card" id="s10">
+<span class="num">010</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 010. 부분집합의 추이성</p>
+<p class="line"><span class="label">정리:</span>A⊆B이고 B⊆C이면 A⊆C이다.</p>
+<p class="line"><span class="label">예시:</span>{1}⊆{1,2}⊆{1,2,3}이므로 {1}⊆{1,2,3}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Transitivity of subsets</p>
+<p class="line"><span class="label">Theorem:</span>If A⊆B and B⊆C, then A⊆C.</p>
+<p class="line"><span class="label">Example:</span>Since {1}⊆{1,2}⊆{1,2,3}, {1}⊆{1,2,3}.</p>
+</div>
+</section>
+<section class="card" id="s11">
+<span class="num">011</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 011. 부분집합의 반대칭성</p>
+<p class="line"><span class="label">정리:</span>A⊆B이고 B⊆A이면 A=B이다.</p>
+<p class="line"><span class="label">예시:</span>A={1,2}, B={2,1}이면 서로 부분집합이므로 A=B.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Antisymmetry of subsets</p>
+<p class="line"><span class="label">Theorem:</span>If A⊆B and B⊆A, then A=B.</p>
+<p class="line"><span class="label">Example:</span>If A={1,2} and B={2,1}, then A=B.</p>
+</div>
+</section>
+<section class="card" id="s12">
+<span class="num">012</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 012. 멱집합의 정의</p>
+<p class="line"><span class="label">정리:</span>집합 A의 모든 부분집합을 모은 집합을 멱집합 P(A)라고 한다.</p>
+<p class="line"><span class="label">예시:</span>A={1,2}이면 P(A)={∅,{1},{2},{1,2}}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Power set definition</p>
+<p class="line"><span class="label">Theorem:</span>The set of all subsets of A is called the power set P(A).</p>
+<p class="line"><span class="label">Example:</span>If A={1,2}, then P(A)={∅,{1},{2},{1,2}}.</p>
+</div>
+</section>
+<section class="card" id="s13">
+<span class="num">013</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 013. 멱집합 원소 개수</p>
+<p class="line"><span class="label">정리:</span>원소가 n개인 집합의 멱집합 원소 개수는 2ⁿ개이다.</p>
+<p class="line"><span class="label">예시:</span>A={a,b,c}이면 부분집합은 2³=8개이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Size of a power set</p>
+<p class="line"><span class="label">Theorem:</span>A set with n elements has 2ⁿ subsets.</p>
+<p class="line"><span class="label">Example:</span>If A={a,b,c}, then A has 2³=8 subsets.</p>
+</div>
+</section>
+<section class="card" id="s14">
+<span class="num">014</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 014. 합집합의 정의</p>
+<p class="line"><span class="label">정리:</span>A 또는 B에 속하는 원소 전체의 집합을 A∪B라고 한다.</p>
+<p class="line"><span class="label">예시:</span>{1,2}∪{2,3}={1,2,3}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Union definition</p>
+<p class="line"><span class="label">Theorem:</span>A∪B is the set of all elements that are in A or in B.</p>
+<p class="line"><span class="label">Example:</span>{1,2}∪{2,3}={1,2,3}.</p>
+</div>
+</section>
+<section class="card" id="s15">
+<span class="num">015</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 015. 교집합의 정의</p>
+<p class="line"><span class="label">정리:</span>A와 B에 동시에 속하는 원소 전체의 집합을 A∩B라고 한다.</p>
+<p class="line"><span class="label">예시:</span>{1,2}∩{2,3}={2}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Intersection definition</p>
+<p class="line"><span class="label">Theorem:</span>A∩B is the set of all elements that are in both A and B.</p>
+<p class="line"><span class="label">Example:</span>{1,2}∩{2,3}={2}.</p>
+</div>
+</section>
+<section class="card" id="s16">
+<span class="num">016</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 016. 차집합의 정의</p>
+<p class="line"><span class="label">정리:</span>A에는 속하지만 B에는 속하지 않는 원소의 집합을 A−B라고 한다.</p>
+<p class="line"><span class="label">예시:</span>{1,2,3}−{2,3}={1}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Difference definition</p>
+<p class="line"><span class="label">Theorem:</span>A−B is the set of elements in A but not in B.</p>
+<p class="line"><span class="label">Example:</span>{1,2,3}−{2,3}={1}.</p>
+</div>
+</section>
+<section class="card" id="s17">
+<span class="num">017</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 017. 여집합의 정의</p>
+<p class="line"><span class="label">정리:</span>전체집합 U에서 A에 속하지 않는 원소들의 집합을 Aᶜ라고 한다.</p>
+<p class="line"><span class="label">예시:</span>U={1,2,3,4}, A={1,2}이면 Aᶜ={3,4}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Complement definition</p>
+<p class="line"><span class="label">Theorem:</span>In a universal set U, Aᶜ is the set of elements not in A.</p>
+<p class="line"><span class="label">Example:</span>If U={1,2,3,4} and A={1,2}, then Aᶜ={3,4}.</p>
+</div>
+</section>
+<section class="card" id="s18">
+<span class="num">018</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 018. 대칭차의 정의</p>
+<p class="line"><span class="label">정리:</span>A와 B 중 한쪽에만 속하는 원소들의 집합을 A△B라고 한다.</p>
+<p class="line"><span class="label">예시:</span>{1,2,3}△{3,4}={1,2,4}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Symmetric difference</p>
+<p class="line"><span class="label">Theorem:</span>A△B is the set of elements that belong to exactly one of A and B.</p>
+<p class="line"><span class="label">Example:</span>{1,2,3}△{3,4}={1,2,4}.</p>
+</div>
+</section>
+<section class="card" id="s19">
+<span class="num">019</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 019. 합집합 교환법칙</p>
+<p class="line"><span class="label">정리:</span>A∪B=B∪A이다.</p>
+<p class="line"><span class="label">예시:</span>{1}∪{2,3}={2,3}∪{1}={1,2,3}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Commutative law of union</p>
+<p class="line"><span class="label">Theorem:</span>A∪B=B∪A.</p>
+<p class="line"><span class="label">Example:</span>{1}∪{2,3}={2,3}∪{1}={1,2,3}.</p>
+</div>
+</section>
+<section class="card" id="s20">
+<span class="num">020</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 020. 교집합 교환법칙</p>
+<p class="line"><span class="label">정리:</span>A∩B=B∩A이다.</p>
+<p class="line"><span class="label">예시:</span>{1,2}∩{2,3}={2}={2,3}∩{1,2}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Commutative law of intersection</p>
+<p class="line"><span class="label">Theorem:</span>A∩B=B∩A.</p>
+<p class="line"><span class="label">Example:</span>{1,2}∩{2,3}={2}={2,3}∩{1,2}.</p>
+</div>
+</section>
+<section class="card" id="s21">
+<span class="num">021</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 021. 합집합 결합법칙</p>
+<p class="line"><span class="label">정리:</span>(A∪B)∪C=A∪(B∪C)이다.</p>
+<p class="line"><span class="label">예시:</span>({1}∪{2})∪{3}={1}∪({2}∪{3}).</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Associative law of union</p>
+<p class="line"><span class="label">Theorem:</span>(A∪B)∪C=A∪(B∪C).</p>
+<p class="line"><span class="label">Example:</span>({1}∪{2})∪{3}={1}∪({2}∪{3}).</p>
+</div>
+</section>
+<section class="card" id="s22">
+<span class="num">022</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 022. 교집합 결합법칙</p>
+<p class="line"><span class="label">정리:</span>(A∩B)∩C=A∩(B∩C)이다.</p>
+<p class="line"><span class="label">예시:</span>({1,2}∩{2,3})∩{2,4}={2}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Associative law of intersection</p>
+<p class="line"><span class="label">Theorem:</span>(A∩B)∩C=A∩(B∩C).</p>
+<p class="line"><span class="label">Example:</span>({1,2}∩{2,3})∩{2,4}={2}.</p>
+</div>
+</section>
+<section class="card" id="s23">
+<span class="num">023</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 023. 분배법칙 1</p>
+<p class="line"><span class="label">정리:</span>A∩(B∪C)=(A∩B)∪(A∩C)이다.</p>
+<p class="line"><span class="label">예시:</span>A={1,2}, B={2,3}, C={1,4}이면 양쪽 모두 {1,2}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Distributive law 1</p>
+<p class="line"><span class="label">Theorem:</span>A∩(B∪C)=(A∩B)∪(A∩C).</p>
+<p class="line"><span class="label">Example:</span>If A={1,2}, B={2,3}, and C={1,4}, both sides are {1,2}.</p>
+</div>
+</section>
+<section class="card" id="s24">
+<span class="num">024</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 024. 분배법칙 2</p>
+<p class="line"><span class="label">정리:</span>A∪(B∩C)=(A∪B)∩(A∪C)이다.</p>
+<p class="line"><span class="label">예시:</span>A={1}, B={1,2}, C={2,3}이면 양쪽 모두 {1,2}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Distributive law 2</p>
+<p class="line"><span class="label">Theorem:</span>A∪(B∩C)=(A∪B)∩(A∪C).</p>
+<p class="line"><span class="label">Example:</span>If A={1}, B={1,2}, and C={2,3}, both sides are {1,2}.</p>
+</div>
+</section>
+<section class="card" id="s25">
+<span class="num">025</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 025. 흡수법칙 1</p>
+<p class="line"><span class="label">정리:</span>A∪(A∩B)=A이다.</p>
+<p class="line"><span class="label">예시:</span>A={1,2}, B={2,3}이면 A∩B={2}, A∪{2}=A.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Absorption law 1</p>
+<p class="line"><span class="label">Theorem:</span>A∪(A∩B)=A.</p>
+<p class="line"><span class="label">Example:</span>If A={1,2} and B={2,3}, then A∩B={2} and A∪{2}=A.</p>
+</div>
+</section>
+<section class="card" id="s26">
+<span class="num">026</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 026. 흡수법칙 2</p>
+<p class="line"><span class="label">정리:</span>A∩(A∪B)=A이다.</p>
+<p class="line"><span class="label">예시:</span>A={1,2}, B={3}이면 A∪B={1,2,3}, A∩(A∪B)=A.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Absorption law 2</p>
+<p class="line"><span class="label">Theorem:</span>A∩(A∪B)=A.</p>
+<p class="line"><span class="label">Example:</span>If A={1,2} and B={3}, then A∩(A∪B)=A.</p>
+</div>
+</section>
+<section class="card" id="s27">
+<span class="num">027</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 027. 멱등법칙 1</p>
+<p class="line"><span class="label">정리:</span>A∪A=A이다.</p>
+<p class="line"><span class="label">예시:</span>{1,2}∪{1,2}={1,2}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Idempotent law 1</p>
+<p class="line"><span class="label">Theorem:</span>A∪A=A.</p>
+<p class="line"><span class="label">Example:</span>{1,2}∪{1,2}={1,2}.</p>
+</div>
+</section>
+<section class="card" id="s28">
+<span class="num">028</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 028. 멱등법칙 2</p>
+<p class="line"><span class="label">정리:</span>A∩A=A이다.</p>
+<p class="line"><span class="label">예시:</span>{1,2}∩{1,2}={1,2}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Idempotent law 2</p>
+<p class="line"><span class="label">Theorem:</span>A∩A=A.</p>
+<p class="line"><span class="label">Example:</span>{1,2}∩{1,2}={1,2}.</p>
+</div>
+</section>
+<section class="card" id="s29">
+<span class="num">029</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 029. 항등법칙 1</p>
+<p class="line"><span class="label">정리:</span>A∪∅=A이다.</p>
+<p class="line"><span class="label">예시:</span>{1,2}∪∅={1,2}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Identity law 1</p>
+<p class="line"><span class="label">Theorem:</span>A∪∅=A.</p>
+<p class="line"><span class="label">Example:</span>{1,2}∪∅={1,2}.</p>
+</div>
+</section>
+<section class="card" id="s30">
+<span class="num">030</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 030. 항등법칙 2</p>
+<p class="line"><span class="label">정리:</span>A∩U=A이다.</p>
+<p class="line"><span class="label">예시:</span>U={1,2,3}, A={1,2}이면 A∩U=A.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Identity law 2</p>
+<p class="line"><span class="label">Theorem:</span>A∩U=A.</p>
+<p class="line"><span class="label">Example:</span>If U={1,2,3} and A={1,2}, then A∩U=A.</p>
+</div>
+</section>
+<section class="card" id="s31">
+<span class="num">031</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 031. 지배법칙 1</p>
+<p class="line"><span class="label">정리:</span>A∪U=U이다.</p>
+<p class="line"><span class="label">예시:</span>U={1,2,3}, A={1}이면 A∪U=U.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Domination law 1</p>
+<p class="line"><span class="label">Theorem:</span>A∪U=U.</p>
+<p class="line"><span class="label">Example:</span>If U={1,2,3} and A={1}, then A∪U=U.</p>
+</div>
+</section>
+<section class="card" id="s32">
+<span class="num">032</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 032. 지배법칙 2</p>
+<p class="line"><span class="label">정리:</span>A∩∅=∅이다.</p>
+<p class="line"><span class="label">예시:</span>{1,2}∩∅=∅.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Domination law 2</p>
+<p class="line"><span class="label">Theorem:</span>A∩∅=∅.</p>
+<p class="line"><span class="label">Example:</span>{1,2}∩∅=∅.</p>
+</div>
+</section>
+<section class="card" id="s33">
+<span class="num">033</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 033. 보수법칙 1</p>
+<p class="line"><span class="label">정리:</span>A∪Aᶜ=U이다.</p>
+<p class="line"><span class="label">예시:</span>U={1,2,3}, A={1}이면 A∪Aᶜ={1,2,3}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Complement law 1</p>
+<p class="line"><span class="label">Theorem:</span>A∪Aᶜ=U.</p>
+<p class="line"><span class="label">Example:</span>If U={1,2,3} and A={1}, then A∪Aᶜ={1,2,3}.</p>
+</div>
+</section>
+<section class="card" id="s34">
+<span class="num">034</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 034. 보수법칙 2</p>
+<p class="line"><span class="label">정리:</span>A∩Aᶜ=∅이다.</p>
+<p class="line"><span class="label">예시:</span>A와 A가 아닌 원소가 동시에 될 수 없다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Complement law 2</p>
+<p class="line"><span class="label">Theorem:</span>A∩Aᶜ=∅.</p>
+<p class="line"><span class="label">Example:</span>An element cannot be both in A and not in A.</p>
+</div>
+</section>
+<section class="card" id="s35">
+<span class="num">035</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 035. 이중여집합 법칙</p>
+<p class="line"><span class="label">정리:</span>(Aᶜ)ᶜ=A이다.</p>
+<p class="line"><span class="label">예시:</span>U={1,2,3}, A={1,2}이면 Aᶜ={3}, (Aᶜ)ᶜ={1,2}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Double complement law</p>
+<p class="line"><span class="label">Theorem:</span>(Aᶜ)ᶜ=A.</p>
+<p class="line"><span class="label">Example:</span>If U={1,2,3} and A={1,2}, then Aᶜ={3} and (Aᶜ)ᶜ={1,2}.</p>
+</div>
+</section>
+<section class="card" id="s36">
+<span class="num">036</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 036. 드모르간 법칙 1</p>
+<p class="line"><span class="label">정리:</span>(A∪B)ᶜ=Aᶜ∩Bᶜ이다.</p>
+<p class="line"><span class="label">예시:</span>A 또는 B에 없는 것은 A에도 없고 B에도 없다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: De Morgan&amp;#x27;s law 1</p>
+<p class="line"><span class="label">Theorem:</span>(A∪B)ᶜ=Aᶜ∩Bᶜ.</p>
+<p class="line"><span class="label">Example:</span>Not being in A or B means being in neither A nor B.</p>
+</div>
+</section>
+<section class="card" id="s37">
+<span class="num">037</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 037. 드모르간 법칙 2</p>
+<p class="line"><span class="label">정리:</span>(A∩B)ᶜ=Aᶜ∪Bᶜ이다.</p>
+<p class="line"><span class="label">예시:</span>A와 B 모두에 속하지 않는다는 것은 A가 아니거나 B가 아니다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: De Morgan&amp;#x27;s law 2</p>
+<p class="line"><span class="label">Theorem:</span>(A∩B)ᶜ=Aᶜ∪Bᶜ.</p>
+<p class="line"><span class="label">Example:</span>Not being in both A and B means not in A or not in B.</p>
+</div>
+</section>
+<section class="card" id="s38">
+<span class="num">038</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 038. 차집합과 교집합</p>
+<p class="line"><span class="label">정리:</span>A−B=A∩Bᶜ이다.</p>
+<p class="line"><span class="label">예시:</span>A={1,2,3}, B={2}이면 A−B={1,3}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Difference and intersection</p>
+<p class="line"><span class="label">Theorem:</span>A−B=A∩Bᶜ.</p>
+<p class="line"><span class="label">Example:</span>If A={1,2,3} and B={2}, then A−B={1,3}.</p>
+</div>
+</section>
+<section class="card" id="s39">
+<span class="num">039</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 039. 차집합의 자기 소거</p>
+<p class="line"><span class="label">정리:</span>A−A=∅이다.</p>
+<p class="line"><span class="label">예시:</span>{1,2}−{1,2}=∅.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Self-difference</p>
+<p class="line"><span class="label">Theorem:</span>A−A=∅.</p>
+<p class="line"><span class="label">Example:</span>{1,2}−{1,2}=∅.</p>
+</div>
+</section>
+<section class="card" id="s40">
+<span class="num">040</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 040. 전체에서 공집합 제거</p>
+<p class="line"><span class="label">정리:</span>A−∅=A이다.</p>
+<p class="line"><span class="label">예시:</span>{1,2,3}−∅={1,2,3}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Removing the empty set</p>
+<p class="line"><span class="label">Theorem:</span>A−∅=A.</p>
+<p class="line"><span class="label">Example:</span>{1,2,3}−∅={1,2,3}.</p>
+</div>
+</section>
+<section class="card" id="s41">
+<span class="num">041</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 041. 공집합에서 빼기</p>
+<p class="line"><span class="label">정리:</span>∅−A=∅이다.</p>
+<p class="line"><span class="label">예시:</span>∅−{1,2}=∅.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Subtracting from the empty set</p>
+<p class="line"><span class="label">Theorem:</span>∅−A=∅.</p>
+<p class="line"><span class="label">Example:</span>∅−{1,2}=∅.</p>
+</div>
+</section>
+<section class="card" id="s42">
+<span class="num">042</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 042. 전체집합 차집합</p>
+<p class="line"><span class="label">정리:</span>U−A=Aᶜ이다.</p>
+<p class="line"><span class="label">예시:</span>U={1,2,3}, A={1}이면 U−A={2,3}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Universal-set difference</p>
+<p class="line"><span class="label">Theorem:</span>U−A=Aᶜ.</p>
+<p class="line"><span class="label">Example:</span>If U={1,2,3} and A={1}, then U−A={2,3}.</p>
+</div>
+</section>
+<section class="card" id="s43">
+<span class="num">043</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 043. 부분집합과 합집합</p>
+<p class="line"><span class="label">정리:</span>A⊆B이면 A∪B=B이다.</p>
+<p class="line"><span class="label">예시:</span>{1}⊆{1,2}이므로 {1}∪{1,2}={1,2}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Subset and union</p>
+<p class="line"><span class="label">Theorem:</span>If A⊆B, then A∪B=B.</p>
+<p class="line"><span class="label">Example:</span>Since {1}⊆{1,2}, {1}∪{1,2}={1,2}.</p>
+</div>
+</section>
+<section class="card" id="s44">
+<span class="num">044</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 044. 부분집합과 교집합</p>
+<p class="line"><span class="label">정리:</span>A⊆B이면 A∩B=A이다.</p>
+<p class="line"><span class="label">예시:</span>{1}⊆{1,2}이므로 {1}∩{1,2}={1}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Subset and intersection</p>
+<p class="line"><span class="label">Theorem:</span>If A⊆B, then A∩B=A.</p>
+<p class="line"><span class="label">Example:</span>Since {1}⊆{1,2}, {1}∩{1,2}={1}.</p>
+</div>
+</section>
+<section class="card" id="s45">
+<span class="num">045</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 045. 서로소의 정의</p>
+<p class="line"><span class="label">정리:</span>A∩B=∅이면 A와 B는 서로소이다.</p>
+<p class="line"><span class="label">예시:</span>짝수 집합과 홀수 집합은 자연수 안에서 서로소이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Disjoint sets</p>
+<p class="line"><span class="label">Theorem:</span>If A∩B=∅, then A and B are disjoint.</p>
+<p class="line"><span class="label">Example:</span>Even numbers and odd numbers are disjoint within the natural numbers.</p>
+</div>
+</section>
+<section class="card" id="s46">
+<span class="num">046</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 046. 서로소 합집합</p>
+<p class="line"><span class="label">정리:</span>서로소인 두 집합의 합집합 원소 수는 각 원소 수의 합이다.</p>
+<p class="line"><span class="label">예시:</span>{1,2}와 {3,4,5}는 서로소이므로 합집합 원소 수는 2+3=5.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Union of disjoint sets</p>
+<p class="line"><span class="label">Theorem:</span>If two sets are disjoint, the size of their union is the sum of their sizes.</p>
+<p class="line"><span class="label">Example:</span>{1,2} and {3,4,5} have union size 2+3=5.</p>
+</div>
+</section>
+<section class="card" id="s47">
+<span class="num">047</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 047. 포함배제 원리 2집합</p>
+<p class="line"><span class="label">정리:</span>|A∪B|=|A|+|B|−|A∩B|이다.</p>
+<p class="line"><span class="label">예시:</span>A={1,2,3}, B={3,4}이면 3+2−1=4.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Inclusion-exclusion for two sets</p>
+<p class="line"><span class="label">Theorem:</span>|A∪B|=|A|+|B|−|A∩B|.</p>
+<p class="line"><span class="label">Example:</span>If A={1,2,3} and B={3,4}, then 3+2−1=4.</p>
+</div>
+</section>
+<section class="card" id="s48">
+<span class="num">048</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 048. 포함배제 원리 3집합</p>
+<p class="line"><span class="label">정리:</span>세 집합의 합집합 크기는 각 크기를 더하고 교집합을 빼고 세 공통을 더한다.</p>
+<p class="line"><span class="label">예시:</span>세 동아리 인원 수를 셀 때 중복 가입자를 조정한다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Inclusion-exclusion for three sets</p>
+<p class="line"><span class="label">Theorem:</span>Add the three sizes, subtract pairwise intersections, and add the triple intersection.</p>
+<p class="line"><span class="label">Example:</span>Use it when counting students in three clubs with overlaps.</p>
+</div>
+</section>
+<section class="card" id="s49">
+<span class="num">049</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 049. 데카르트 곱</p>
+<p class="line"><span class="label">정리:</span>A×B는 순서쌍 (a,b)의 전체 집합이다.</p>
+<p class="line"><span class="label">예시:</span>A={1,2}, B={x,y}이면 A×B={(1,x),(1,y),(2,x),(2,y)}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Cartesian product</p>
+<p class="line"><span class="label">Theorem:</span>A×B is the set of all ordered pairs (a,b).</p>
+<p class="line"><span class="label">Example:</span>If A={1,2} and B={x,y}, then A×B={(1,x),(1,y),(2,x),(2,y)}.</p>
+</div>
+</section>
+<section class="card" id="s50">
+<span class="num">050</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 050. 데카르트 곱 크기</p>
+<p class="line"><span class="label">정리:</span>|A×B|=|A|×|B|이다.</p>
+<p class="line"><span class="label">예시:</span>A가 3개, B가 4개 원소이면 A×B는 12개이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Size of a Cartesian product</p>
+<p class="line"><span class="label">Theorem:</span>|A×B|=|A|×|B|.</p>
+<p class="line"><span class="label">Example:</span>If A has 3 elements and B has 4, then A×B has 12 elements.</p>
+</div>
+</section>
+<section class="card" id="s51">
+<span class="num">051</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 051. 순서쌍의 동일성</p>
+<p class="line"><span class="label">정리:</span>(a,b)=(c,d)이면 a=c이고 b=d이다.</p>
+<p class="line"><span class="label">예시:</span>(1,2)=(x,y)이면 x=1, y=2.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Equality of ordered pairs</p>
+<p class="line"><span class="label">Theorem:</span>If (a,b)=(c,d), then a=c and b=d.</p>
+<p class="line"><span class="label">Example:</span>If (1,2)=(x,y), then x=1 and y=2.</p>
+</div>
+</section>
+<section class="card" id="s52">
+<span class="num">052</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 052. 관계의 정의</p>
+<p class="line"><span class="label">정리:</span>A에서 B로의 관계는 A×B의 부분집합이다.</p>
+<p class="line"><span class="label">예시:</span>A={1,2}, B={3,4}, R={(1,3),(2,4)}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Relation definition</p>
+<p class="line"><span class="label">Theorem:</span>A relation from A to B is a subset of A×B.</p>
+<p class="line"><span class="label">Example:</span>If A={1,2}, B={3,4}, then R={(1,3),(2,4)} is a relation.</p>
+</div>
+</section>
+<section class="card" id="s53">
+<span class="num">053</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 053. 반사관계</p>
+<p class="line"><span class="label">정리:</span>A의 모든 x에 대해 (x,x)가 관계 R에 있으면 반사관계이다.</p>
+<p class="line"><span class="label">예시:</span>≤ 관계는 모든 수 x에 대해 x≤x이므로 반사적이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Reflexive relation</p>
+<p class="line"><span class="label">Theorem:</span>R is reflexive if (x,x)∈R for every x in A.</p>
+<p class="line"><span class="label">Example:</span>The relation ≤ is reflexive because x≤x for every x.</p>
+</div>
+</section>
+<section class="card" id="s54">
+<span class="num">054</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 054. 대칭관계</p>
+<p class="line"><span class="label">정리:</span>(a,b)∈R이면 (b,a)∈R일 때 대칭관계이다.</p>
+<p class="line"><span class="label">예시:</span>친구 관계는 보통 대칭관계이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Symmetric relation</p>
+<p class="line"><span class="label">Theorem:</span>R is symmetric if (a,b)∈R implies (b,a)∈R.</p>
+<p class="line"><span class="label">Example:</span>Friendship is usually symmetric.</p>
+</div>
+</section>
+<section class="card" id="s55">
+<span class="num">055</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 055. 반대칭관계</p>
+<p class="line"><span class="label">정리:</span>(a,b)∈R, (b,a)∈R이면 a=b일 때 반대칭관계이다.</p>
+<p class="line"><span class="label">예시:</span>≤ 관계에서 a≤b이고 b≤a이면 a=b.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Antisymmetric relation</p>
+<p class="line"><span class="label">Theorem:</span>R is antisymmetric if (a,b)∈R and (b,a)∈R imply a=b.</p>
+<p class="line"><span class="label">Example:</span>If a≤b and b≤a, then a=b.</p>
+</div>
+</section>
+<section class="card" id="s56">
+<span class="num">056</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 056. 추이관계</p>
+<p class="line"><span class="label">정리:</span>(a,b)∈R, (b,c)∈R이면 (a,c)∈R일 때 추이관계이다.</p>
+<p class="line"><span class="label">예시:</span>a≤b, b≤c이면 a≤c.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Transitive relation</p>
+<p class="line"><span class="label">Theorem:</span>R is transitive if (a,b)∈R and (b,c)∈R imply (a,c)∈R.</p>
+<p class="line"><span class="label">Example:</span>If a≤b and b≤c, then a≤c.</p>
+</div>
+</section>
+<section class="card" id="s57">
+<span class="num">057</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 057. 동치관계</p>
+<p class="line"><span class="label">정리:</span>반사성, 대칭성, 추이성을 모두 만족하는 관계이다.</p>
+<p class="line"><span class="label">예시:</span>정수를 3으로 나눈 나머지가 같다는 관계는 동치관계이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Equivalence relation</p>
+<p class="line"><span class="label">Theorem:</span>A relation that is reflexive, symmetric, and transitive.</p>
+<p class="line"><span class="label">Example:</span>Having the same remainder modulo 3 is an equivalence relation.</p>
+</div>
+</section>
+<section class="card" id="s58">
+<span class="num">058</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 058. 동치류</p>
+<p class="line"><span class="label">정리:</span>동치관계에서 서로 동치인 원소들의 모임이다.</p>
+<p class="line"><span class="label">예시:</span>mod 3에서 [1]={..., -2,1,4,7,...}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Equivalence class</p>
+<p class="line"><span class="label">Theorem:</span>The set of all elements equivalent to a given element.</p>
+<p class="line"><span class="label">Example:</span>Modulo 3, [1]={..., -2,1,4,7,...}.</p>
+</div>
+</section>
+<section class="card" id="s59">
+<span class="num">059</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 059. 분할</p>
+<p class="line"><span class="label">정리:</span>집합을 겹치지 않는 여러 부분집합으로 나누는 것이다.</p>
+<p class="line"><span class="label">예시:</span>학생 전체를 학급별로 나누면 분할이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Partition</p>
+<p class="line"><span class="label">Theorem:</span>A division of a set into non-overlapping subsets.</p>
+<p class="line"><span class="label">Example:</span>Dividing all students by class forms a partition.</p>
+</div>
+</section>
+<section class="card" id="s60">
+<span class="num">060</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 060. 동치관계와 분할</p>
+<p class="line"><span class="label">정리:</span>동치관계는 집합의 분할을 만들고, 분할은 동치관계를 만든다.</p>
+<p class="line"><span class="label">예시:</span>나머지가 같은 수끼리 묶으면 동치류 분할이 된다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Equivalence relations and partitions</p>
+<p class="line"><span class="label">Theorem:</span>Every equivalence relation creates a partition, and every partition creates an equivalence relation.</p>
+<p class="line"><span class="label">Example:</span>Grouping integers by equal remainders gives equivalence classes.</p>
+</div>
+</section>
+<section class="card" id="s61">
+<span class="num">061</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 061. 함수의 정의</p>
+<p class="line"><span class="label">정리:</span>A의 각 원소에 B의 원소가 정확히 하나 대응되면 함수이다.</p>
+<p class="line"><span class="label">예시:</span>f(x)=x+1은 정수에서 정수로 가는 함수이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Function definition</p>
+<p class="line"><span class="label">Theorem:</span>A function assigns exactly one element of B to each element of A.</p>
+<p class="line"><span class="label">Example:</span>f(x)=x+1 is a function from integers to integers.</p>
+</div>
+</section>
+<section class="card" id="s62">
+<span class="num">062</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 062. 정의역</p>
+<p class="line"><span class="label">정리:</span>함수에 입력할 수 있는 원소들의 집합이다.</p>
+<p class="line"><span class="label">예시:</span>f:A→B에서 A가 정의역이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Domain</p>
+<p class="line"><span class="label">Theorem:</span>The set of all possible inputs of a function.</p>
+<p class="line"><span class="label">Example:</span>In f:A→B, A is the domain.</p>
+</div>
+</section>
+<section class="card" id="s63">
+<span class="num">063</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 063. 공역</p>
+<p class="line"><span class="label">정리:</span>함수의 출력이 속하도록 정해진 집합이다.</p>
+<p class="line"><span class="label">예시:</span>f:A→B에서 B가 공역이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Codomain</p>
+<p class="line"><span class="label">Theorem:</span>The set in which the outputs of a function are declared to lie.</p>
+<p class="line"><span class="label">Example:</span>In f:A→B, B is the codomain.</p>
+</div>
+</section>
+<section class="card" id="s64">
+<span class="num">064</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 064. 치역</p>
+<p class="line"><span class="label">정리:</span>실제로 함수값으로 나오는 원소들의 집합이다.</p>
+<p class="line"><span class="label">예시:</span>f(x)=x², 정의역 {-2,-1,0,1,2}이면 치역 {0,1,4}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Range</p>
+<p class="line"><span class="label">Theorem:</span>The set of values that actually occur as outputs.</p>
+<p class="line"><span class="label">Example:</span>For f(x)=x² on {-2,-1,0,1,2}, the range is {0,1,4}.</p>
+</div>
+</section>
+<section class="card" id="s65">
+<span class="num">065</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 065. 일대일 함수</p>
+<p class="line"><span class="label">정리:</span>서로 다른 입력은 서로 다른 출력으로 가는 함수이다.</p>
+<p class="line"><span class="label">예시:</span>f(x)=2x는 정수에서 정수로 일대일이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Injective function</p>
+<p class="line"><span class="label">Theorem:</span>Different inputs produce different outputs.</p>
+<p class="line"><span class="label">Example:</span>f(x)=2x is injective from integers to integers.</p>
+</div>
+</section>
+<section class="card" id="s66">
+<span class="num">066</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 066. 전사 함수</p>
+<p class="line"><span class="label">정리:</span>공역의 모든 원소가 적어도 하나의 입력값으로 나온다.</p>
+<p class="line"><span class="label">예시:</span>f:{1,2,3}→{a,b}, f(1)=a, f(2)=b, f(3)=b는 전사이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Surjective function</p>
+<p class="line"><span class="label">Theorem:</span>Every element of the codomain is hit by at least one input.</p>
+<p class="line"><span class="label">Example:</span>f:{1,2,3}→{a,b} with f(1)=a, f(2)=b, f(3)=b is surjective.</p>
+</div>
+</section>
+<section class="card" id="s67">
+<span class="num">067</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 067. 전단사 함수</p>
+<p class="line"><span class="label">정리:</span>일대일이면서 전사인 함수이다.</p>
+<p class="line"><span class="label">예시:</span>학생 3명과 의자 3개가 정확히 하나씩 대응되면 전단사이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Bijective function</p>
+<p class="line"><span class="label">Theorem:</span>A function that is both injective and surjective.</p>
+<p class="line"><span class="label">Example:</span>Three students matched one-to-one with three chairs form a bijection.</p>
+</div>
+</section>
+<section class="card" id="s68">
+<span class="num">068</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 068. 역함수 존재 정리</p>
+<p class="line"><span class="label">정리:</span>함수 f가 전단사이면 역함수 f⁻¹가 존재한다.</p>
+<p class="line"><span class="label">예시:</span>f(x)=x+3은 역함수 f⁻¹(x)=x−3을 가진다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Inverse function theorem</p>
+<p class="line"><span class="label">Theorem:</span>If f is bijective, then an inverse function f⁻¹ exists.</p>
+<p class="line"><span class="label">Example:</span>f(x)=x+3 has inverse f⁻¹(x)=x−3.</p>
+</div>
+</section>
+<section class="card" id="s69">
+<span class="num">069</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 069. 함수 합성</p>
+<p class="line"><span class="label">정리:</span>f:A→B, g:B→C이면 g∘f:A→C를 정의할 수 있다.</p>
+<p class="line"><span class="label">예시:</span>f(x)=x+1, g(x)=2x이면 g(f(x))=2x+2.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Composition of functions</p>
+<p class="line"><span class="label">Theorem:</span>If f:A→B and g:B→C, then g∘f:A→C can be defined.</p>
+<p class="line"><span class="label">Example:</span>If f(x)=x+1 and g(x)=2x, then g(f(x))=2x+2.</p>
+</div>
+</section>
+<section class="card" id="s70">
+<span class="num">070</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 070. 항등함수</p>
+<p class="line"><span class="label">정리:</span>모든 원소를 자기 자신으로 보내는 함수이다.</p>
+<p class="line"><span class="label">예시:</span>id_A(x)=x.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Identity function</p>
+<p class="line"><span class="label">Theorem:</span>A function that sends every element to itself.</p>
+<p class="line"><span class="label">Example:</span>id_A(x)=x.</p>
+</div>
+</section>
+<section class="card" id="s71">
+<span class="num">071</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 071. 상수함수</p>
+<p class="line"><span class="label">정리:</span>모든 입력을 같은 출력으로 보내는 함수이다.</p>
+<p class="line"><span class="label">예시:</span>f(x)=5는 상수함수이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Constant function</p>
+<p class="line"><span class="label">Theorem:</span>A function that sends every input to the same output.</p>
+<p class="line"><span class="label">Example:</span>f(x)=5 is a constant function.</p>
+</div>
+</section>
+<section class="card" id="s72">
+<span class="num">072</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 072. 상 집합</p>
+<p class="line"><span class="label">정리:</span>S⊆A일 때 f(S)={f(x)|x∈S}이다.</p>
+<p class="line"><span class="label">예시:</span>f(x)=x², S={-2,1}이면 f(S)={1,4}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Image of a set</p>
+<p class="line"><span class="label">Theorem:</span>If S⊆A, then f(S)={f(x)|x∈S}.</p>
+<p class="line"><span class="label">Example:</span>If f(x)=x² and S={-2,1}, then f(S)={1,4}.</p>
+</div>
+</section>
+<section class="card" id="s73">
+<span class="num">073</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 073. 역상 집합</p>
+<p class="line"><span class="label">정리:</span>T⊆B일 때 f⁻¹(T)={x∈A|f(x)∈T}이다.</p>
+<p class="line"><span class="label">예시:</span>f(x)=x², T={4}이면 역상은 {-2,2}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Preimage of a set</p>
+<p class="line"><span class="label">Theorem:</span>If T⊆B, then f⁻¹(T)={x∈A|f(x)∈T}.</p>
+<p class="line"><span class="label">Example:</span>If f(x)=x² and T={4}, then the preimage is {-2,2}.</p>
+</div>
+</section>
+<section class="card" id="s74">
+<span class="num">074</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 074. 상은 합집합 보존</p>
+<p class="line"><span class="label">정리:</span>f(A∪B)=f(A)∪f(B)이다.</p>
+<p class="line"><span class="label">예시:</span>입력 묶음을 합친 뒤 출력해도, 각각 출력해서 합쳐도 같다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Images preserve unions</p>
+<p class="line"><span class="label">Theorem:</span>f(A∪B)=f(A)∪f(B).</p>
+<p class="line"><span class="label">Example:</span>Combining inputs first or combining their outputs later gives the same set.</p>
+</div>
+</section>
+<section class="card" id="s75">
+<span class="num">075</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 075. 역상은 합집합 보존</p>
+<p class="line"><span class="label">정리:</span>f⁻¹(A∪B)=f⁻¹(A)∪f⁻¹(B)이다.</p>
+<p class="line"><span class="label">예시:</span>출력이 A 또는 B에 들어가는 입력을 모은다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Preimages preserve unions</p>
+<p class="line"><span class="label">Theorem:</span>f⁻¹(A∪B)=f⁻¹(A)∪f⁻¹(B).</p>
+<p class="line"><span class="label">Example:</span>Collect inputs whose outputs lie in A or B.</p>
+</div>
+</section>
+<section class="card" id="s76">
+<span class="num">076</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 076. 역상은 교집합 보존</p>
+<p class="line"><span class="label">정리:</span>f⁻¹(A∩B)=f⁻¹(A)∩f⁻¹(B)이다.</p>
+<p class="line"><span class="label">예시:</span>출력이 A와 B에 동시에 들어가는 입력을 모은다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Preimages preserve intersections</p>
+<p class="line"><span class="label">Theorem:</span>f⁻¹(A∩B)=f⁻¹(A)∩f⁻¹(B).</p>
+<p class="line"><span class="label">Example:</span>Collect inputs whose outputs lie in both A and B.</p>
+</div>
+</section>
+<section class="card" id="s77">
+<span class="num">077</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 077. 역상은 여집합 보존</p>
+<p class="line"><span class="label">정리:</span>f⁻¹(Bᶜ)=(f⁻¹(B))ᶜ이다.</p>
+<p class="line"><span class="label">예시:</span>출력이 B가 아닌 입력은 B로 가지 않는 입력이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Preimages preserve complements</p>
+<p class="line"><span class="label">Theorem:</span>f⁻¹(Bᶜ)=(f⁻¹(B))ᶜ.</p>
+<p class="line"><span class="label">Example:</span>Inputs whose outputs are not in B are exactly inputs that do not map into B.</p>
+</div>
+</section>
+<section class="card" id="s78">
+<span class="num">078</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 078. 상은 교집합을 항상 보존하지 않음</p>
+<p class="line"><span class="label">정리:</span>일반적으로 f(A∩B)⊆f(A)∩f(B)만 성립한다.</p>
+<p class="line"><span class="label">예시:</span>f(1)=f(2)=a, A={1}, B={2}이면 왼쪽은 ∅, 오른쪽은 {a}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Images do not always preserve intersections</p>
+<p class="line"><span class="label">Theorem:</span>In general, only f(A∩B)⊆f(A)∩f(B) holds.</p>
+<p class="line"><span class="label">Example:</span>If f(1)=f(2)=a, A={1}, and B={2}, then the left side is ∅ and the right side is {a}.</p>
+</div>
+</section>
+<section class="card" id="s79">
+<span class="num">079</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 079. 기수의 개념</p>
+<p class="line"><span class="label">정리:</span>집합의 원소 개수 또는 크기를 기수라고 한다.</p>
+<p class="line"><span class="label">예시:</span>|{a,b,c}|=3.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Cardinality</p>
+<p class="line"><span class="label">Theorem:</span>The size or number of elements of a set is its cardinality.</p>
+<p class="line"><span class="label">Example:</span>|{a,b,c}|=3.</p>
+</div>
+</section>
+<section class="card" id="s80">
+<span class="num">080</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 080. 유한집합</p>
+<p class="line"><span class="label">정리:</span>원소의 개수가 자연수로 셀 수 있는 집합이다.</p>
+<p class="line"><span class="label">예시:</span>{월,화,수,목,금,토,일}은 유한집합이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Finite set</p>
+<p class="line"><span class="label">Theorem:</span>A set whose elements can be counted by a natural number.</p>
+<p class="line"><span class="label">Example:</span>{Mon,Tue,Wed,Thu,Fri,Sat,Sun} is finite.</p>
+</div>
+</section>
+<section class="card" id="s81">
+<span class="num">081</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 081. 무한집합</p>
+<p class="line"><span class="label">정리:</span>원소의 개수가 끝없이 계속되는 집합이다.</p>
+<p class="line"><span class="label">예시:</span>자연수 집합 N은 무한집합이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Infinite set</p>
+<p class="line"><span class="label">Theorem:</span>A set whose elements continue without end.</p>
+<p class="line"><span class="label">Example:</span>The set of natural numbers N is infinite.</p>
+</div>
+</section>
+<section class="card" id="s82">
+<span class="num">082</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 082. 가산집합</p>
+<p class="line"><span class="label">정리:</span>자연수와 일대일 대응될 수 있는 집합이다.</p>
+<p class="line"><span class="label">예시:</span>짝수 집합은 2,4,6,...으로 셀 수 있어 가산이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Countable set</p>
+<p class="line"><span class="label">Theorem:</span>A set that can be put in one-to-one correspondence with the natural numbers.</p>
+<p class="line"><span class="label">Example:</span>The even numbers are countable: 2,4,6,...</p>
+</div>
+</section>
+<section class="card" id="s83">
+<span class="num">083</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 083. 정수의 가산성</p>
+<p class="line"><span class="label">정리:</span>정수 집합 Z는 가산집합이다.</p>
+<p class="line"><span class="label">예시:</span>0,1,-1,2,-2,3,-3,... 순서로 셀 수 있다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Countability of integers</p>
+<p class="line"><span class="label">Theorem:</span>The set of integers Z is countable.</p>
+<p class="line"><span class="label">Example:</span>They can be listed as 0,1,-1,2,-2,3,-3,...</p>
+</div>
+</section>
+<section class="card" id="s84">
+<span class="num">084</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 084. 유리수의 가산성</p>
+<p class="line"><span class="label">정리:</span>유리수 집합 Q는 가산집합이다.</p>
+<p class="line"><span class="label">예시:</span>분자와 분모를 격자처럼 배열해 차례로 셀 수 있다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Countability of rational numbers</p>
+<p class="line"><span class="label">Theorem:</span>The set of rational numbers Q is countable.</p>
+<p class="line"><span class="label">Example:</span>Arrange numerators and denominators in a grid and list them systematically.</p>
+</div>
+</section>
+<section class="card" id="s85">
+<span class="num">085</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 085. 실수의 비가산성</p>
+<p class="line"><span class="label">정리:</span>실수 집합 R은 자연수처럼 셀 수 없다.</p>
+<p class="line"><span class="label">예시:</span>0과 1 사이의 실수도 대각선 논법으로 셀 수 없다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Uncountability of real numbers</p>
+<p class="line"><span class="label">Theorem:</span>The set of real numbers R cannot be counted like the natural numbers.</p>
+<p class="line"><span class="label">Example:</span>Even the real numbers between 0 and 1 are uncountable by diagonalization.</p>
+</div>
+</section>
+<section class="card" id="s86">
+<span class="num">086</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 086. 칸토어 대각선 논법</p>
+<p class="line"><span class="label">정리:</span>실수 목록이 있다고 가정해도 목록에 없는 새 실수를 만들 수 있다.</p>
+<p class="line"><span class="label">예시:</span>소수 전개에서 n번째 숫자를 다르게 바꾸면 모든 n번째 수와 다르다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Cantor&amp;#x27;s diagonal argument</p>
+<p class="line"><span class="label">Theorem:</span>Even if a list of real numbers is given, a new real number not on the list can be constructed.</p>
+<p class="line"><span class="label">Example:</span>Change the nth digit of the nth number.</p>
+</div>
+</section>
+<section class="card" id="s87">
+<span class="num">087</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 087. 칸토어 정리</p>
+<p class="line"><span class="label">정리:</span>어떤 집합 A에 대해서도 |A|&amp;lt;|P(A)|이다.</p>
+<p class="line"><span class="label">예시:</span>A={1,2}이면 |A|=2, |P(A)|=4.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Cantor&amp;#x27;s theorem</p>
+<p class="line"><span class="label">Theorem:</span>For every set A, |A|&amp;lt;|P(A)|.</p>
+<p class="line"><span class="label">Example:</span>If A={1,2}, then |A|=2 and |P(A)|=4.</p>
+</div>
+</section>
+<section class="card" id="s88">
+<span class="num">088</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 088. 슈뢰더-베른슈타인 정리</p>
+<p class="line"><span class="label">정리:</span>A에서 B로, B에서 A로 각각 일대일 함수가 있으면 A와 B는 같은 크기이다.</p>
+<p class="line"><span class="label">예시:</span>두 무한집합의 크기 비교에 사용된다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Schroeder-Bernstein theorem</p>
+<p class="line"><span class="label">Theorem:</span>If there are injections A→B and B→A, then A and B have the same cardinality.</p>
+<p class="line"><span class="label">Example:</span>It is used to compare sizes of infinite sets.</p>
+</div>
+</section>
+<section class="card" id="s89">
+<span class="num">089</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 089. 동일 기수</p>
+<p class="line"><span class="label">정리:</span>두 집합 사이에 전단사 함수가 있으면 두 집합의 기수가 같다.</p>
+<p class="line"><span class="label">예시:</span>자연수와 짝수는 n↦2n으로 같은 크기이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Equal cardinality</p>
+<p class="line"><span class="label">Theorem:</span>Two sets have the same cardinality if there is a bijection between them.</p>
+<p class="line"><span class="label">Example:</span>Natural numbers and even numbers have the same size via n↦2n.</p>
+</div>
+</section>
+<section class="card" id="s90">
+<span class="num">090</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 090. 유한집합의 부분집합 크기</p>
+<p class="line"><span class="label">정리:</span>A⊆B이고 B가 유한집합이면 |A|≤|B|이다.</p>
+<p class="line"><span class="label">예시:</span>{1,3}⊆{1,2,3,4}이므로 2≤4.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Size of subsets of finite sets</p>
+<p class="line"><span class="label">Theorem:</span>If A⊆B and B is finite, then |A|≤|B|.</p>
+<p class="line"><span class="label">Example:</span>Since {1,3}⊆{1,2,3,4}, 2≤4.</p>
+</div>
+</section>
+<section class="card" id="s91">
+<span class="num">091</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 091. 비둘기집 원리</p>
+<p class="line"><span class="label">정리:</span>n+1개 이상의 물건을 n개의 상자에 넣으면 어떤 상자에는 2개 이상 들어간다.</p>
+<p class="line"><span class="label">예시:</span>학생 13명이면 같은 생일 월을 가진 학생이 적어도 2명 있다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Pigeonhole principle</p>
+<p class="line"><span class="label">Theorem:</span>If more than n objects are put into n boxes, some box contains at least two objects.</p>
+<p class="line"><span class="label">Example:</span>Among 13 students, at least two share a birth month.</p>
+</div>
+</section>
+<section class="card" id="s92">
+<span class="num">092</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 092. 일반화된 비둘기집 원리</p>
+<p class="line"><span class="label">정리:</span>N개 물건을 k개 상자에 넣으면 어떤 상자에는 적어도 ⌈N/k⌉개가 들어간다.</p>
+<p class="line"><span class="label">예시:</span>31명을 5조로 나누면 한 조는 적어도 7명이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Generalized pigeonhole principle</p>
+<p class="line"><span class="label">Theorem:</span>If N objects are put into k boxes, some box contains at least ⌈N/k⌉ objects.</p>
+<p class="line"><span class="label">Example:</span>Dividing 31 people into 5 groups gives at least one group of 7.</p>
+</div>
+</section>
+<section class="card" id="s93">
+<span class="num">093</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 093. 선택공리</p>
+<p class="line"><span class="label">정리:</span>공집합이 아닌 집합들의 모임에서 각 집합마다 원소 하나를 선택할 수 있다고 보는 원리이다.</p>
+<p class="line"><span class="label">예시:</span>무한히 많은 양말 상자에서 양말 하나씩 고르는 상황.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Axiom of choice</p>
+<p class="line"><span class="label">Theorem:</span>From each nonempty set in a collection, one element can be chosen.</p>
+<p class="line"><span class="label">Example:</span>Choosing one sock from each of infinitely many boxes.</p>
+</div>
+</section>
+<section class="card" id="s94">
+<span class="num">094</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 094. 조른 보조정리</p>
+<p class="line"><span class="label">정리:</span>부분순서집합에서 모든 사슬이 상계를 가지면 극대원소가 존재한다는 정리이다.</p>
+<p class="line"><span class="label">예시:</span>고급 대수학에서 기저 존재 증명에 쓰인다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Zorn&amp;#x27;s lemma</p>
+<p class="line"><span class="label">Theorem:</span>If every chain in a partially ordered set has an upper bound, then a maximal element exists.</p>
+<p class="line"><span class="label">Example:</span>It is used to prove the existence of bases in algebra.</p>
+</div>
+</section>
+<section class="card" id="s95">
+<span class="num">095</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 095. 정렬정리</p>
+<p class="line"><span class="label">정리:</span>선택공리와 동치인 명제로, 모든 집합은 잘 정렬될 수 있다.</p>
+<p class="line"><span class="label">예시:</span>임의의 집합에도 어떤 순서를 정해 최소 원소가 있게 만들 수 있다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Well-ordering theorem</p>
+<p class="line"><span class="label">Theorem:</span>Equivalent to the axiom of choice, it says every set can be well-ordered.</p>
+<p class="line"><span class="label">Example:</span>Any set can be given an order in which every nonempty subset has a least element.</p>
+</div>
+</section>
+<section class="card" id="s96">
+<span class="num">096</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 096. 부분순서</p>
+<p class="line"><span class="label">정리:</span>반사성, 반대칭성, 추이성을 만족하는 관계이다.</p>
+<p class="line"><span class="label">예시:</span>부분집합 관계 ⊆는 멱집합에서 부분순서이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Partial order</p>
+<p class="line"><span class="label">Theorem:</span>A relation that is reflexive, antisymmetric, and transitive.</p>
+<p class="line"><span class="label">Example:</span>The subset relation ⊆ is a partial order on a power set.</p>
+</div>
+</section>
+<section class="card" id="s97">
+<span class="num">097</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 097. 전순서</p>
+<p class="line"><span class="label">정리:</span>임의의 두 원소가 항상 비교 가능한 부분순서이다.</p>
+<p class="line"><span class="label">예시:</span>실수의 ≤ 관계는 전순서이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Total order</p>
+<p class="line"><span class="label">Theorem:</span>A partial order in which any two elements are comparable.</p>
+<p class="line"><span class="label">Example:</span>The usual ≤ relation on real numbers is a total order.</p>
+</div>
+</section>
+<section class="card" id="s98">
+<span class="num">098</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 098. 잘순서</p>
+<p class="line"><span class="label">정리:</span>공집합이 아닌 모든 부분집합이 최소 원소를 가지는 순서이다.</p>
+<p class="line"><span class="label">예시:</span>자연수의 보통 순서는 잘순서이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Well-order</p>
+<p class="line"><span class="label">Theorem:</span>An order in which every nonempty subset has a least element.</p>
+<p class="line"><span class="label">Example:</span>The usual order on natural numbers is a well-order.</p>
+</div>
+</section>
+<section class="card" id="s99">
+<span class="num">099</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 099. 최소원소</p>
+<p class="line"><span class="label">정리:</span>집합의 모든 원소보다 작거나 같은 원소이다.</p>
+<p class="line"><span class="label">예시:</span>{3,5,7}에서 3은 최소원소이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Least element</p>
+<p class="line"><span class="label">Theorem:</span>An element that is less than or equal to every element of a set.</p>
+<p class="line"><span class="label">Example:</span>In {3,5,7}, 3 is the least element.</p>
+</div>
+</section>
+<section class="card" id="s100">
+<span class="num">100</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 100. 극소원소</p>
+<p class="line"><span class="label">정리:</span>자기보다 더 작은 원소가 없는 원소이다.</p>
+<p class="line"><span class="label">예시:</span>부분순서에서는 극소원소가 여러 개 있을 수 있다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Minimal element</p>
+<p class="line"><span class="label">Theorem:</span>An element with no smaller element below it.</p>
+<p class="line"><span class="label">Example:</span>In a partial order, there may be several minimal elements.</p>
+</div>
+</section>
+<section class="card" id="s101">
+<span class="num">101</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 101. 상계</p>
+<p class="line"><span class="label">정리:</span>부분집합의 모든 원소보다 크거나 같은 원소이다.</p>
+<p class="line"><span class="label">예시:</span>실수에서 {1,2,3}의 상계는 3,4,5 등이 있다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Upper bound</p>
+<p class="line"><span class="label">Theorem:</span>An element greater than or equal to every element of a subset.</p>
+<p class="line"><span class="label">Example:</span>In real numbers, 3,4,5 are upper bounds of {1,2,3}.</p>
+</div>
+</section>
+<section class="card" id="s102">
+<span class="num">102</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 102. 최소상계</p>
+<p class="line"><span class="label">정리:</span>상계 중 가장 작은 것을 최소상계 또는 상한이라고 한다.</p>
+<p class="line"><span class="label">예시:</span>{x∈R | x&amp;lt;2}의 최소상계는 2이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Least upper bound</p>
+<p class="line"><span class="label">Theorem:</span>The smallest of all upper bounds, also called the supremum.</p>
+<p class="line"><span class="label">Example:</span>The least upper bound of {x∈R | x&amp;lt;2} is 2.</p>
+</div>
+</section>
+<section class="card" id="s103">
+<span class="num">103</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 103. 귀납법과 자연수</p>
+<p class="line"><span class="label">정리:</span>자연수의 부분집합이 1을 포함하고 다음 수로 넘어가면 전체 자연수를 포함한다.</p>
+<p class="line"><span class="label">예시:</span>1에서 시작해 n이면 n+1도 성립함을 보이면 모든 자연수에 성립한다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Induction and natural numbers</p>
+<p class="line"><span class="label">Theorem:</span>If a subset of natural numbers contains 1 and passes from n to n+1, it contains all natural numbers.</p>
+<p class="line"><span class="label">Example:</span>Prove a statement for 1 and then prove n implies n+1.</p>
+</div>
+</section>
+<section class="card" id="s104">
+<span class="num">104</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 104. 초한귀납법</p>
+<p class="line"><span class="label">정리:</span>잘순서집합에서 이전 모든 단계가 참이면 현재 단계도 참임을 이용하는 증명법이다.</p>
+<p class="line"><span class="label">예시:</span>순서수가 등장하는 고급 집합론에서 사용된다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Transfinite induction</p>
+<p class="line"><span class="label">Theorem:</span>A proof method on well-ordered sets using all previous stages to prove the current stage.</p>
+<p class="line"><span class="label">Example:</span>It is used in advanced set theory with ordinals.</p>
+</div>
+</section>
+<section class="card" id="s105">
+<span class="num">105</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 105. 순서수</p>
+<p class="line"><span class="label">정리:</span>잘 정렬된 집합의 순서 구조를 나타내는 대상이다.</p>
+<p class="line"><span class="label">예시:</span>0,1,2,3,...,ω는 대표적인 순서수이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Ordinal number</p>
+<p class="line"><span class="label">Theorem:</span>An object representing the order type of a well-ordered set.</p>
+<p class="line"><span class="label">Example:</span>0,1,2,3,...,ω are typical ordinals.</p>
+</div>
+</section>
+<section class="card" id="s106">
+<span class="num">106</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 106. 기수 비교</p>
+<p class="line"><span class="label">정리:</span>|A|≤|B|는 A에서 B로 가는 일대일 함수가 있음을 뜻한다.</p>
+<p class="line"><span class="label">예시:</span>자연수에서 정수로 포함 함수가 있으므로 |N|≤|Z|.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Comparison of cardinalities</p>
+<p class="line"><span class="label">Theorem:</span>|A|≤|B| means there is an injection from A to B.</p>
+<p class="line"><span class="label">Example:</span>The inclusion from N to Z shows |N|≤|Z|.</p>
+</div>
+</section>
+<section class="card" id="s107">
+<span class="num">107</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 107. 러셀 역설</p>
+<p class="line"><span class="label">정리:</span>자기 자신을 원소로 갖지 않는 모든 집합의 집합을 생각하면 모순이 생긴다.</p>
+<p class="line"><span class="label">예시:</span>R={x|x∉x}라 하면 R∈R인지 R∉R인지 모순이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Russell&amp;#x27;s paradox</p>
+<p class="line"><span class="label">Theorem:</span>The set of all sets that do not contain themselves leads to a contradiction.</p>
+<p class="line"><span class="label">Example:</span>If R={x|x∉x}, asking whether R∈R creates a contradiction.</p>
+</div>
+</section>
+<section class="card" id="s108">
+<span class="num">108</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 108. 공리적 집합론의 필요성</p>
+<p class="line"><span class="label">정리:</span>러셀 역설 같은 모순을 피하기 위해 집합을 공리로 엄밀히 다룬다.</p>
+<p class="line"><span class="label">예시:</span>ZF, ZFC 집합론은 현대 수학의 기초 체계이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Need for axiomatic set theory</p>
+<p class="line"><span class="label">Theorem:</span>Sets are handled by axioms to avoid contradictions such as Russell&amp;#x27;s paradox.</p>
+<p class="line"><span class="label">Example:</span>ZF and ZFC are foundations of modern mathematics.</p>
+</div>
+</section>
+<section class="card" id="s109">
+<span class="num">109</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 109. 외연성 공리</p>
+<p class="line"><span class="label">정리:</span>두 집합의 원소가 모두 같으면 두 집합은 같다.</p>
+<p class="line"><span class="label">예시:</span>{1,2}와 {2,1}은 원소가 같으므로 같은 집합이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Axiom of extensionality</p>
+<p class="line"><span class="label">Theorem:</span>If two sets have the same elements, then the two sets are equal.</p>
+<p class="line"><span class="label">Example:</span>{1,2} and {2,1} are the same set.</p>
+</div>
+</section>
+<section class="card" id="s110">
+<span class="num">110</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 110. 짝집합 공리</p>
+<p class="line"><span class="label">정리:</span>임의의 a,b에 대해 {a,b}라는 집합이 존재한다.</p>
+<p class="line"><span class="label">예시:</span>a=3, b=5이면 {3,5}가 존재한다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Pairing axiom</p>
+<p class="line"><span class="label">Theorem:</span>For any a and b, the set {a,b} exists.</p>
+<p class="line"><span class="label">Example:</span>If a=3 and b=5, then {3,5} exists.</p>
+</div>
+</section>
+<section class="card" id="s111">
+<span class="num">111</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 111. 합집합 공리</p>
+<p class="line"><span class="label">정리:</span>집합들의 집합이 있으면 그 원소들을 모두 모은 합집합이 존재한다.</p>
+<p class="line"><span class="label">예시:</span>{{1,2},{3}}의 합집합은 {1,2,3}.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Union axiom</p>
+<p class="line"><span class="label">Theorem:</span>If a set of sets exists, then the union of all their elements exists.</p>
+<p class="line"><span class="label">Example:</span>The union of {{1,2},{3}} is {1,2,3}.</p>
+</div>
+</section>
+<section class="card" id="s112">
+<span class="num">112</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 112. 무한 공리</p>
+<p class="line"><span class="label">정리:</span>무한집합, 특히 자연수 집합의 존재를 보장한다.</p>
+<p class="line"><span class="label">예시:</span>0,1,2,3,...을 담는 집합이 존재한다고 본다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Axiom of infinity</p>
+<p class="line"><span class="label">Theorem:</span>It guarantees the existence of an infinite set, especially the natural numbers.</p>
+<p class="line"><span class="label">Example:</span>A set containing 0,1,2,3,... exists.</p>
+</div>
+</section>
+<section class="card" id="s113">
+<span class="num">113</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 113. 분리 공리</p>
+<p class="line"><span class="label">정리:</span>이미 있는 집합에서 조건을 만족하는 원소만 골라 부분집합을 만들 수 있다.</p>
+<p class="line"><span class="label">예시:</span>자연수 집합에서 짝수만 골라 짝수 집합을 만든다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Axiom schema of separation</p>
+<p class="line"><span class="label">Theorem:</span>From an existing set, a subset can be formed by selecting elements satisfying a condition.</p>
+<p class="line"><span class="label">Example:</span>Select the even numbers from the natural numbers.</p>
+</div>
+</section>
+<section class="card" id="s114">
+<span class="num">114</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 114. 치환 공리</p>
+<p class="line"><span class="label">정리:</span>집합의 원소들을 함수적 규칙으로 바꾼 결과도 집합이다.</p>
+<p class="line"><span class="label">예시:</span>{1,2,3}의 각 원소를 제곱하면 {1,4,9}가 집합이다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Axiom schema of replacement</p>
+<p class="line"><span class="label">Theorem:</span>The image of a set under a functional rule is also a set.</p>
+<p class="line"><span class="label">Example:</span>Squaring each element of {1,2,3} gives {1,4,9}.</p>
+</div>
+</section>
+<section class="card" id="s115">
+<span class="num">115</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 115. 정칙성 공리</p>
+<p class="line"><span class="label">정리:</span>무한히 자기 안으로 내려가는 원소 관계를 막는 공리이다.</p>
+<p class="line"><span class="label">예시:</span>A∈A 같은 이상한 순환을 제한하는 데 쓰인다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Axiom of regularity</p>
+<p class="line"><span class="label">Theorem:</span>It prevents infinitely descending membership chains.</p>
+<p class="line"><span class="label">Example:</span>It restricts strange cycles such as A∈A.</p>
+</div>
+</section>
+<section class="card" id="s116">
+<span class="num">116</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 116. 멱집합 공리</p>
+<p class="line"><span class="label">정리:</span>임의의 집합 A에 대해 모든 부분집합의 집합 P(A)가 존재한다.</p>
+<p class="line"><span class="label">예시:</span>A={1,2}이면 P(A)가 존재한다.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Power set axiom</p>
+<p class="line"><span class="label">Theorem:</span>For every set A, the power set P(A) exists.</p>
+<p class="line"><span class="label">Example:</span>If A={1,2}, then P(A) exists.</p>
+</div>
+</section>
+<section class="card" id="s117">
+<span class="num">117</span>
+<div class="block ko">
+<p class="line title">🇰🇷 제목: 117. 선택함수</p>
+<p class="line"><span class="label">정리:</span>집합들의 모임에서 각 집합의 원소 하나를 골라 주는 함수이다.</p>
+<p class="line"><span class="label">예시:</span>각 반에서 대표 학생 한 명씩 고르는 규칙.</p>
+</div>
+<div class="block en">
+<p class="line title">🇺🇸 Title: Choice function</p>
+<p class="line"><span class="label">Theorem:</span>A function that selects one element from each set in a collection.</p>
+<p class="line"><span class="label">Example:</span>A rule choosing one representative student from each class.</p>
+</div>
+</section>
+</main>
+<a class="top" href="#top">▲ 위로</a>
+<footer>집합론 정리 · 제목/정리/예시 줄 나누기 HTML 학습자료</footer>
+</body>
+</html>

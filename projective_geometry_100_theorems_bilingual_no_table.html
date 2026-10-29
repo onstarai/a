@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>사영기하학 정리 100개 / 100 Theorems in Projective Geometry</title>
+<style>
+body{font-family:'Malgun Gothic','Nanum Gothic',Arial,sans-serif;line-height:1.75;background:#f7f8fb;color:#222;margin:0;padding:30px}
+.container{max-width:1100px;margin:auto;background:white;padding:34px;border-radius:18px;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+h1{text-align:center;color:#1d3557} h2{margin-top:34px;color:#0b5c75;border-left:8px solid #2a9d8f;padding-left:12px}
+.item{padding:18px 20px;margin:18px 0;border-radius:14px;background:#f1f7ff;border:1px solid #d8e7f8}
+.kor{color:#0b3d91;font-weight:700}.eng{color:#b35400;font-weight:700}.ex{color:#245501;font-weight:700}
+.p{margin:8px 0}.small{font-size:.95em;color:#555;text-align:center}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>사영기하학 정리 100개<br>100 Theorems in Projective Geometry</h1>
+<p class="small">표 없이 정리 · 한국어 / English / 예시 포함</p>
+<div class="item">
+<h2>001. 사영평면의 두 직선 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영평면에서 서로 다른 두 직선은 반드시 한 점에서 만난다.</p>
+<p class="p"><span class="eng">English:</span> In a projective plane, any two distinct lines meet in exactly one point.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 평행한 두 유클리드 직선도 사영평면에서는 무한원점에서 만난다.</p>
+</div>
+<div class="item">
+<h2>002. 사영평면의 두 점 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영평면에서 서로 다른 두 점을 지나는 직선은 정확히 하나 존재한다.</p>
+<p class="p"><span class="eng">English:</span> In a projective plane, through any two distinct points there is exactly one line.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 두 점 A, B가 주어지면 직선 AB가 유일하게 결정된다.</p>
+</div>
+<div class="item">
+<h2>003. 평행선의 소실점 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 유클리드 평면의 평행선들은 사영평면에서 하나의 소실점에서 만난다.</p>
+<p class="p"><span class="eng">English:</span> Parallel lines in the Euclidean plane meet at a common point at infinity in the projective plane.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 철도 레일이 멀리서 한 점으로 모여 보이는 현상이다.</p>
+</div>
+<div class="item">
+<h2>004. 무한직선 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 모든 무한원점은 하나의 직선, 즉 무한직선 위에 놓인다.</p>
+<p class="p"><span class="eng">English:</span> All points at infinity lie on one line, called the line at infinity.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 수평 방향과 수직 방향의 무한원점은 모두 무한직선 위에 있다.</p>
+</div>
+<div class="item">
+<h2>005. 쌍대성 원리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영기하학의 명제에서 점과 직선을 서로 바꾸면 또 다른 참인 명제가 얻어진다.</p>
+<p class="p"><span class="eng">English:</span> The principle of duality states that interchanging points and lines in a projective theorem gives another valid theorem.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 두 점이 한 직선을 결정한다는 명제의 쌍대는 두 직선이 한 점을 결정한다는 명제이다.</p>
+</div>
+<div class="item">
+<h2>006. 데자르그 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 두 삼각형의 대응 꼭짓점을 잇는 세 직선이 한 점에서 만나면, 대응 변의 교점 세 개는 한 직선 위에 있다.</p>
+<p class="p"><span class="eng">English:</span> Desargues' theorem states that if two triangles are perspective from a point, then they are perspective from a line.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 두 삼각형 ABC와 A'B'C'에서 AA', BB', CC'가 한 점에서 만나면 AB와 A'B' 등의 교점은 한 직선 위에 있다.</p>
+</div>
+<div class="item">
+<h2>007. 데자르그 정리의 역</h2>
+<p class="p"><span class="kor">한국어:</span> 두 삼각형의 대응 변 교점 세 개가 한 직선 위에 있으면, 대응 꼭짓점을 잇는 세 직선은 한 점에서 만난다.</p>
+<p class="p"><span class="eng">English:</span> The converse of Desargues' theorem states that if two triangles are perspective from a line, then they are perspective from a point.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 대응 변의 교점이 한 직선 위에 있으면 AA', BB', CC'는 한 점에서 만난다.</p>
+</div>
+<div class="item">
+<h2>008. 파푸스 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 두 직선 위의 세 점씩으로 만든 교차점 세 개는 한 직선 위에 있다.</p>
+<p class="p"><span class="eng">English:</span> Pappus' theorem states that for two triples of collinear points, the three intersection points of opposite sides are collinear.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 한 직선 위 A,B,C와 다른 직선 위 A',B',C'를 잡으면 특정 교점 세 개가 파푸스 직선 위에 놓인다.</p>
+</div>
+<div class="item">
+<h2>009. 파스칼 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 원뿔곡선 위의 여섯 점으로 만든 육각형의 세 쌍의 대변 교점은 한 직선 위에 있다.</p>
+<p class="p"><span class="eng">English:</span> Pascal's theorem states that the three pairs of opposite sides of a hexagon inscribed in a conic meet in three collinear points.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 원 위의 여섯 점으로 육각형을 만들면 대변 교점 세 개가 파스칼 직선 위에 있다.</p>
+</div>
+<div class="item">
+<h2>010. 브리앙숑 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 원뿔곡선에 외접하는 육각형의 세 대각선은 한 점에서 만난다.</p>
+<p class="p"><span class="eng">English:</span> Brianchon's theorem states that the three main diagonals of a hexagon circumscribed about a conic are concurrent.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 타원에 접하는 여섯 변으로 육각형을 만들면 마주 보는 꼭짓점을 잇는 세 직선이 한 점에서 만난다.</p>
+</div>
+<div class="item">
+<h2>011. 파스칼-브리앙숑 쌍대성</h2>
+<p class="p"><span class="kor">한국어:</span> 파스칼 정리와 브리앙숑 정리는 서로 쌍대 관계에 있다.</p>
+<p class="p"><span class="eng">English:</span> Pascal's theorem and Brianchon's theorem are dual to each other.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 점이 원뿔곡선 위에 있다는 조건은 직선이 원뿔곡선에 접한다는 조건과 쌍대가 된다.</p>
+</div>
+<div class="item">
+<h2>012. 사영변환의 직선 보존 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영변환은 직선을 직선으로 보낸다.</p>
+<p class="p"><span class="eng">English:</span> A projective transformation maps lines to lines.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 사진에서 건물의 직선 모서리는 원근 변환 후에도 직선으로 보인다.</p>
+</div>
+<div class="item">
+<h2>013. 사영변환의 결합성 보존</h2>
+<p class="p"><span class="kor">한국어:</span> 사영변환은 한 직선 위에 있는 점들의 공선성을 보존한다.</p>
+<p class="p"><span class="eng">English:</span> Projective transformations preserve collinearity.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 세 점 A,B,C가 한 직선 위에 있으면 변환 후 A',B',C'도 한 직선 위에 있다.</p>
+</div>
+<div class="item">
+<h2>014. 사영변환의 동시성 보존</h2>
+<p class="p"><span class="kor">한국어:</span> 사영변환은 여러 직선이 한 점에서 만나는 성질을 보존한다.</p>
+<p class="p"><span class="eng">English:</span> Projective transformations preserve concurrence of lines.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 세 직선이 P에서 만나면 변환된 세 직선도 P'에서 만난다.</p>
+</div>
+<div class="item">
+<h2>015. 교차비 불변 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 한 직선 위 네 점의 교차비는 사영변환에서 변하지 않는다.</p>
+<p class="p"><span class="eng">English:</span> The cross ratio of four collinear points is invariant under projective transformations.</p>
+<p class="p"><span class="ex">예시 / Example:</span> A,B,C,D의 교차비가 2이면 사영변환 뒤에도 A',B',C',D'의 교차비는 2이다.</p>
+</div>
+<div class="item">
+<h2>016. 교차비에 의한 사영좌표 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 직선 위 점의 사영좌표는 기준점들과의 교차비로 표현할 수 있다.</p>
+<p class="p"><span class="eng">English:</span> Projective coordinates on a line can be described using cross ratios with reference points.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 기준점 0,1,∞를 잡으면 다른 점 x는 교차비로 나타낼 수 있다.</p>
+</div>
+<div class="item">
+<h2>017. 조화분할 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 네 점의 교차비가 -1이면 그 네 점은 조화분할을 이룬다.</p>
+<p class="p"><span class="eng">English:</span> Four collinear points form a harmonic range when their cross ratio is -1.</p>
+<p class="p"><span class="ex">예시 / Example:</span> A,B가 C,D에 의해 조화적으로 나뉘면 (A,B;C,D)=-1이다.</p>
+</div>
+<div class="item">
+<h2>018. 완전사각형의 조화성</h2>
+<p class="p"><span class="kor">한국어:</span> 완전사각형의 대각점들은 특정 직선 위에서 조화분할을 만든다.</p>
+<p class="p"><span class="eng">English:</span> A complete quadrangle determines harmonic ranges on its diagonal lines.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 네 점으로 만든 완전사각형에서 대각점과 교점들이 조화적으로 배열된다.</p>
+</div>
+<div class="item">
+<h2>019. 완전사변형의 조화성</h2>
+<p class="p"><span class="kor">한국어:</span> 완전사변형의 대각선 구조는 조화분할을 만든다.</p>
+<p class="p"><span class="eng">English:</span> A complete quadrilateral gives rise to harmonic ranges through its diagonal points.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 네 직선으로 이루어진 완전사변형에서 대각점과 교선이 조화관계를 이룬다.</p>
+</div>
+<div class="item">
+<h2>020. 사영좌표의 동차성</h2>
+<p class="p"><span class="kor">한국어:</span> 사영좌표는 0이 아닌 같은 배수를 곱해도 같은 점을 나타낸다.</p>
+<p class="p"><span class="eng">English:</span> Homogeneous coordinates represent the same projective point up to a nonzero scalar multiple.</p>
+<p class="p"><span class="ex">예시 / Example:</span> [1:2:3]과 [2:4:6]은 같은 사영점이다.</p>
+</div>
+<div class="item">
+<h2>021. 동차좌표의 직선 방정식</h2>
+<p class="p"><span class="kor">한국어:</span> 사영평면의 직선은 ax+by+cz=0 꼴의 동차방정식으로 나타난다.</p>
+<p class="p"><span class="eng">English:</span> A line in the projective plane is represented by a homogeneous equation ax+by+cz=0.</p>
+<p class="p"><span class="ex">예시 / Example:</span> x+y-z=0은 사영평면의 한 직선이다.</p>
+</div>
+<div class="item">
+<h2>022. 점과 직선의 결합 조건</h2>
+<p class="p"><span class="kor">한국어:</span> 점 [x:y:z]가 직선 ax+by+cz=0 위에 있을 필요충분조건은 대입값이 0인 것이다.</p>
+<p class="p"><span class="eng">English:</span> A point [x:y:z] lies on a line ax+by+cz=0 iff ax+by+cz=0.</p>
+<p class="p"><span class="ex">예시 / Example:</span> [1:2:3]은 x+y-z=0 위에 있다. 1+2-3=0이기 때문이다.</p>
+</div>
+<div class="item">
+<h2>023. 두 점의 외적 직선 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 동차좌표에서 두 점의 외적은 그 두 점을 지나는 직선의 좌표를 준다.</p>
+<p class="p"><span class="eng">English:</span> The cross product of two point coordinates gives the line passing through them.</p>
+<p class="p"><span class="ex">예시 / Example:</span> P×Q를 계산하면 직선 PQ의 계수 [a:b:c]가 나온다.</p>
+</div>
+<div class="item">
+<h2>024. 두 직선의 외적 교점 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 동차좌표에서 두 직선의 외적은 두 직선의 교점을 준다.</p>
+<p class="p"><span class="eng">English:</span> The cross product of two line coordinates gives their intersection point.</p>
+<p class="p"><span class="ex">예시 / Example:</span> l×m은 직선 l과 m의 교점 좌표이다.</p>
+</div>
+<div class="item">
+<h2>025. 원뿔곡선의 동차방정식</h2>
+<p class="p"><span class="kor">한국어:</span> 사영평면의 원뿔곡선은 2차 동차방정식으로 나타난다.</p>
+<p class="p"><span class="eng">English:</span> A conic in the projective plane is represented by a homogeneous quadratic equation.</p>
+<p class="p"><span class="ex">예시 / Example:</span> x²+y²-z²=0은 사영평면의 원뿔곡선이다.</p>
+</div>
+<div class="item">
+<h2>026. 비특이 원뿔곡선 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 비특이 원뿔곡선은 사영변환에 의해 다른 비특이 원뿔곡선으로 변환된다.</p>
+<p class="p"><span class="eng">English:</span> A nonsingular conic is mapped to a nonsingular conic under a projective transformation.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 원은 사영변환을 통해 타원, 포물선, 쌍곡선 형태로 보일 수 있다.</p>
+</div>
+<div class="item">
+<h2>027. 다섯 점 원뿔곡선 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 일반 위치의 다섯 점을 지나는 원뿔곡선은 정확히 하나 존재한다.</p>
+<p class="p"><span class="eng">English:</span> Through five points in general position there passes a unique conic.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 세 점이 한 직선 위에 있지 않은 다섯 점을 잡으면 하나의 원뿔곡선이 결정된다.</p>
+</div>
+<div class="item">
+<h2>028. 접선의 쌍대 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 원뿔곡선 위의 한 점에는 그 원뿔곡선의 접선이 유일하게 존재한다.</p>
+<p class="p"><span class="eng">English:</span> At each point of a nonsingular conic there is a unique tangent line.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 타원 위 점 P에서 접선은 하나만 그어진다.</p>
+</div>
+<div class="item">
+<h2>029. 극과 극선 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 비특이 원뿔곡선에 대해 점과 직선 사이에는 극-극선 대응이 존재한다.</p>
+<p class="p"><span class="eng">English:</span> With respect to a nonsingular conic, there is a pole-polar correspondence between points and lines.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 원 밖의 점 P에 대해 두 접점의 연결선은 P의 극선이다.</p>
+</div>
+<div class="item">
+<h2>030. 라 이르 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 점 P가 점 Q의 극선 위에 있으면 Q도 P의 극선 위에 있다.</p>
+<p class="p"><span class="eng">English:</span> La Hire's theorem states that if P lies on the polar of Q, then Q lies on the polar of P.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 극과 극선의 관계는 서로 대칭적이다.</p>
+</div>
+<div class="item">
+<h2>031. 접점현 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 외부점에서 원뿔곡선에 그은 두 접선의 접점을 이은 직선은 그 점의 극선이다.</p>
+<p class="p"><span class="eng">English:</span> The chord of contact from an external point is the polar of that point.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 원 밖 점 P에서 그은 두 접선의 접점 A,B를 이으면 AB가 P의 극선이다.</p>
+</div>
+<div class="item">
+<h2>032. 극점의 동시성 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 한 직선 위의 점들의 극선들은 한 점을 지난다.</p>
+<p class="p"><span class="eng">English:</span> The polars of points on a line pass through a common point, the pole of the line.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 직선 l 위 여러 점의 극선을 그리면 모두 l의 극점 L에서 만난다.</p>
+</div>
+<div class="item">
+<h2>033. 극선의 공선성 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 한 점을 지나는 직선들의 극점들은 한 직선 위에 있다.</p>
+<p class="p"><span class="eng">English:</span> The poles of lines through a point lie on a single line, the polar of the point.</p>
+<p class="p"><span class="ex">예시 / Example:</span> P를 지나는 여러 직선의 극점은 P의 극선 위에 놓인다.</p>
+</div>
+<div class="item">
+<h2>034. 사영변환의 행렬 표현</h2>
+<p class="p"><span class="kor">한국어:</span> 사영평면의 사영변환은 가역 3×3 행렬로 표현된다.</p>
+<p class="p"><span class="eng">English:</span> A projective transformation of the projective plane is represented by an invertible 3×3 matrix.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 점 X는 X'=HX로 변환되며 H는 동차행렬이다.</p>
+</div>
+<div class="item">
+<h2>035. 동차행렬의 배수 동치</h2>
+<p class="p"><span class="kor">한국어:</span> 사영변환 행렬은 0이 아닌 상수배까지 같은 변환을 나타낸다.</p>
+<p class="p"><span class="eng">English:</span> Projective transformation matrices are defined up to nonzero scalar multiples.</p>
+<p class="p"><span class="ex">예시 / Example:</span> H와 3H는 같은 사영변환을 나타낸다.</p>
+</div>
+<div class="item">
+<h2>036. 사영변환 결정 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 일반 위치의 네 점의 대응은 사영평면의 사영변환을 유일하게 결정한다.</p>
+<p class="p"><span class="eng">English:</span> A projectivity of the projective plane is determined by the images of four points in general position.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 네 꼭짓점이 같은 평면 배치에서 대응되면 전체 원근 변환이 결정된다.</p>
+</div>
+<div class="item">
+<h2>037. 직선 위 사영변환 결정 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영직선의 사영변환은 서로 다른 세 점의 대응으로 유일하게 결정된다.</p>
+<p class="p"><span class="eng">English:</span> A projectivity of a projective line is determined by the images of three distinct points.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 0,1,∞의 상이 정해지면 직선 위 모든 점의 상이 정해진다.</p>
+</div>
+<div class="item">
+<h2>038. 중심사영 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 한 평면의 점들을 중심점에서 다른 평면으로 투영하면 사영변환이 얻어진다.</p>
+<p class="p"><span class="eng">English:</span> Projection from a center between planes induces a projective transformation.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 카메라 중심에서 물체 평면을 사진 평면으로 보내는 과정이다.</p>
+</div>
+<div class="item">
+<h2>039. 원근성 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 두 평면 사이의 중심사영은 직선을 직선으로 보낸다.</p>
+<p class="p"><span class="eng">English:</span> A perspectivity between planes maps lines to lines.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 칠판의 직선은 사진 속에서도 직선으로 나타난다.</p>
+</div>
+<div class="item">
+<h2>040. 사영성과 원근성의 합성</h2>
+<p class="p"><span class="kor">한국어:</span> 여러 원근성의 합성은 사영성이 된다.</p>
+<p class="p"><span class="eng">English:</span> A composition of perspectivities is a projectivity.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 두 번의 투영을 연속 적용하면 하나의 사영변환으로 볼 수 있다.</p>
+</div>
+<div class="item">
+<h2>041. 사영직선의 자기동형군</h2>
+<p class="p"><span class="kor">한국어:</span> 사영직선의 자기 사영변환들은 PGL(2) 군을 이룬다.</p>
+<p class="p"><span class="eng">English:</span> Projective automorphisms of a projective line form the group PGL(2).</p>
+<p class="p"><span class="ex">예시 / Example:</span> 분수선형변환 x↦(ax+b)/(cx+d)는 사영직선의 변환이다.</p>
+</div>
+<div class="item">
+<h2>042. 사영평면의 자기동형군</h2>
+<p class="p"><span class="kor">한국어:</span> 사영평면의 자기 사영변환들은 PGL(3) 군을 이룬다.</p>
+<p class="p"><span class="eng">English:</span> Projective automorphisms of a projective plane form the group PGL(3).</p>
+<p class="p"><span class="ex">예시 / Example:</span> 가역 3×3 행렬들의 스칼라배 동치류가 변환군을 이룬다.</p>
+</div>
+<div class="item">
+<h2>043. 모비우스 변환 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 복소 사영직선의 사영변환은 모비우스 변환으로 표현된다.</p>
+<p class="p"><span class="eng">English:</span> Projective transformations of the complex projective line are Möbius transformations.</p>
+<p class="p"><span class="ex">예시 / Example:</span> z↦(az+b)/(cz+d)는 복소 사영직선의 변환이다.</p>
+</div>
+<div class="item">
+<h2>044. 원과 직선 보존 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 모비우스 변환은 확장복소평면에서 원과 직선을 원 또는 직선으로 보낸다.</p>
+<p class="p"><span class="eng">English:</span> Möbius transformations map generalized circles to generalized circles.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 직선은 무한점을 지나는 원으로 생각할 수 있다.</p>
+</div>
+<div class="item">
+<h2>045. 사영공간의 두 점 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영공간에서도 서로 다른 두 점은 하나의 사영직선을 결정한다.</p>
+<p class="p"><span class="eng">English:</span> In projective space, two distinct points determine a unique projective line.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 3차원 사영공간에서 두 점 P,Q는 직선 PQ를 만든다.</p>
+</div>
+<div class="item">
+<h2>046. 사영공간의 두 평면 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 3차원 사영공간에서 서로 다른 두 평면은 하나의 직선에서 만난다.</p>
+<p class="p"><span class="eng">English:</span> In projective 3-space, two distinct planes meet in a line.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 유클리드 공간에서 평행한 평면도 사영공간에서는 무한직선에서 만난다.</p>
+</div>
+<div class="item">
+<h2>047. 사영공간의 직선-평면 교차 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영 3공간에서 직선과 평면은 보통 한 점에서 만난다.</p>
+<p class="p"><span class="eng">English:</span> In projective 3-space, a line and a plane generally meet in one point.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 평면과 평행한 직선도 무한점에서 평면과 만난다.</p>
+</div>
+<div class="item">
+<h2>048. 차원 공식</h2>
+<p class="p"><span class="kor">한국어:</span> 사영부분공간 A,B에 대해 dim(A∩B) ≥ dim A + dim B - n 이다.</p>
+<p class="p"><span class="eng">English:</span> For projective subspaces A and B in P^n, dim(A∩B) ≥ dim A + dim B - n.</p>
+<p class="p"><span class="ex">예시 / Example:</span> P³에서 두 평면은 적어도 직선 차원으로 만난다.</p>
+</div>
+<div class="item">
+<h2>049. 사영공간의 동차좌표</h2>
+<p class="p"><span class="kor">한국어:</span> n차원 사영공간의 점은 [x0:x1:...:xn]으로 표현된다.</p>
+<p class="p"><span class="eng">English:</span> A point in n-dimensional projective space is represented by homogeneous coordinates [x0:x1:...:xn].</p>
+<p class="p"><span class="ex">예시 / Example:</span> P³의 점 [1:2:0:4]는 [2:4:0:8]과 같다.</p>
+</div>
+<div class="item">
+<h2>050. 아핀공간 삽입 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 아핀공간은 무한초평면을 제외한 사영공간의 부분으로 볼 수 있다.</p>
+<p class="p"><span class="eng">English:</span> Affine space can be embedded into projective space as the complement of a hyperplane at infinity.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 평면 z=1의 점 (x,y)는 사영점 [x:y:1]로 표현된다.</p>
+</div>
+<div class="item">
+<h2>051. 무한초평면 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영공간에서 w=0인 점들은 아핀공간의 무한초평면을 이룬다.</p>
+<p class="p"><span class="eng">English:</span> The set w=0 forms the hyperplane at infinity for an affine chart.</p>
+<p class="p"><span class="ex">예시 / Example:</span> [x:y:0]은 평면에서 무한원점을 나타낸다.</p>
+</div>
+<div class="item">
+<h2>052. 사영기하의 거리 비보존</h2>
+<p class="p"><span class="kor">한국어:</span> 사영변환은 일반적으로 거리와 각도를 보존하지 않는다.</p>
+<p class="p"><span class="eng">English:</span> Projective transformations generally do not preserve distances or angles.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 사진 속 가까운 물체와 먼 물체의 길이 비율은 실제와 다를 수 있다.</p>
+</div>
+<div class="item">
+<h2>053. 사영기하의 접촉 보존</h2>
+<p class="p"><span class="kor">한국어:</span> 사영변환은 곡선과 직선의 접촉 관계를 보존한다.</p>
+<p class="p"><span class="eng">English:</span> Projective transformations preserve incidence and tangency relations.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 원에 접한 직선은 변환 후 원뿔곡선에 접한 직선이 된다.</p>
+</div>
+<div class="item">
+<h2>054. 사영변환의 원뿔곡선 보존</h2>
+<p class="p"><span class="kor">한국어:</span> 사영변환은 원뿔곡선을 원뿔곡선으로 보낸다.</p>
+<p class="p"><span class="eng">English:</span> Projective transformations map conics to conics.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 원은 기울어진 평면 투영에서 타원처럼 보일 수 있다.</p>
+</div>
+<div class="item">
+<h2>055. 퇴화 원뿔곡선 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 2차 동차방정식의 행렬식이 0이면 퇴화 원뿔곡선이 된다.</p>
+<p class="p"><span class="eng">English:</span> A conic is degenerate when the determinant of its quadratic matrix is zero.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 두 직선의 합집합도 퇴화 원뿔곡선으로 나타날 수 있다.</p>
+</div>
+<div class="item">
+<h2>056. 두 원뿔곡선의 교점 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 두 원뿔곡선은 복소 사영평면에서 중복도를 세어 네 점에서 만난다.</p>
+<p class="p"><span class="eng">English:</span> Two conics meet in four points counted with multiplicity in the complex projective plane.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 두 원은 보통 두 실교점과 두 무한 복소교점을 가진다.</p>
+</div>
+<div class="item">
+<h2>057. 베주 정리의 원뿔곡선 경우</h2>
+<p class="p"><span class="kor">한국어:</span> 차수 2인 두 곡선의 교점 수는 중복도 포함 4이다.</p>
+<p class="p"><span class="eng">English:</span> For two plane curves of degree 2, Bézout's theorem gives four intersections counted with multiplicity.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 타원과 쌍곡선은 최대 네 점에서 만날 수 있다.</p>
+</div>
+<div class="item">
+<h2>058. 사영분류 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 실수 사영평면에서 비특이 원뿔곡선들은 사영적으로 서로 동치이다.</p>
+<p class="p"><span class="eng">English:</span> All nonsingular real projective conics are projectively equivalent.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 원과 타원은 사영변환으로 서로 대응될 수 있다.</p>
+</div>
+<div class="item">
+<h2>059. 절대원뿔곡선 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 유클리드 계량은 사영평면에서 무한원점의 절대원뿔곡선과 관련된다.</p>
+<p class="p"><span class="eng">English:</span> Euclidean metric structure can be encoded projectively by the absolute conic at infinity.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 컴퓨터 비전에서 카메라 보정은 절대원뿔곡선 개념과 연결된다.</p>
+</div>
+<div class="item">
+<h2>060. 카메라 사영 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 핀홀 카메라는 3차원 사영공간의 점을 2차원 사영평면으로 보내는 사영사상이다.</p>
+<p class="p"><span class="eng">English:</span> A pinhole camera is a projective map from 3D projective space to a 2D projective plane.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 3D 점 X는 이미지 점 x=PX로 투영된다.</p>
+</div>
+<div class="item">
+<h2>061. 호모그래피 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 동일 평면 위의 점들은 두 이미지 사이에서 하나의 호모그래피로 대응된다.</p>
+<p class="p"><span class="eng">English:</span> Points on the same plane are related between two images by a homography.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 책 표지의 네 모서리 대응만 알면 사진 속 표지를 정면으로 펼칠 수 있다.</p>
+</div>
+<div class="item">
+<h2>062. 기본행렬 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 두 카메라 영상의 대응점은 에피폴라 제약 x'ᵀFx=0을 만족한다.</p>
+<p class="p"><span class="eng">English:</span> Corresponding points in two images satisfy the epipolar constraint x'^T F x = 0.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 한 사진의 점에 대응하는 다른 사진의 점은 에피폴라선 위에 있다.</p>
+</div>
+<div class="item">
+<h2>063. 에피폴라선 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 한 영상의 점은 다른 영상에서 하나의 에피폴라선을 결정한다.</p>
+<p class="p"><span class="eng">English:</span> A point in one image determines an epipolar line in the other image.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 왼쪽 사진의 점 x에 대해 오른쪽 사진의 대응점은 Fx가 나타내는 직선 위에 있다.</p>
+</div>
+<div class="item">
+<h2>064. 에피폴 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 두 카메라 중심을 잇는 직선의 영상은 에피폴이다.</p>
+<p class="p"><span class="eng">English:</span> The image of the line joining two camera centers is an epipole.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 모든 에피폴라선은 에피폴에서 만난다.</p>
+</div>
+<div class="item">
+<h2>065. 삼선좌표 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 삼각형에 대한 점의 위치는 세 변까지의 관계로 사영적으로 표현될 수 있다.</p>
+<p class="p"><span class="eng">English:</span> Trilinear-type coordinates express points relative to the sides of a reference triangle in projective geometry.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 기준 삼각형 ABC를 잡고 점 P의 위치를 세 기준선에 대한 좌표로 나타낸다.</p>
+</div>
+<div class="item">
+<h2>066. 바리센트릭 좌표의 사영화</h2>
+<p class="p"><span class="kor">한국어:</span> 동차 바리센트릭 좌표는 사영좌표로 해석할 수 있다.</p>
+<p class="p"><span class="eng">English:</span> Homogeneous barycentric coordinates can be interpreted as projective coordinates.</p>
+<p class="p"><span class="ex">예시 / Example:</span> [1:1:1]은 기준 삼각형의 중심에 해당한다.</p>
+</div>
+<div class="item">
+<h2>067. 케바 정리의 사영형</h2>
+<p class="p"><span class="kor">한국어:</span> 삼각형의 세 체바선이 한 점에서 만나는 성질은 사영변환에서 보존된다.</p>
+<p class="p"><span class="eng">English:</span> The concurrence form of Ceva's theorem is projectively invariant.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 삼각형 꼭짓점에서 대변으로 그은 세 직선이 한 점에서 만나면 변환 후에도 그렇다.</p>
+</div>
+<div class="item">
+<h2>068. 메넬라오스 정리의 사영형</h2>
+<p class="p"><span class="kor">한국어:</span> 삼각형의 세 변 또는 연장선 위 점들이 한 직선 위에 있는 성질은 사영적으로 보존된다.</p>
+<p class="p"><span class="eng">English:</span> The collinearity form of Menelaus' theorem is projectively invariant.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 한 직선이 삼각형 세 변을 자르면 그 교점들의 관계는 사영변환 후에도 유지된다.</p>
+</div>
+<div class="item">
+<h2>069. 케바-메넬라오스 쌍대성</h2>
+<p class="p"><span class="kor">한국어:</span> 케바의 동시성 명제와 메넬라오스의 공선성 명제는 사영적 쌍대 관점에서 대응된다.</p>
+<p class="p"><span class="eng">English:</span> Ceva-type concurrence and Menelaus-type collinearity are dual in projective spirit.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 세 직선이 한 점에서 만나는 명제와 세 점이 한 직선 위에 있는 명제가 대응된다.</p>
+</div>
+<div class="item">
+<h2>070. 사영기하의 순서 비보존</h2>
+<p class="p"><span class="kor">한국어:</span> 사영기하에서는 점들의 거리 순서나 사이 관계가 일반적으로 보존되지 않는다.</p>
+<p class="p"><span class="eng">English:</span> Projective geometry generally does not preserve order or betweenness.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 중간에 있던 점이 투영 후에는 바깥쪽에 보일 수 있다.</p>
+</div>
+<div class="item">
+<h2>071. 교차비의 순열 공식</h2>
+<p class="p"><span class="kor">한국어:</span> 네 점의 순서를 바꾸면 교차비는 여섯 가지 값 중 하나로 변한다.</p>
+<p class="p"><span class="eng">English:</span> Permuting four points changes the cross ratio among six related values.</p>
+<p class="p"><span class="ex">예시 / Example:</span> λ의 가능한 값은 λ, 1/λ, 1-λ, 1/(1-λ), λ/(λ-1), (λ-1)/λ이다.</p>
+</div>
+<div class="item">
+<h2>072. 조화켤레의 유일성</h2>
+<p class="p"><span class="kor">한국어:</span> 세 점이 주어지면 네 번째 조화켤레점은 유일하게 결정된다.</p>
+<p class="p"><span class="eng">English:</span> Given three collinear points, the fourth harmonic conjugate is uniquely determined.</p>
+<p class="p"><span class="ex">예시 / Example:</span> A,B,C가 주어지면 (A,B;C,D)=-1이 되는 D는 하나이다.</p>
+</div>
+<div class="item">
+<h2>073. 사영직선의 완비성</h2>
+<p class="p"><span class="kor">한국어:</span> 사영직선은 아핀직선에 무한점 하나를 추가한 구조이다.</p>
+<p class="p"><span class="eng">English:</span> A projective line is obtained from an affine line by adding one point at infinity.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 실수직선에 ∞를 추가하면 실수 사영직선이 된다.</p>
+</div>
+<div class="item">
+<h2>074. 실수 사영직선의 원형성</h2>
+<p class="p"><span class="kor">한국어:</span> 실수 사영직선은 위상적으로 원과 같다.</p>
+<p class="p"><span class="eng">English:</span> The real projective line is topologically a circle.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 기울기 m과 무한기울기를 모두 포함한 방향들의 공간은 원형 구조를 가진다.</p>
+</div>
+<div class="item">
+<h2>075. 실수 사영평면의 비방향성</h2>
+<p class="p"><span class="kor">한국어:</span> 실수 사영평면은 비방향 곡면이다.</p>
+<p class="p"><span class="eng">English:</span> The real projective plane is a non-orientable surface.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 구면에서 서로 반대인 점을 같은 점으로 붙이면 실수 사영평면을 얻는다.</p>
+</div>
+<div class="item">
+<h2>076. 구면모형 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 실수 사영평면은 구면의 대척점들을 동일시한 공간으로 볼 수 있다.</p>
+<p class="p"><span class="eng">English:</span> The real projective plane can be modeled as a sphere with antipodal points identified.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 구 위의 점 P와 -P는 같은 사영점이다.</p>
+</div>
+<div class="item">
+<h2>077. 중심투영과 구면모형</h2>
+<p class="p"><span class="kor">한국어:</span> 원점을 지나는 직선들은 구면의 대척점 쌍과 대응된다.</p>
+<p class="p"><span class="eng">English:</span> Lines through the origin correspond to antipodal pairs on the sphere.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 3차원 벡터공간의 1차원 부분공간이 사영평면의 점이다.</p>
+</div>
+<div class="item">
+<h2>078. 그라스만 해석</h2>
+<p class="p"><span class="kor">한국어:</span> 사영공간의 k차원 부분공간은 벡터공간의 k+1차원 부분공간에 대응한다.</p>
+<p class="p"><span class="eng">English:</span> A k-dimensional projective subspace corresponds to a (k+1)-dimensional vector subspace.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 사영직선은 벡터공간의 2차원 부분공간이다.</p>
+</div>
+<div class="item">
+<h2>079. 플뤼커 좌표 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영 3공간의 직선은 플뤼커 좌표로 표현된다.</p>
+<p class="p"><span class="eng">English:</span> Lines in projective 3-space can be represented by Plücker coordinates.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 두 점 X,Y를 잇는 직선은 좌표 p_ij=x_i y_j-x_j y_i로 표현된다.</p>
+</div>
+<div class="item">
+<h2>080. 플뤼커 관계식</h2>
+<p class="p"><span class="kor">한국어:</span> 사영 3공간의 직선 플뤼커 좌표는 하나의 2차 관계식을 만족한다.</p>
+<p class="p"><span class="eng">English:</span> Plücker coordinates of a line in projective 3-space satisfy a quadratic relation.</p>
+<p class="p"><span class="ex">예시 / Example:</span> p01p23-p02p13+p03p12=0이 대표적 관계식이다.</p>
+</div>
+<div class="item">
+<h2>081. 쌍대공간 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영공간의 초평면들은 쌍대 사영공간의 점으로 볼 수 있다.</p>
+<p class="p"><span class="eng">English:</span> Hyperplanes of a projective space form the points of the dual projective space.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 평면의 직선 ax+by+cz=0은 쌍대공간의 점 [a:b:c]이다.</p>
+</div>
+<div class="item">
+<h2>082. 쌍대변환 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영변환은 쌍대공간에도 자연스러운 변환을 유도한다.</p>
+<p class="p"><span class="eng">English:</span> A projective transformation induces a natural dual transformation on hyperplanes.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 점 변환 행렬이 H이면 직선은 H^{-T}로 변환된다.</p>
+</div>
+<div class="item">
+<h2>083. 무한원점의 방향 대응</h2>
+<p class="p"><span class="kor">한국어:</span> 아핀평면의 방향은 사영평면의 무한원점과 일대일 대응한다.</p>
+<p class="p"><span class="eng">English:</span> Directions in the affine plane correspond to points at infinity in the projective plane.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 기울기 2인 모든 평행선은 같은 무한원점을 공유한다.</p>
+</div>
+<div class="item">
+<h2>084. 원근 중심 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 두 도형의 대응점을 잇는 직선들이 한 점에서 만나면 그 점은 원근 중심이다.</p>
+<p class="p"><span class="eng">English:</span> If lines joining corresponding points meet at one point, that point is the center of perspectivity.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 두 삼각형의 AA', BB', CC'가 O에서 만나면 O가 원근 중심이다.</p>
+</div>
+<div class="item">
+<h2>085. 원근 축 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 두 도형의 대응변 교점들이 한 직선 위에 있으면 그 직선은 원근 축이다.</p>
+<p class="p"><span class="eng">English:</span> If intersections of corresponding sides are collinear, that line is the axis of perspectivity.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 데자르그 정리에서 얻는 직선이 원근 축이다.</p>
+</div>
+<div class="item">
+<h2>086. 사영기저 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영공간 P^n에서 일반 위치의 n+2개 점은 사영기저를 이룬다.</p>
+<p class="p"><span class="eng">English:</span> In P^n, n+2 points in general position form a projective frame.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 사영평면에서는 네 점이 사영기저가 된다.</p>
+</div>
+<div class="item">
+<h2>087. 사영기저에 의한 좌표화</h2>
+<p class="p"><span class="kor">한국어:</span> 사영기저를 정하면 모든 점을 동차좌표로 표현할 수 있다.</p>
+<p class="p"><span class="eng">English:</span> Once a projective frame is chosen, every point can be assigned homogeneous coordinates.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 기준 네 점을 [1:0:0], [0:1:0], [0:0:1], [1:1:1]로 둘 수 있다.</p>
+</div>
+<div class="item">
+<h2>088. 사영동치 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 두 사영기저 사이에는 유일한 사영변환이 존재한다.</p>
+<p class="p"><span class="eng">English:</span> Between two projective frames there exists a unique projective transformation.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 한 사영평면의 기준 네 점을 다른 네 점으로 보내는 변환은 유일하다.</p>
+</div>
+<div class="item">
+<h2>089. 공선점의 행렬식 조건</h2>
+<p class="p"><span class="kor">한국어:</span> 세 점이 한 직선 위에 있을 필요충분조건은 좌표행렬의 행렬식이 0인 것이다.</p>
+<p class="p"><span class="eng">English:</span> Three points in the projective plane are collinear iff the determinant of their coordinate matrix is zero.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 세 점 좌표를 행으로 놓은 3×3 행렬의 det가 0이면 공선이다.</p>
+</div>
+<div class="item">
+<h2>090. 동시직선의 행렬식 조건</h2>
+<p class="p"><span class="kor">한국어:</span> 세 직선이 한 점에서 만날 필요충분조건은 계수행렬의 행렬식이 0인 것이다.</p>
+<p class="p"><span class="eng">English:</span> Three lines are concurrent iff the determinant of their coefficient matrix is zero.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 세 직선 ax+by+cz=0의 계수행렬 det가 0이면 공점이다.</p>
+</div>
+<div class="item">
+<h2>091. 사영곡선의 차수 보존</h2>
+<p class="p"><span class="kor">한국어:</span> 가역 사영변환은 평면 대수곡선의 차수를 보존한다.</p>
+<p class="p"><span class="eng">English:</span> An invertible projective transformation preserves the degree of a plane algebraic curve.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 3차 곡선은 사영변환 후에도 3차 곡선이다.</p>
+</div>
+<div class="item">
+<h2>092. 접선의 대수적 정의</h2>
+<p class="p"><span class="kor">한국어:</span> 사영곡선 F=0의 점에서 접선은 F의 편도함수로 주어진 선형식이다.</p>
+<p class="p"><span class="eng">English:</span> The tangent line to a projective curve F=0 is given by the linear form of its partial derivatives at the point.</p>
+<p class="p"><span class="ex">예시 / Example:</span> F_x(P)x+F_y(P)y+F_z(P)z=0이 접선 방정식이다.</p>
+</div>
+<div class="item">
+<h2>093. 헤세 곡선 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 평면 삼차곡선의 변곡점은 헤세 곡선과의 교점으로 찾을 수 있다.</p>
+<p class="p"><span class="eng">English:</span> Inflection points of a plane cubic can be found using its Hessian curve.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 삼차곡선 F의 2차 편도함수 행렬식이 헤세 곡선을 만든다.</p>
+</div>
+<div class="item">
+<h2>094. 케일리-바하라흐 정리의 기본형</h2>
+<p class="p"><span class="kor">한국어:</span> 두 삼차곡선의 9개 교점 중 8개를 지나는 삼차곡선은 나머지 하나도 지난다.</p>
+<p class="p"><span class="eng">English:</span> A basic Cayley-Bacharach theorem says that a cubic through eight of the nine intersections of two cubics passes through the ninth.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 9개 교점 중 8개 조건이 주어지면 마지막 교점 조건이 자동으로 따라온다.</p>
+</div>
+<div class="item">
+<h2>095. 구성 가능성의 사영 불변성</h2>
+<p class="p"><span class="kor">한국어:</span> 자와 점만 이용한 사영적 구성은 사영변환 아래 보존된다.</p>
+<p class="p"><span class="eng">English:</span> Projective constructions using incidence are invariant under projective transformations.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 교점과 연결선만 쓰는 작도는 원근 변환 후에도 같은 구조를 준다.</p>
+</div>
+<div class="item">
+<h2>096. 사영평면의 최소 공리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영평면은 점, 직선, 결합관계에 대한 몇 가지 공리로 정의된다.</p>
+<p class="p"><span class="eng">English:</span> A projective plane is defined axiomatically by points, lines, and incidence relations.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 두 점은 한 직선을 결정하고, 두 직선은 한 점에서 만난다는 공리가 핵심이다.</p>
+</div>
+<div class="item">
+<h2>097. 유한 사영평면의 점 개수</h2>
+<p class="p"><span class="kor">한국어:</span> 차수 q의 유한 사영평면은 q²+q+1개의 점을 가진다.</p>
+<p class="p"><span class="eng">English:</span> A finite projective plane of order q has q²+q+1 points.</p>
+<p class="p"><span class="ex">예시 / Example:</span> q=2이면 파노 평면은 7개의 점을 가진다.</p>
+</div>
+<div class="item">
+<h2>098. 유한 사영평면의 직선 개수</h2>
+<p class="p"><span class="kor">한국어:</span> 차수 q의 유한 사영평면은 q²+q+1개의 직선을 가진다.</p>
+<p class="p"><span class="eng">English:</span> A finite projective plane of order q has q²+q+1 lines.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 파노 평면에는 7개의 직선이 있다.</p>
+</div>
+<div class="item">
+<h2>099. 유한 사영평면의 직선 위 점 개수</h2>
+<p class="p"><span class="kor">한국어:</span> 차수 q의 유한 사영평면에서 각 직선에는 q+1개의 점이 있다.</p>
+<p class="p"><span class="eng">English:</span> In a finite projective plane of order q, each line contains q+1 points.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 파노 평면(q=2)의 각 직선에는 3점이 있다.</p>
+</div>
+<div class="item">
+<h2>100. 유한 사영평면의 점을 지나는 직선 개수</h2>
+<p class="p"><span class="kor">한국어:</span> 차수 q의 유한 사영평면에서 각 점을 지나는 직선은 q+1개이다.</p>
+<p class="p"><span class="eng">English:</span> In a finite projective plane of order q, q+1 lines pass through each point.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 파노 평면에서 각 점에는 3개의 직선이 지난다.</p>
+</div>
+<div class="item">
+<h2>101. 파노 평면 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 가장 작은 유한 사영평면은 차수 2의 파노 평면이다.</p>
+<p class="p"><span class="eng">English:</span> The smallest finite projective plane is the Fano plane of order 2.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 7점 7직선 구조이며 각 직선은 3점을 포함한다.</p>
+</div>
+<div class="item">
+<h2>102. 파노 평면의 쌍대성</h2>
+<p class="p"><span class="kor">한국어:</span> 파노 평면은 점과 직선을 바꾸어도 같은 결합 구조를 가진다.</p>
+<p class="p"><span class="eng">English:</span> The Fano plane is self-dual in its incidence structure.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 7개의 점과 7개의 직선이 대칭적으로 대응된다.</p>
+</div>
+<div class="item">
+<h2>103. 데자르그 평면 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 체 위의 3차원 벡터공간에서 만든 사영평면은 데자르그 정리를 만족한다.</p>
+<p class="p"><span class="eng">English:</span> A projective plane constructed from a vector space over a field satisfies Desargues' theorem.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 실수 좌표 사영평면에서는 데자르그 정리가 항상 성립한다.</p>
+</div>
+<div class="item">
+<h2>104. 파푸스 평면 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 가환체 위의 사영평면은 파푸스 정리를 만족한다.</p>
+<p class="p"><span class="eng">English:</span> A projective plane over a commutative field satisfies Pappus' theorem.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 실수와 복소수 위의 사영평면에서는 파푸스 정리가 성립한다.</p>
+</div>
+<div class="item">
+<h2>105. 파푸스와 교환법칙</h2>
+<p class="p"><span class="kor">한국어:</span> 좌표화 가능한 데자르그 평면에서 파푸스 정리는 기초 체의 곱셈 교환법칙과 관련된다.</p>
+<p class="p"><span class="eng">English:</span> In coordinatized Desarguesian planes, Pappus' theorem corresponds to commutativity of the coordinate division ring.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 비가환 나눗셈환에서는 파푸스 정리가 실패할 수 있다.</p>
+</div>
+<div class="item">
+<h2>106. 사영평면의 좌표화</h2>
+<p class="p"><span class="kor">한국어:</span> 데자르그 정리를 만족하는 사영평면은 나눗셈환으로 좌표화할 수 있다.</p>
+<p class="p"><span class="eng">English:</span> A Desarguesian projective plane can be coordinatized by a division ring.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 실수 사영평면은 실수체 R로 좌표화된다.</p>
+</div>
+<div class="item">
+<h2>107. 원근 투영의 그림자 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 한 평면 도형의 그림자는 광원 중심에 의한 사영변환으로 설명된다.</p>
+<p class="p"><span class="eng">English:</span> The shadow of a planar figure cast from a point light source is described by a projective transformation.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 정사각형 그림자가 사다리꼴로 보이는 것은 사영변환 때문이다.</p>
+</div>
+<div class="item">
+<h2>108. 소실선 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 한 평면의 무한직선은 영상에서 그 평면의 소실선으로 나타난다.</p>
+<p class="p"><span class="eng">English:</span> The line at infinity of a plane maps to the vanishing line of that plane in an image.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 바닥 평면의 평행선들이 만나는 점들은 모두 수평선 같은 소실선 위에 놓인다.</p>
+</div>
+<div class="item">
+<h2>109. 지평선 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 수평 평면의 소실선은 관찰자의 눈높이에 해당하는 지평선으로 나타난다.</p>
+<p class="p"><span class="eng">English:</span> The vanishing line of a horizontal plane appears as the horizon line.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 도로 사진에서 수평선은 도로 평면의 소실선이다.</p>
+</div>
+<div class="item">
+<h2>110. 1점 투시 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 한 방향의 평행선만 화면과 평행하지 않으면 하나의 주된 소실점이 생긴다.</p>
+<p class="p"><span class="eng">English:</span> One-point perspective occurs when one family of parallel lines has a vanishing point while others remain parallel to the image plane.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 복도 사진에서 깊이 방향 선들이 한 점으로 모인다.</p>
+</div>
+<div class="item">
+<h2>111. 2점 투시 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 두 방향의 평행선이 각각 다른 소실점을 가지면 2점 투시가 된다.</p>
+<p class="p"><span class="eng">English:</span> Two-point perspective occurs when two families of parallel lines have two distinct vanishing points.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 건물 모서리를 비스듬히 보면 좌우 방향 선들이 서로 다른 두 점으로 모인다.</p>
+</div>
+<div class="item">
+<h2>112. 3점 투시 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 세 방향의 평행선이 모두 소실점을 가지면 3점 투시가 된다.</p>
+<p class="p"><span class="eng">English:</span> Three-point perspective occurs when three families of parallel lines have three vanishing points.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 고층 건물을 아래에서 올려다보면 수직선도 위쪽 소실점으로 모인다.</p>
+</div>
+<div class="item">
+<h2>113. 사영복원 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 평면 물체의 네 점 대응을 알면 원근 왜곡을 제거할 수 있다.</p>
+<p class="p"><span class="eng">English:</span> Knowing four point correspondences on a plane allows rectification of projective distortion.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 사진 속 비스듬한 칠판의 네 모서리를 이용해 정면 이미지로 복원할 수 있다.</p>
+</div>
+<div class="item">
+<h2>114. 아핀복원 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 소실선을 알면 사영왜곡 중 아핀 구조를 복원할 수 있다.</p>
+<p class="p"><span class="eng">English:</span> Knowing the vanishing line allows affine rectification from a projective image.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 바닥의 평행선 소실점을 이용하면 평행성이 복원된다.</p>
+</div>
+<div class="item">
+<h2>115. 계량복원 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 절대원뿔곡선 또는 직교 조건을 알면 길이와 각도의 계량 구조를 복원할 수 있다.</p>
+<p class="p"><span class="eng">English:</span> Metric rectification is possible when the absolute conic or orthogonality constraints are known.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 정사각형의 직각 정보를 사용하면 사진에서 실제 각도를 복원할 수 있다.</p>
+</div>
+<div class="item">
+<h2>116. 사영기하의 핵심 불변량 정리</h2>
+<p class="p"><span class="kor">한국어:</span> 사영기하의 핵심 불변량은 결합관계와 교차비이다.</p>
+<p class="p"><span class="eng">English:</span> The central invariants of projective geometry are incidence relations and cross ratios.</p>
+<p class="p"><span class="ex">예시 / Example:</span> 길이는 변해도 네 공선점의 교차비는 변하지 않는다.</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Modern Algebra 정리 100개 | 현대대수학 정리 100개</title>
+<style>
+body{font-family:'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif;line-height:1.8;margin:0;background:#f5f7fb;color:#1f2937}
+header{background:#1e3a8a;color:white;padding:34px 24px;text-align:center}
+header h1{margin:0;font-size:32px}
+header p{margin:10px 0 0;font-size:16px}
+main{max-width:980px;margin:28px auto;padding:0 18px 60px}
+.section{background:white;border-radius:18px;margin:18px 0;padding:22px 24px;box-shadow:0 4px 16px rgba(0,0,0,.08);border-left:8px solid #2563eb}
+.num{font-weight:800;color:#2563eb;font-size:19px}
+.title{font-size:22px;font-weight:800;margin:4px 0 12px;color:#111827}
+.label{font-weight:800;color:#1e40af}
+.en .label{color:#047857}
+.example .label{color:#b45309}
+.ko,.en,.example{margin:8px 0}
+footer{text-align:center;color:#6b7280;padding:20px}
+</style>
+</head>
+<body>
+<header>
+<h1>Modern Algebra 정리 100개</h1>
+<p>현대대수학 핵심 정리 100개 — 한국어 / English / 예시 포함, 표 없음</p>
+</header>
+<main>
+
+<section class="section">
+  <div class="num">정리 001</div>
+  <div class="title">군의 항등원 유일성</div>
+  <div class="ko"><span class="label">한국어:</span> 군에서 항등원은 오직 하나이다.</div>
+  <div class="en"><span class="label">English:</span> The identity element in a group is unique.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 정수의 덧셈군 (ℤ,+)에서 항등원은 0 하나뿐이다. / In (ℤ,+), the only identity is 0.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 002</div>
+  <div class="title">군의 역원 유일성</div>
+  <div class="ko"><span class="label">한국어:</span> 군의 각 원소는 오직 하나의 역원을 가진다.</div>
+  <div class="en"><span class="label">English:</span> Each element of a group has a unique inverse.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: (ℤ,+)에서 5의 역원은 -5 하나뿐이다. / In (ℤ,+), the inverse of 5 is only -5.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 003</div>
+  <div class="title">좌소거 법칙</div>
+  <div class="ko"><span class="label">한국어:</span> 군에서 ab=ac이면 b=c이다.</div>
+  <div class="en"><span class="label">English:</span> In a group, if ab=ac, then b=c.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 3+x=3+y이면 x=y. / If 3+x=3+y, then x=y.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 004</div>
+  <div class="title">우소거 법칙</div>
+  <div class="ko"><span class="label">한국어:</span> 군에서 ba=ca이면 b=c이다.</div>
+  <div class="en"><span class="label">English:</span> In a group, if ba=ca, then b=c.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: x+3=y+3이면 x=y. / If x+3=y+3, then x=y.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 005</div>
+  <div class="title">항등원의 역원</div>
+  <div class="ko"><span class="label">한국어:</span> 군의 항등원의 역원은 자기 자신이다.</div>
+  <div class="en"><span class="label">English:</span> The inverse of the identity element is itself.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 0의 덧셈 역원은 0이다. / The additive inverse of 0 is 0.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 006</div>
+  <div class="title">역원의 역원</div>
+  <div class="ko"><span class="label">한국어:</span> 군에서 원소 a의 역원의 역원은 a이다.</div>
+  <div class="en"><span class="label">English:</span> In a group, the inverse of the inverse of a is a.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: -(-7)=7. / -(-7)=7.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 007</div>
+  <div class="title">곱의 역원 공식</div>
+  <div class="ko"><span class="label">한국어:</span> 군에서 (ab)⁻¹=b⁻¹a⁻¹이다.</div>
+  <div class="en"><span class="label">English:</span> In a group, (ab)⁻¹=b⁻¹a⁻¹.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 행렬곱에서 (AB)⁻¹=B⁻¹A⁻¹. / For matrices, (AB)⁻¹=B⁻¹A⁻¹.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 008</div>
+  <div class="title">거듭제곱 법칙</div>
+  <div class="ko"><span class="label">한국어:</span> 군에서 a^m a^n=a^(m+n)이다.</div>
+  <div class="en"><span class="label">English:</span> In a group, a^m a^n=a^(m+n).</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 2^3·2^4=2^7. / 2^3·2^4=2^7.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 009</div>
+  <div class="title">아벨군의 정의 성질</div>
+  <div class="ko"><span class="label">한국어:</span> 군 G가 아벨군이면 모든 a,b에 대해 ab=ba이다.</div>
+  <div class="en"><span class="label">English:</span> If G is abelian, then ab=ba for all a,b in G.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: (ℤ,+)는 아벨군이다. / (ℤ,+) is an abelian group.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 010</div>
+  <div class="title">순환군은 아벨군</div>
+  <div class="ko"><span class="label">한국어:</span> 모든 순환군은 아벨군이다.</div>
+  <div class="en"><span class="label">English:</span> Every cyclic group is abelian.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₆={0,1,2,3,4,5}는 1로 생성되는 순환 아벨군이다. / ℤ₆ is cyclic and abelian.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 011</div>
+  <div class="title">부분군 판정법</div>
+  <div class="ko"><span class="label">한국어:</span> 공집합이 아닌 H⊆G가 ab⁻¹에 대해 닫혀 있으면 H는 부분군이다.</div>
+  <div class="en"><span class="label">English:</span> If nonempty H⊆G is closed under ab⁻¹, then H is a subgroup.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 짝수 정수 2ℤ는 ℤ의 부분군이다. / 2ℤ is a subgroup of ℤ.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 012</div>
+  <div class="title">유한 부분군 판정법</div>
+  <div class="ko"><span class="label">한국어:</span> 유한한 공집합 아닌 H⊆G가 연산에 닫혀 있으면 H는 부분군이다.</div>
+  <div class="en"><span class="label">English:</span> A finite nonempty subset H of G closed under the operation is a subgroup.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: {0,2,4}는 ℤ₆의 부분군이다. / {0,2,4} is a subgroup of ℤ₆.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 013</div>
+  <div class="title">부분군의 교집합</div>
+  <div class="ko"><span class="label">한국어:</span> 부분군들의 교집합은 다시 부분군이다.</div>
+  <div class="en"><span class="label">English:</span> The intersection of subgroups is a subgroup.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 2ℤ∩3ℤ=6ℤ. / 2ℤ∩3ℤ=6ℤ.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 014</div>
+  <div class="title">생성 부분군</div>
+  <div class="ko"><span class="label">한국어:</span> 원소 a가 만드는 모든 거듭제곱의 집합은 부분군이다.</div>
+  <div class="en"><span class="label">English:</span> The set of all powers of an element a forms a subgroup.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₈에서 <2>={0,2,4,6}. / In ℤ₈, <2>={0,2,4,6}.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 015</div>
+  <div class="title">원소의 위수</div>
+  <div class="ko"><span class="label">한국어:</span> 원소 a의 위수는 a^n=e가 되는 최소 양의 정수 n이다.</div>
+  <div class="en"><span class="label">English:</span> The order of a is the least positive n such that a^n=e.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₆에서 2의 위수는 3이다. / In ℤ₆, the order of 2 is 3.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 016</div>
+  <div class="title">유한군 원소의 위수</div>
+  <div class="ko"><span class="label">한국어:</span> 유한군에서 원소의 위수는 군의 위수를 나눈다.</div>
+  <div class="en"><span class="label">English:</span> In a finite group, the order of an element divides the order of the group.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: |ℤ₆|=6이고 원소 2의 위수는 3이다. / In ℤ₆, order of 2 is 3, dividing 6.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 017</div>
+  <div class="title">라그랑주 정리</div>
+  <div class="ko"><span class="label">한국어:</span> 유한군 G의 부분군 H에 대해 |H|는 |G|를 나눈다.</div>
+  <div class="en"><span class="label">English:</span> For a finite group G and subgroup H, |H| divides |G|.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₁₂의 부분군 <4>의 크기 3은 12를 나눈다. / In ℤ₁₂, |<4>|=3 divides 12.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 018</div>
+  <div class="title">페르마 소정리</div>
+  <div class="ko"><span class="label">한국어:</span> 소수 p와 p∤a이면 a^(p-1)≡1 mod p이다.</div>
+  <div class="en"><span class="label">English:</span> If p is prime and p does not divide a, then a^(p-1)≡1 mod p.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 2^4≡1 mod 5. / 2^4≡1 mod 5.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 019</div>
+  <div class="title">오일러 정리</div>
+  <div class="ko"><span class="label">한국어:</span> gcd(a,n)=1이면 a^φ(n)≡1 mod n이다.</div>
+  <div class="en"><span class="label">English:</span> If gcd(a,n)=1, then a^φ(n)≡1 mod n.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: φ(10)=4, 3^4≡1 mod 10. / φ(10)=4 and 3^4≡1 mod 10.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 020</div>
+  <div class="title">코셋의 크기</div>
+  <div class="ko"><span class="label">한국어:</span> 부분군 H의 모든 좌코셋은 H와 같은 크기이다.</div>
+  <div class="en"><span class="label">English:</span> Every left coset of H has the same size as H.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₆에서 1+{0,3}={1,4}. / In ℤ₆, 1+{0,3}={1,4}.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 021</div>
+  <div class="title">코셋 분할</div>
+  <div class="ko"><span class="label">한국어:</span> 부분군의 좌코셋들은 군을 서로소로 분할한다.</div>
+  <div class="en"><span class="label">English:</span> Left cosets of a subgroup partition the group.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₆은 {0,3},{1,4},{2,5}로 분할된다. / ℤ₆ is partitioned into {0,3},{1,4},{2,5}.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 022</div>
+  <div class="title">정규부분군 판정</div>
+  <div class="ko"><span class="label">한국어:</span> H가 정규부분군이면 모든 g에 대해 gH=Hg이다.</div>
+  <div class="en"><span class="label">English:</span> H is normal if and only if gH=Hg for every g.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 아벨군의 모든 부분군은 정규부분군이다. / Every subgroup of an abelian group is normal.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 023</div>
+  <div class="title">몫군 존재 정리</div>
+  <div class="ko"><span class="label">한국어:</span> N이 정규부분군이면 G/N은 군이 된다.</div>
+  <div class="en"><span class="label">English:</span> If N is normal in G, then G/N is a group.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ/3ℤ는 몫군이다. / ℤ/3ℤ is a quotient group.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 024</div>
+  <div class="title">군 준동형의 핵</div>
+  <div class="ko"><span class="label">한국어:</span> 군 준동형의 핵은 정규부분군이다.</div>
+  <div class="en"><span class="label">English:</span> The kernel of a group homomorphism is a normal subgroup.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: f:ℤ→ℤ₃, f(n)=n mod 3의 핵은 3ℤ이다. / The kernel is 3ℤ.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 025</div>
+  <div class="title">군 준동형의 상</div>
+  <div class="ko"><span class="label">한국어:</span> 군 준동형의 상은 공역의 부분군이다.</div>
+  <div class="en"><span class="label">English:</span> The image of a group homomorphism is a subgroup of the codomain.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: n↦2n의 상은 2ℤ이다. / The image of n↦2n is 2ℤ.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 026</div>
+  <div class="title">제1 동형 정리</div>
+  <div class="ko"><span class="label">한국어:</span> G/ker f는 im f와 동형이다.</div>
+  <div class="en"><span class="label">English:</span> G/ker f is isomorphic to im f.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ/3ℤ ≅ ℤ₃. / ℤ/3ℤ is isomorphic to ℤ₃.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 027</div>
+  <div class="title">제2 동형 정리</div>
+  <div class="ko"><span class="label">한국어:</span> A≤G, N◁G이면 AN/N ≅ A/(A∩N)이다.</div>
+  <div class="en"><span class="label">English:</span> If A≤G and N◁G, then AN/N ≅ A/(A∩N).</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 부분군과 정규부분군의 결합 구조를 비교할 때 사용한다. / Used to compare products of subgroups with quotients.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 028</div>
+  <div class="title">제3 동형 정리</div>
+  <div class="ko"><span class="label">한국어:</span> N≤M◁G이면 (G/N)/(M/N) ≅ G/M이다.</div>
+  <div class="en"><span class="label">English:</span> If N≤M◁G, then (G/N)/(M/N) ≅ G/M.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ에서 (ℤ/6ℤ)/(3ℤ/6ℤ) ≅ ℤ/3ℤ. / Example quotient reduction.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 029</div>
+  <div class="title">대응 정리</div>
+  <div class="ko"><span class="label">한국어:</span> G/N의 부분군은 N을 포함하는 G의 부분군과 대응한다.</div>
+  <div class="en"><span class="label">English:</span> Subgroups of G/N correspond to subgroups of G containing N.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ/6ℤ의 부분군은 6ℤ을 포함하는 ℤ의 부분군과 대응한다. / Subgroups correspond through the quotient map.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 030</div>
+  <div class="title">케일리 정리</div>
+  <div class="ko"><span class="label">한국어:</span> 모든 군은 어떤 대칭군의 부분군과 동형이다.</div>
+  <div class="en"><span class="label">English:</span> Every group is isomorphic to a subgroup of a symmetric group.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 크기 3인 군은 S₃의 부분군으로 표현된다. / A group of order 3 embeds in S₃.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 031</div>
+  <div class="title">순열의 부호</div>
+  <div class="ko"><span class="label">한국어:</span> 순열은 짝순열 또는 홀순열 중 하나이다.</div>
+  <div class="en"><span class="label">English:</span> Every permutation is either even or odd.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 전치 하나는 홀순열이다. / A single transposition is odd.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 032</div>
+  <div class="title">교대군의 정규성</div>
+  <div class="ko"><span class="label">한국어:</span> A_n은 S_n의 정규부분군이다.</div>
+  <div class="en"><span class="label">English:</span> A_n is a normal subgroup of S_n.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: A₃◁S₃. / A₃ is normal in S₃.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 033</div>
+  <div class="title">실로우 제1정리</div>
+  <div class="ko"><span class="label">한국어:</span> p^k가 |G|를 나누면 G는 위수 p^k인 부분군을 가진다.</div>
+  <div class="en"><span class="label">English:</span> If p^k divides |G| appropriately, G has a subgroup of order p^k.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 위수 12인 군은 위수 4인 2-실로우 부분군을 가진다. / A group of order 12 has a Sylow 2-subgroup of order 4.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 034</div>
+  <div class="title">실로우 제2정리</div>
+  <div class="ko"><span class="label">한국어:</span> 모든 실로우 p-부분군은 서로 켤레이다.</div>
+  <div class="en"><span class="label">English:</span> All Sylow p-subgroups are conjugate.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: S₃의 위수 2 부분군들은 서로 켤레이다. / Order-2 Sylow subgroups in S₃ are conjugate.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 035</div>
+  <div class="title">실로우 제3정리</div>
+  <div class="ko"><span class="label">한국어:</span> 실로우 p-부분군의 개수는 p에 대해 1과 합동이고 특정 지수를 나눈다.</div>
+  <div class="en"><span class="label">English:</span> The number of Sylow p-subgroups is congruent to 1 mod p and divides the appropriate index.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 위수 6인 군에서 실로우 3-부분군 개수는 1이다. / In order 6, the number of Sylow 3-subgroups is 1.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 036</div>
+  <div class="title">군 작용 궤도-안정자 정리</div>
+  <div class="ko"><span class="label">한국어:</span> |Orb(x)|·|Stab(x)|=|G|이다.</div>
+  <div class="en"><span class="label">English:</span> For a group action, |Orb(x)|·|Stab(x)|=|G|.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 정삼각형 회전군이 꼭짓점에 작용하면 궤도 크기는 3이다. / Rotations of a triangle act on vertices with orbit size 3.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 037</div>
+  <div class="title">번사이드 보조정리</div>
+  <div class="ko"><span class="label">한국어:</span> 궤도의 수는 고정점 수의 평균이다.</div>
+  <div class="en"><span class="label">English:</span> The number of orbits equals the average number of fixed points.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 목걸이 색칠 경우의 수 계산에 사용한다. / Used to count colorings of necklaces.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 038</div>
+  <div class="title">중심의 부분군성</div>
+  <div class="ko"><span class="label">한국어:</span> 군의 중심 Z(G)는 G의 부분군이다.</div>
+  <div class="en"><span class="label">English:</span> The center Z(G) is a subgroup of G.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 아벨군에서는 Z(G)=G. / For abelian groups, Z(G)=G.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 039</div>
+  <div class="title">중심화자의 부분군성</div>
+  <div class="ko"><span class="label">한국어:</span> 원소 a와 교환하는 원소들의 집합은 부분군이다.</div>
+  <div class="en"><span class="label">English:</span> The set of elements commuting with a is a subgroup.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 행렬 A와 교환하는 가역행렬들의 집합. / Invertible matrices commuting with A form a subgroup.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 040</div>
+  <div class="title">공액류 방정식</div>
+  <div class="ko"><span class="label">한국어:</span> 유한군의 크기는 중심과 비중심 공액류 크기의 합으로 표현된다.</div>
+  <div class="en"><span class="label">English:</span> The class equation expresses |G| as the sum of center elements and noncentral conjugacy class sizes.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: p-군의 중심이 자명하지 않음을 보일 때 사용한다. / Used to prove p-groups have nontrivial center.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 041</div>
+  <div class="title">p-군 중심 정리</div>
+  <div class="ko"><span class="label">한국어:</span> 유한 p-군의 중심은 자명하지 않다.</div>
+  <div class="en"><span class="label">English:</span> The center of a finite p-group is nontrivial.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 위수 p²인 군은 중심이 1보다 크다. / A group of order p² has nontrivial center.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 042</div>
+  <div class="title">위수 p² 군</div>
+  <div class="ko"><span class="label">한국어:</span> 위수 p²인 군은 아벨군이다.</div>
+  <div class="en"><span class="label">English:</span> Every group of order p² is abelian.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 위수 9인 군은 아벨군이다. / Every group of order 9 is abelian.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 043</div>
+  <div class="title">소수 위수 군</div>
+  <div class="ko"><span class="label">한국어:</span> 소수 위수의 군은 순환군이다.</div>
+  <div class="en"><span class="label">English:</span> Every group of prime order is cyclic.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 위수 5인 군은 ℤ₅와 동형이다. / A group of order 5 is isomorphic to ℤ₅.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 044</div>
+  <div class="title">직접곱의 군성</div>
+  <div class="ko"><span class="label">한국어:</span> 두 군의 직접곱은 군이다.</div>
+  <div class="en"><span class="label">English:</span> The direct product of two groups is a group.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₂×ℤ₃는 군이다. / ℤ₂×ℤ₃ is a group.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 045</div>
+  <div class="title">서로소 순환군 직접곱</div>
+  <div class="ko"><span class="label">한국어:</span> gcd(m,n)=1이면 ℤ_m×ℤ_n ≅ ℤ_mn이다.</div>
+  <div class="en"><span class="label">English:</span> If gcd(m,n)=1, then ℤ_m×ℤ_n ≅ ℤ_mn.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₂×ℤ₃≅ℤ₆. / ℤ₂×ℤ₃≅ℤ₆.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 046</div>
+  <div class="title">유한 생성 아벨군 기본정리</div>
+  <div class="ko"><span class="label">한국어:</span> 유한 생성 아벨군은 순환군들의 직접곱으로 분해된다.</div>
+  <div class="en"><span class="label">English:</span> Every finitely generated abelian group decomposes into a direct product of cyclic groups.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₁₂≅ℤ₃×ℤ₄. / ℤ₁₂≅ℤ₃×ℤ₄.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 047</div>
+  <div class="title">환의 영원 유일성</div>
+  <div class="ko"><span class="label">한국어:</span> 환의 덧셈 항등원 0은 유일하다.</div>
+  <div class="en"><span class="label">English:</span> The additive identity 0 in a ring is unique.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 정수환 ℤ의 0은 하나뿐이다. / The zero of ℤ is unique.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 048</div>
+  <div class="title">환의 덧셈 역원 유일성</div>
+  <div class="ko"><span class="label">한국어:</span> 환에서 각 원소의 덧셈 역원은 유일하다.</div>
+  <div class="en"><span class="label">English:</span> In a ring, each element has a unique additive inverse.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 7의 덧셈 역원은 -7이다. / The additive inverse of 7 is -7.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 049</div>
+  <div class="title">0 곱셈 성질</div>
+  <div class="ko"><span class="label">한국어:</span> 환에서 0·a=a·0=0이다.</div>
+  <div class="en"><span class="label">English:</span> In a ring, 0·a=a·0=0.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 0·5=0. / 0·5=0.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 050</div>
+  <div class="title">음수 곱셈 성질</div>
+  <div class="ko"><span class="label">한국어:</span> 환에서 (-a)b=-(ab)이다.</div>
+  <div class="en"><span class="label">English:</span> In a ring, (-a)b=-(ab).</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: (-2)·3=-6. / (-2)·3=-6.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 051</div>
+  <div class="title">분배법칙</div>
+  <div class="ko"><span class="label">한국어:</span> 환의 곱셈은 덧셈에 대해 분배된다.</div>
+  <div class="en"><span class="label">English:</span> Multiplication in a ring distributes over addition.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 2(3+4)=2·3+2·4. / 2(3+4)=2·3+2·4.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 052</div>
+  <div class="title">부분환 판정법</div>
+  <div class="ko"><span class="label">한국어:</span> 공집합이 아닌 S가 뺄셈과 곱셈에 닫혀 있으면 부분환이다.</div>
+  <div class="en"><span class="label">English:</span> A nonempty subset closed under subtraction and multiplication is a subring.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 짝수 정수 2ℤ는 ℤ의 부분환이다. / 2ℤ is a subring of ℤ.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 053</div>
+  <div class="title">아이디얼 판정법</div>
+  <div class="ko"><span class="label">한국어:</span> I가 덧셈 부분군이고 rI, Ir⊆I이면 아이디얼이다.</div>
+  <div class="en"><span class="label">English:</span> If I is an additive subgroup and rI, Ir⊆I, then I is an ideal.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: nℤ는 ℤ의 아이디얼이다. / nℤ is an ideal of ℤ.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 054</div>
+  <div class="title">몫환 존재 정리</div>
+  <div class="ko"><span class="label">한국어:</span> I가 아이디얼이면 R/I는 환이 된다.</div>
+  <div class="en"><span class="label">English:</span> If I is an ideal, then R/I is a ring.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ/5ℤ는 몫환이다. / ℤ/5ℤ is a quotient ring.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 055</div>
+  <div class="title">환 준동형의 핵</div>
+  <div class="ko"><span class="label">한국어:</span> 환 준동형의 핵은 아이디얼이다.</div>
+  <div class="en"><span class="label">English:</span> The kernel of a ring homomorphism is an ideal.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ→ℤ₆의 핵은 6ℤ이다. / The kernel of ℤ→ℤ₆ is 6ℤ.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 056</div>
+  <div class="title">환 제1 동형 정리</div>
+  <div class="ko"><span class="label">한국어:</span> R/ker f는 im f와 동형인 환이다.</div>
+  <div class="en"><span class="label">English:</span> R/ker f is isomorphic to im f as rings.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ/6ℤ≅이미지(ℤ→ℤ₆). / ℤ/6ℤ is the image of ℤ in ℤ₆.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 057</div>
+  <div class="title">소아이디얼 판정</div>
+  <div class="ko"><span class="label">한국어:</span> R/P가 정역이면 P는 소아이디얼이다.</div>
+  <div class="en"><span class="label">English:</span> P is prime iff R/P is an integral domain.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: (p)는 ℤ에서 p가 소수일 때 소아이디얼이다. / (p) is prime in ℤ when p is prime.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 058</div>
+  <div class="title">극대아이디얼 판정</div>
+  <div class="ko"><span class="label">한국어:</span> R/M이 체이면 M은 극대아이디얼이다.</div>
+  <div class="en"><span class="label">English:</span> M is maximal iff R/M is a field.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: (5)는 ℤ의 극대아이디얼이다. / (5) is maximal in ℤ.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 059</div>
+  <div class="title">극대아이디얼은 소아이디얼</div>
+  <div class="ko"><span class="label">한국어:</span> 가환환에서 모든 극대아이디얼은 소아이디얼이다.</div>
+  <div class="en"><span class="label">English:</span> In a commutative ring, every maximal ideal is prime.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: (5)⊂ℤ는 극대이므로 소아이디얼이다. / (5) is maximal, hence prime in ℤ.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 060</div>
+  <div class="title">정역의 소거법칙</div>
+  <div class="ko"><span class="label">한국어:</span> 정역에서 a≠0이고 ab=ac이면 b=c이다.</div>
+  <div class="en"><span class="label">English:</span> In an integral domain, if a≠0 and ab=ac, then b=c.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 정수에서 2x=2y이면 x=y. / In ℤ, 2x=2y implies x=y.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 061</div>
+  <div class="title">체는 정역</div>
+  <div class="ko"><span class="label">한국어:</span> 모든 체는 정역이다.</div>
+  <div class="en"><span class="label">English:</span> Every field is an integral domain.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 유리수체 ℚ는 정역이다. / ℚ is an integral domain.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 062</div>
+  <div class="title">유한 정역은 체</div>
+  <div class="ko"><span class="label">한국어:</span> 유한 정역은 체이다.</div>
+  <div class="en"><span class="label">English:</span> Every finite integral domain is a field.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₅는 유한 정역이므로 체이다. / ℤ₅ is a field.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 063</div>
+  <div class="title">ℤ_n이 체일 조건</div>
+  <div class="ko"><span class="label">한국어:</span> ℤ_n은 n이 소수일 때 체이다.</div>
+  <div class="en"><span class="label">English:</span> ℤ_n is a field iff n is prime.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₇은 체, ℤ₆은 체가 아니다. / ℤ₇ is a field, ℤ₆ is not.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 064</div>
+  <div class="title">단위원군</div>
+  <div class="ko"><span class="label">한국어:</span> 환 R의 단위원들은 곱셈에 대해 군을 이룬다.</div>
+  <div class="en"><span class="label">English:</span> The units of a ring form a group under multiplication.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₈의 단위원은 {1,3,5,7}. / Units of ℤ₈ are {1,3,5,7}.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 065</div>
+  <div class="title">중국인의 나머지 정리</div>
+  <div class="ko"><span class="label">한국어:</span> 서로소 아이디얼들에 대해 몫환은 몫환들의 직접곱과 동형이다.</div>
+  <div class="en"><span class="label">English:</span> For coprime ideals, a quotient ring is isomorphic to a product of quotient rings.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₆≅ℤ₂×ℤ₃. / ℤ₆≅ℤ₂×ℤ₃.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 066</div>
+  <div class="title">다항식 나눗셈 알고리즘</div>
+  <div class="ko"><span class="label">한국어:</span> 체 F 위의 다항식 f,g에 대해 f=qg+r, deg r<deg g이다.</div>
+  <div class="en"><span class="label">English:</span> Over a field F, f=qg+r with deg r<deg g.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: x²+1을 x-1로 나누면 나머지는 2이다. / Dividing x²+1 by x-1 gives remainder 2.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 067</div>
+  <div class="title">나머지 정리</div>
+  <div class="ko"><span class="label">한국어:</span> f(x)를 x-a로 나눈 나머지는 f(a)이다.</div>
+  <div class="en"><span class="label">English:</span> The remainder of f(x) divided by x-a is f(a).</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: f=x²+1, a=1이면 나머지 2. / For f=x²+1 and a=1, remainder is 2.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 068</div>
+  <div class="title">인수 정리</div>
+  <div class="ko"><span class="label">한국어:</span> f(a)=0이면 x-a는 f(x)의 인수이다.</div>
+  <div class="en"><span class="label">English:</span> If f(a)=0, then x-a divides f(x).</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: x²-1은 x-1을 인수로 가진다. / x²-1 has factor x-1.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 069</div>
+  <div class="title">체 위 다항식환은 유클리드 정역</div>
+  <div class="ko"><span class="label">한국어:</span> F가 체이면 F[x]는 유클리드 정역이다.</div>
+  <div class="en"><span class="label">English:</span> If F is a field, then F[x] is a Euclidean domain.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℚ[x]에서는 다항식 나눗셈이 가능하다. / Polynomial division works in ℚ[x].</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 070</div>
+  <div class="title">유클리드 정역은 주아이디얼 정역</div>
+  <div class="ko"><span class="label">한국어:</span> 모든 유클리드 정역은 PID이다.</div>
+  <div class="en"><span class="label">English:</span> Every Euclidean domain is a principal ideal domain.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ는 유클리드 정역이므로 PID이다. / ℤ is Euclidean, hence a PID.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 071</div>
+  <div class="title">PID는 UFD</div>
+  <div class="ko"><span class="label">한국어:</span> 모든 주아이디얼 정역은 유일인수분해정역이다.</div>
+  <div class="en"><span class="label">English:</span> Every PID is a UFD.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ는 UFD이다. / ℤ is a UFD.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 072</div>
+  <div class="title">가우스 보조정리</div>
+  <div class="ko"><span class="label">한국어:</span> 원시 다항식의 곱은 원시 다항식이다.</div>
+  <div class="en"><span class="label">English:</span> The product of primitive polynomials is primitive.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 정수계수 다항식의 기약성 판단에 사용한다. / Used to test irreducibility over integers.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 073</div>
+  <div class="title">에이젠슈타인 판정법</div>
+  <div class="ko"><span class="label">한국어:</span> 적절한 소수 p 조건을 만족하면 다항식은 기약이다.</div>
+  <div class="en"><span class="label">English:</span> A polynomial satisfying Eisenstein's criterion for a prime p is irreducible.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: x³+2x+2는 p=2로 기약이다. / x³+2x+2 is irreducible by p=2.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 074</div>
+  <div class="title">체 확장의 차수 곱셈</div>
+  <div class="ko"><span class="label">한국어:</span> K/F와 L/K가 유한확장이면 [L:F]=[L:K][K:F]이다.</div>
+  <div class="en"><span class="label">English:</span> For finite extensions K/F and L/K, [L:F]=[L:K][K:F].</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: [ℚ(√2,√3):ℚ]=4. / [ℚ(√2,√3):ℚ]=4.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 075</div>
+  <div class="title">대수적 원소의 최소다항식</div>
+  <div class="ko"><span class="label">한국어:</span> 대수적 원소는 유일한 단원 기약 최소다항식을 가진다.</div>
+  <div class="en"><span class="label">English:</span> An algebraic element has a unique monic irreducible minimal polynomial.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: √2의 최소다항식은 x²-2이다. / The minimal polynomial of √2 is x²-2.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 076</div>
+  <div class="title">유한 차수 확장은 대수적</div>
+  <div class="ko"><span class="label">한국어:</span> 유한 차수 체 확장은 대수적 확장이다.</div>
+  <div class="en"><span class="label">English:</span> Every finite field extension is algebraic.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℚ(√2)/ℚ는 유한이므로 대수적이다. / ℚ(√2)/ℚ is algebraic.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 077</div>
+  <div class="title">대수적 확장의 추이성</div>
+  <div class="ko"><span class="label">한국어:</span> L/K와 K/F가 대수적이면 L/F도 대수적이다.</div>
+  <div class="en"><span class="label">English:</span> If L/K and K/F are algebraic, then L/F is algebraic.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: √2와 √3을 차례로 붙여도 대수적이다. / Adjoining √2 and √3 remains algebraic.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 078</div>
+  <div class="title">유한체의 크기</div>
+  <div class="ko"><span class="label">한국어:</span> 유한체의 원소 개수는 p^n 꼴이다.</div>
+  <div class="en"><span class="label">English:</span> The number of elements in a finite field is p^n.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: GF(4)는 2²개의 원소를 가진다. / GF(4) has 2² elements.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 079</div>
+  <div class="title">유한체의 곱셈군</div>
+  <div class="ko"><span class="label">한국어:</span> 유한체의 0이 아닌 원소들은 순환군을 이룬다.</div>
+  <div class="en"><span class="label">English:</span> The nonzero elements of a finite field form a cyclic group.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₇^×는 위수 6의 순환군이다. / ℤ₇^× is cyclic of order 6.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 080</div>
+  <div class="title">분해체 존재</div>
+  <div class="ko"><span class="label">한국어:</span> 임의의 다항식은 어떤 체 확장에서 완전히 분해된다.</div>
+  <div class="en"><span class="label">English:</span> Every polynomial splits completely over some field extension.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: x²+1은 ℂ에서 분해된다. / x²+1 splits over ℂ.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 081</div>
+  <div class="title">분해체 유일성</div>
+  <div class="ko"><span class="label">한국어:</span> 분해체는 F-동형을 제외하고 유일하다.</div>
+  <div class="en"><span class="label">English:</span> Splitting fields are unique up to F-isomorphism.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: x²-2의 분해체는 ℚ(√2)와 동형이다. / The splitting field of x²-2 is ℚ(√2) up to isomorphism.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 082</div>
+  <div class="title">대수적 폐포 존재</div>
+  <div class="ko"><span class="label">한국어:</span> 모든 체는 대수적 폐포를 가진다.</div>
+  <div class="en"><span class="label">English:</span> Every field has an algebraic closure.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℚ의 대수적 폐포는 ℂ 안에 포함될 수 있다. / An algebraic closure of ℚ can be embedded in ℂ.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 083</div>
+  <div class="title">특성 0 체</div>
+  <div class="ko"><span class="label">한국어:</span> 체의 특성이 0이면 자연수 n·1이 모두 0이 아니다.</div>
+  <div class="en"><span class="label">English:</span> If a field has characteristic 0, then n·1≠0 for all positive n.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℚ,ℝ,ℂ의 특성은 0이다. / ℚ, ℝ, and ℂ have characteristic 0.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 084</div>
+  <div class="title">체의 특성은 0 또는 소수</div>
+  <div class="ko"><span class="label">한국어:</span> 체의 특성은 0이거나 소수 p이다.</div>
+  <div class="en"><span class="label">English:</span> The characteristic of a field is 0 or a prime p.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ₅의 특성은 5이다. / ℤ₅ has characteristic 5.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 085</div>
+  <div class="title">갈루아 군</div>
+  <div class="ko"><span class="label">한국어:</span> 분해체의 자기동형들은 갈루아 군을 이룬다.</div>
+  <div class="en"><span class="label">English:</span> Automorphisms of a splitting field form the Galois group.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℚ(√2)/ℚ의 갈루아 군은 크기 2이다. / Gal(ℚ(√2)/ℚ) has order 2.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 086</div>
+  <div class="title">갈루아 대응</div>
+  <div class="ko"><span class="label">한국어:</span> 갈루아 확장에서 부분군과 중간체 사이에 반대 방향 대응이 있다.</div>
+  <div class="en"><span class="label">English:</span> In a Galois extension, subgroups correspond oppositely to intermediate fields.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 큰 부분군은 작은 고정체에 대응한다. / Larger subgroups correspond to smaller fixed fields.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 087</div>
+  <div class="title">갈루아 기본정리</div>
+  <div class="ko"><span class="label">한국어:</span> 유한 갈루아 확장의 중간체와 갈루아 군의 부분군은 일대일 대응한다.</div>
+  <div class="en"><span class="label">English:</span> Intermediate fields of a finite Galois extension correspond to subgroups of its Galois group.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℚ(√2,√3) 확장의 중간체 분석. / Used to analyze intermediate fields of ℚ(√2,√3).</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 088</div>
+  <div class="title">정규확장 판정</div>
+  <div class="ko"><span class="label">한국어:</span> 대수확장 E/F가 모든 기약다항식을 완전히 분해하면 정규이다.</div>
+  <div class="en"><span class="label">English:</span> An algebraic extension E/F is normal if irreducible polynomials split in E.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℚ(√2)는 x²-2의 분해체라 정규이다. / ℚ(√2) is normal.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 089</div>
+  <div class="title">분리확장</div>
+  <div class="ko"><span class="label">한국어:</span> 모든 원소의 최소다항식이 중근을 갖지 않으면 분리확장이다.</div>
+  <div class="en"><span class="label">English:</span> An extension is separable if minimal polynomials have no repeated roots.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 특성 0의 모든 대수확장은 분리적이다. / Algebraic extensions in characteristic 0 are separable.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 090</div>
+  <div class="title">갈루아 확장 조건</div>
+  <div class="ko"><span class="label">한국어:</span> 유한확장이 정규이고 분리적이면 갈루아 확장이다.</div>
+  <div class="en"><span class="label">English:</span> A finite extension is Galois iff it is normal and separable.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℚ(√2)/ℚ는 갈루아 확장이다. / ℚ(√2)/ℚ is Galois.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 091</div>
+  <div class="title">해결가능군과 근호해</div>
+  <div class="ko"><span class="label">한국어:</span> 다항식이 근호로 풀리려면 관련 갈루아 군이 해결가능해야 한다.</div>
+  <div class="en"><span class="label">English:</span> A polynomial is solvable by radicals when its Galois group is solvable.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 일반 5차방정식은 보통 근호로 풀 수 없다. / The general quintic is not solvable by radicals.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 092</div>
+  <div class="title">모듈의 부분모듈</div>
+  <div class="ko"><span class="label">한국어:</span> 모듈의 부분집합이 덧셈과 스칼라곱에 닫혀 있으면 부분모듈이다.</div>
+  <div class="en"><span class="label">English:</span> A subset closed under addition and scalar multiplication is a submodule.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ-모듈 ℤ에서 2ℤ는 부분모듈이다. / 2ℤ is a submodule of ℤ.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 093</div>
+  <div class="title">몫모듈</div>
+  <div class="ko"><span class="label">한국어:</span> N이 M의 부분모듈이면 M/N은 모듈이다.</div>
+  <div class="en"><span class="label">English:</span> If N is a submodule of M, then M/N is a module.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ/2ℤ는 ℤ-모듈이다. / ℤ/2ℤ is a ℤ-module.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 094</div>
+  <div class="title">모듈 준동형 핵</div>
+  <div class="ko"><span class="label">한국어:</span> 모듈 준동형의 핵은 부분모듈이다.</div>
+  <div class="en"><span class="label">English:</span> The kernel of a module homomorphism is a submodule.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: f:ℤ→ℤ₂의 핵은 2ℤ이다. / The kernel is 2ℤ.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 095</div>
+  <div class="title">모듈 제1 동형 정리</div>
+  <div class="ko"><span class="label">한국어:</span> M/ker f는 im f와 동형이다.</div>
+  <div class="en"><span class="label">English:</span> M/ker f is isomorphic to im f.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℤ/2ℤ≅이미지(ℤ→ℤ₂). / ℤ/2ℤ is isomorphic to the image.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 096</div>
+  <div class="title">자유모듈의 기저</div>
+  <div class="ko"><span class="label">한국어:</span> 자유모듈은 기저를 가지며 원소가 유한 선형결합으로 표현된다.</div>
+  <div class="en"><span class="label">English:</span> A free module has a basis and elements are finite linear combinations.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: R^n은 표준기저를 가진 자유 R-모듈이다. / R^n is a free R-module.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 097</div>
+  <div class="title">벡터공간은 자유모듈</div>
+  <div class="ko"><span class="label">한국어:</span> 체 위의 모든 벡터공간은 자유모듈이다.</div>
+  <div class="en"><span class="label">English:</span> Every vector space over a field is a free module.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: ℝ²는 ℝ-자유모듈이다. / ℝ² is a free ℝ-module.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 098</div>
+  <div class="title">단순모듈</div>
+  <div class="ko"><span class="label">한국어:</span> 0과 자기 자신만 부분모듈로 가지는 모듈은 단순모듈이다.</div>
+  <div class="en"><span class="label">English:</span> A module with only 0 and itself as submodules is simple.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 체 F는 자기 자신 위의 단순모듈이다. / A field F is simple as an F-module.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 099</div>
+  <div class="title">노에터 모듈 조건</div>
+  <div class="ko"><span class="label">한국어:</span> 부분모듈의 증가 사슬이 멈추면 노에터 모듈이다.</div>
+  <div class="en"><span class="label">English:</span> A module is Noetherian if ascending chains of submodules stabilize.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 유한 생성 ℤ-모듈은 노에터이다. / Finitely generated ℤ-modules are Noetherian.</div>
+</section>
+
+<section class="section">
+  <div class="num">정리 100</div>
+  <div class="title">아르틴 모듈 조건</div>
+  <div class="ko"><span class="label">한국어:</span> 부분모듈의 감소 사슬이 멈추면 아르틴 모듈이다.</div>
+  <div class="en"><span class="label">English:</span> A module is Artinian if descending chains of submodules stabilize.</div>
+  <div class="example"><span class="label">예시 / Example:</span> 예시: 유한 아벨군은 아르틴 ℤ-모듈이다. / Finite abelian groups are Artinian ℤ-modules.</div>
+</section>
+
+</main>
+<footer>Modern Algebra 100 Theorems · Bilingual HTML · No Table</footer>
+</body>
+</html>

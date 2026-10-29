@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>정리 모음 index</title>
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Malgun Gothic", Arial, sans-serif;
+}
+.topbar {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    padding: 2px 6px;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+select {
+    font-size: 12px;
+    height: 22px;
+    width: 270px;
+}
+.viewer {
+    width: 100%;
+    height: calc(100vh - 28px);
+    border: 0;
+    display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+    <select id="pageSelect" onchange="openPage()">
+        <option value="set_theory_title_theorem_example_lines.html">Set Theory</option>
+        <option value="general_topology_100_ko_en_no_table.html">General Topology</option>
+        <option value="vector_analysis_100_theorems_bilingual_no_table.html">Vector Analysis</option>
+        <option value="projective_geometry_100_theorems_bilingual_no_table.html">Projective Geometry</option>
+        <option value="modern_algebra_100_theorems_bilingual_no_table.html">Modern Algebra</option>
+        <option value="linear_algebra_100_theorems_bilingual_no_table.html">Linear Algebra</option>
+    </select>
+</div>
+
+<iframe id="viewer" class="viewer" src="set_theory_title_theorem_example_lines.html"></iframe>
+
+<script>
+function openPage() {
+    const file = document.getElementById("pageSelect").value;
+    document.getElementById("viewer").src = file;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear Algebra 정리 100개 - 한국어 영어 예시</title>
+<style>
+body{font-family:'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif;line-height:1.75;margin:0;background:#f6f8fb;color:#1f2937}
+header{background:#1e3a8a;color:white;padding:34px 24px;text-align:center}
+header h1{margin:0;font-size:30px} header p{margin:10px 0 0;font-size:16px}
+main{max-width:1080px;margin:24px auto;padding:0 18px 60px}
+.item{background:white;border-radius:16px;padding:22px 24px;margin:18px 0;box-shadow:0 4px 14px rgba(0,0,0,.07);border-left:8px solid #2563eb}
+.num{font-size:20px;font-weight:800;color:#1d4ed8;margin-bottom:8px}
+.ko{font-weight:700;color:#111827;margin-top:8px}.en{font-weight:700;color:#374151;margin-top:8px}.ex{background:#eef6ff;border-radius:10px;padding:12px 14px;margin-top:10px;color:#0f172a}
+.label{display:inline-block;font-size:13px;background:#dbeafe;color:#1e40af;border-radius:999px;padding:2px 10px;margin-right:6px;font-weight:800}
+code{background:#f1f5f9;padding:2px 6px;border-radius:5px}.math{font-family:Consolas,monospace;color:#7c2d12;font-weight:700}
+footer{text-align:center;color:#64748b;padding:30px}
+</style>
+</head>
+<body>
+<header>
+<h1>Linear Algebra 정리 100개</h1>
+<p>각 정리마다 한국어 설명, 영어 설명, 예시 포함 · 표 없음</p>
+</header>
+<main>
+<section class="item">
+<div class="num">001. 벡터공간의 영벡터 유일성</div>
+<div class="ko"><span class="label">한국어</span>벡터공간에서 덧셈의 항등원인 영벡터는 오직 하나이다.</div>
+<div class="en"><span class="label">English</span>In a vector space, the additive identity, called the zero vector, is unique.</div>
+<div class="ex"><span class="label">예시 / Example</span>만약 0과 0'가 모두 영벡터라면 0 = 0 + 0' = 0' 이므로 서로 같다.</div>
+</section>
+<section class="item">
+<div class="num">002. 덧셈 역원의 유일성</div>
+<div class="ko"><span class="label">한국어</span>벡터 v에 대해 v + w = 0을 만족하는 덧셈 역원 w는 유일하다.</div>
+<div class="en"><span class="label">English</span>For each vector v, its additive inverse is unique.</div>
+<div class="ex"><span class="label">예시 / Example</span>v의 역원이 w와 u라면 w = w + 0 = w + (v+u) = (w+v)+u = u.</div>
+</section>
+<section class="item">
+<div class="num">003. 스칼라 0과 벡터의 곱</div>
+<div class="ko"><span class="label">한국어</span>임의의 벡터 v에 대해 0v = 0이다.</div>
+<div class="en"><span class="label">English</span>For any vector v, multiplying by the scalar 0 gives the zero vector.</div>
+<div class="ex"><span class="label">예시 / Example</span>0v = (0+0)v = 0v+0v 이므로 양변에 0v의 역원을 더하면 0v=0.</div>
+</section>
+<section class="item">
+<div class="num">004. 스칼라와 영벡터의 곱</div>
+<div class="ko"><span class="label">한국어</span>임의의 스칼라 a에 대해 a0 = 0이다.</div>
+<div class="en"><span class="label">English</span>For any scalar a, multiplying the zero vector by a gives the zero vector.</div>
+<div class="ex"><span class="label">예시 / Example</span>a0 = a(0+0)=a0+a0 이므로 a0=0.</div>
+</section>
+<section class="item">
+<div class="num">005. 음수 스칼라 곱</div>
+<div class="ko"><span class="label">한국어</span>(-1)v는 v의 덧셈 역원 -v와 같다.</div>
+<div class="en"><span class="label">English</span>The scalar multiple (-1)v equals the additive inverse of v.</div>
+<div class="ex"><span class="label">예시 / Example</span>v+(-1)v = 1v+(-1)v = (1-1)v = 0v = 0.</div>
+</section>
+<section class="item">
+<div class="num">006. 부분공간 판정법</div>
+<div class="ko"><span class="label">한국어</span>공집합이 아닌 집합 W가 덧셈과 스칼라 곱에 닫혀 있으면 W는 부분공간이다.</div>
+<div class="en"><span class="label">English</span>A nonempty subset W closed under addition and scalar multiplication is a subspace.</div>
+<div class="ex"><span class="label">예시 / Example</span>R²에서 W={(x,0)}는 두 벡터를 더해도 x축 위에 있고 스칼라를 곱해도 x축 위에 있으므로 부분공간이다.</div>
+</section>
+<section class="item">
+<div class="num">007. 선형결합의 닫힘</div>
+<div class="ko"><span class="label">한국어</span>벡터공간의 부분공간은 그 안의 벡터들의 모든 선형결합을 포함한다.</div>
+<div class="en"><span class="label">English</span>A subspace contains every linear combination of its vectors.</div>
+<div class="ex"><span class="label">예시 / Example</span>u,v가 W에 있으면 3u-2v도 W에 있다.</div>
+</section>
+<section class="item">
+<div class="num">008. 생성공간은 부분공간</div>
+<div class="ko"><span class="label">한국어</span>벡터들의 모든 선형결합으로 이루어진 span은 부분공간이다.</div>
+<div class="en"><span class="label">English</span>The span of a set of vectors is a subspace.</div>
+<div class="ex"><span class="label">예시 / Example</span>span{(1,0),(0,1)} = R²이다.</div>
+</section>
+<section class="item">
+<div class="num">009. 생성공간의 최소성</div>
+<div class="ko"><span class="label">한국어</span>span(S)는 S를 포함하는 가장 작은 부분공간이다.</div>
+<div class="en"><span class="label">English</span>span(S) is the smallest subspace containing S.</div>
+<div class="ex"><span class="label">예시 / Example</span>R³에서 e1,e2를 포함하는 가장 작은 부분공간은 xy평면이다.</div>
+</section>
+<section class="item">
+<div class="num">010. 일차독립의 정의</div>
+<div class="ko"><span class="label">한국어</span>c1v1+...+cnvn=0의 해가 모두 ci=0뿐이면 벡터들은 일차독립이다.</div>
+<div class="en"><span class="label">English</span>Vectors are linearly independent if the only solution to c1v1+...+cnvn=0 is the trivial solution.</div>
+<div class="ex"><span class="label">예시 / Example</span>(1,0),(0,1)은 a(1,0)+b(0,1)=(0,0)일 때 a=b=0이므로 독립이다.</div>
+</section>
+<section class="item">
+<div class="num">011. 일차종속의 정의</div>
+<div class="ko"><span class="label">한국어</span>영이 아닌 계수로 0을 만드는 선형결합이 존재하면 일차종속이다.</div>
+<div class="en"><span class="label">English</span>Vectors are linearly dependent if a nontrivial linear combination equals zero.</div>
+<div class="ex"><span class="label">예시 / Example</span>(1,0),(2,0)은 2(1,0)-1(2,0)=0이므로 종속이다.</div>
+</section>
+<section class="item">
+<div class="num">012. 영벡터 포함 집합의 종속성</div>
+<div class="ko"><span class="label">한국어</span>벡터 집합이 영벡터를 포함하면 항상 일차종속이다.</div>
+<div class="en"><span class="label">English</span>Any set containing the zero vector is linearly dependent.</div>
+<div class="ex"><span class="label">예시 / Example</span>5·0 = 0이므로 비자명한 관계가 있다.</div>
+</section>
+<section class="item">
+<div class="num">013. 한 벡터가 다른 벡터들의 선형결합이면 종속</div>
+<div class="ko"><span class="label">한국어</span>집합의 한 벡터가 나머지 벡터들의 선형결합이면 전체 집합은 일차종속이다.</div>
+<div class="en"><span class="label">English</span>If one vector is a linear combination of the others, the set is linearly dependent.</div>
+<div class="ex"><span class="label">예시 / Example</span>v3=v1+v2이면 v1+v2-v3=0.</div>
+</section>
+<section class="item">
+<div class="num">014. 독립 집합의 부분집합</div>
+<div class="ko"><span class="label">한국어</span>일차독립 집합의 모든 부분집합도 일차독립이다.</div>
+<div class="en"><span class="label">English</span>Every subset of a linearly independent set is linearly independent.</div>
+<div class="ex"><span class="label">예시 / Example</span>{e1,e2,e3}가 독립이면 {e1,e3}도 독립이다.</div>
+</section>
+<section class="item">
+<div class="num">015. 종속 집합의 확대집합</div>
+<div class="ko"><span class="label">한국어</span>일차종속 집합에 벡터를 더해도 여전히 일차종속이다.</div>
+<div class="en"><span class="label">English</span>Any superset of a linearly dependent set is linearly dependent.</div>
+<div class="ex"><span class="label">예시 / Example</span>{(1,0),(2,0)}가 종속이면 여기에 (0,1)을 추가해도 종속이다.</div>
+</section>
+<section class="item">
+<div class="num">016. 기저의 정의</div>
+<div class="ko"><span class="label">한국어</span>벡터공간 V의 기저는 V를 생성하고 동시에 일차독립인 벡터 집합이다.</div>
+<div class="en"><span class="label">English</span>A basis of V is a linearly independent set that spans V.</div>
+<div class="ex"><span class="label">예시 / Example</span>R²의 표준기저는 {(1,0),(0,1)}이다.</div>
+</section>
+<section class="item">
+<div class="num">017. 좌표 표현의 유일성</div>
+<div class="ko"><span class="label">한국어</span>기저가 주어지면 모든 벡터는 그 기저에 대해 유일한 좌표를 가진다.</div>
+<div class="en"><span class="label">English</span>With respect to a basis, every vector has a unique coordinate representation.</div>
+<div class="ex"><span class="label">예시 / Example</span>v=(3,4)는 표준기저에서 3e1+4e2로 유일하게 표현된다.</div>
+</section>
+<section class="item">
+<div class="num">018. 기저의 크기 동일성</div>
+<div class="ko"><span class="label">한국어</span>유한차원 벡터공간의 모든 기저는 같은 개수의 벡터를 가진다.</div>
+<div class="en"><span class="label">English</span>All bases of a finite-dimensional vector space have the same number of vectors.</div>
+<div class="ex"><span class="label">예시 / Example</span>R³의 어떤 기저도 정확히 3개의 벡터를 가진다.</div>
+</section>
+<section class="item">
+<div class="num">019. 차원의 정의</div>
+<div class="ko"><span class="label">한국어</span>벡터공간의 차원은 그 공간의 기저에 들어 있는 벡터의 개수이다.</div>
+<div class="en"><span class="label">English</span>The dimension of a vector space is the number of vectors in a basis.</div>
+<div class="ex"><span class="label">예시 / Example</span>dim(R⁴)=4이다.</div>
+</section>
+<section class="item">
+<div class="num">020. 교환정리</div>
+<div class="ko"><span class="label">한국어</span>독립인 벡터를 생성 집합에 적절히 교환해 넣어도 생성성을 유지할 수 있다.</div>
+<div class="en"><span class="label">English</span>The exchange lemma allows replacing vectors in a spanning set with independent vectors while preserving spanning.</div>
+<div class="ex"><span class="label">예시 / Example</span>R²에서 생성집합 {e1,e2}에 v=e1+e2를 넣으면 e1 또는 e2 하나를 빼도 여전히 생성할 수 있다.</div>
+</section>
+<section class="item">
+<div class="num">021. 독립 집합 확장 정리</div>
+<div class="ko"><span class="label">한국어</span>유한차원 공간의 일차독립 집합은 기저로 확장할 수 있다.</div>
+<div class="en"><span class="label">English</span>Every linearly independent set in a finite-dimensional space can be extended to a basis.</div>
+<div class="ex"><span class="label">예시 / Example</span>R³에서 {(1,0,0)}에 e2,e3를 추가하면 기저가 된다.</div>
+</section>
+<section class="item">
+<div class="num">022. 생성 집합 축소 정리</div>
+<div class="ko"><span class="label">한국어</span>유한차원 공간의 생성 집합에서 불필요한 벡터를 제거하여 기저를 얻을 수 있다.</div>
+<div class="en"><span class="label">English</span>A spanning set of a finite-dimensional space can be reduced to a basis.</div>
+<div class="ex"><span class="label">예시 / Example</span>{e1,e2,e1+e2}에서 e1+e2를 제거해도 R²를 생성한다.</div>
+</section>
+<section class="item">
+<div class="num">023. n개 독립 벡터 정리</div>
+<div class="ko"><span class="label">한국어</span>n차원 공간에서 n개의 일차독립 벡터는 기저이다.</div>
+<div class="en"><span class="label">English</span>In an n-dimensional space, n linearly independent vectors form a basis.</div>
+<div class="ex"><span class="label">예시 / Example</span>R²에서 독립인 두 벡터는 R²의 기저이다.</div>
+</section>
+<section class="item">
+<div class="num">024. n개 생성 벡터 정리</div>
+<div class="ko"><span class="label">한국어</span>n차원 공간에서 n개의 벡터가 공간을 생성하면 그 벡터들은 기저이다.</div>
+<div class="en"><span class="label">English</span>In an n-dimensional space, n vectors that span the space form a basis.</div>
+<div class="ex"><span class="label">예시 / Example</span>R³를 생성하는 세 벡터는 자동으로 독립이다.</div>
+</section>
+<section class="item">
+<div class="num">025. 차원 초과 벡터의 종속성</div>
+<div class="ko"><span class="label">한국어</span>n차원 공간에서 n개보다 많은 벡터는 반드시 일차종속이다.</div>
+<div class="en"><span class="label">English</span>More than n vectors in an n-dimensional space are necessarily linearly dependent.</div>
+<div class="ex"><span class="label">예시 / Example</span>R²의 세 벡터는 항상 종속이다.</div>
+</section>
+<section class="item">
+<div class="num">026. 차원 미만 벡터의 비생성성</div>
+<div class="ko"><span class="label">한국어</span>n차원 공간에서 n개보다 적은 벡터는 전체 공간을 생성할 수 없다.</div>
+<div class="en"><span class="label">English</span>Fewer than n vectors cannot span an n-dimensional space.</div>
+<div class="ex"><span class="label">예시 / Example</span>R³에서 두 벡터만으로는 R³ 전체를 생성할 수 없다.</div>
+</section>
+<section class="item">
+<div class="num">027. 행렬 곱의 결합법칙</div>
+<div class="ko"><span class="label">한국어</span>행렬 곱은 정의될 때 A(BC)=(AB)C를 만족한다.</div>
+<div class="en"><span class="label">English</span>Matrix multiplication is associative whenever the products are defined.</div>
+<div class="ex"><span class="label">예시 / Example</span>A가 2×3, B가 3×4, C가 4×2이면 A(BC)와 (AB)C는 모두 2×2이다.</div>
+</section>
+<section class="item">
+<div class="num">028. 행렬 곱의 분배법칙</div>
+<div class="ko"><span class="label">한국어</span>A(B+C)=AB+AC, (A+B)C=AC+BC가 성립한다.</div>
+<div class="en"><span class="label">English</span>Matrix multiplication distributes over addition.</div>
+<div class="ex"><span class="label">예시 / Example</span>A가 같을 때 두 변환의 합에 먼저 적용해도 결과는 각각 적용해 더한 것과 같다.</div>
+</section>
+<section class="item">
+<div class="num">029. 행렬 곱은 일반적으로 교환법칙 불성립</div>
+<div class="ko"><span class="label">한국어</span>대부분의 행렬에 대해 AB와 BA는 같지 않거나 한쪽이 정의되지 않을 수 있다.</div>
+<div class="en"><span class="label">English</span>Matrix multiplication is generally not commutative.</div>
+<div class="ex"><span class="label">예시 / Example</span>2×3 행렬 A와 3×2 행렬 B에서 AB는 2×2, BA는 3×3이다.</div>
+</section>
+<section class="item">
+<div class="num">030. 단위행렬의 항등성</div>
+<div class="ko"><span class="label">한국어</span>IA=A, AI=A가 성립한다.</div>
+<div class="en"><span class="label">English</span>The identity matrix acts as a multiplicative identity: IA=A and AI=A.</div>
+<div class="ex"><span class="label">예시 / Example</span>2×2 행렬 A에 I₂를 곱하면 A가 그대로 나온다.</div>
+</section>
+<section class="item">
+<div class="num">031. 전치의 전치</div>
+<div class="ko"><span class="label">한국어</span>행렬 A에 대해 (Aᵀ)ᵀ=A이다.</div>
+<div class="en"><span class="label">English</span>The transpose of the transpose of A equals A.</div>
+<div class="ex"><span class="label">예시 / Example</span>행과 열을 두 번 바꾸면 원래 행렬이 된다.</div>
+</section>
+<section class="item">
+<div class="num">032. 합의 전치</div>
+<div class="ko"><span class="label">한국어</span>(A+B)ᵀ=Aᵀ+Bᵀ이다.</div>
+<div class="en"><span class="label">English</span>The transpose of a sum equals the sum of transposes.</div>
+<div class="ex"><span class="label">예시 / Example</span>각 성분을 더한 뒤 뒤집는 것과 각각 뒤집어 더하는 것이 같다.</div>
+</section>
+<section class="item">
+<div class="num">033. 곱의 전치</div>
+<div class="ko"><span class="label">한국어</span>(AB)ᵀ=BᵀAᵀ이다.</div>
+<div class="en"><span class="label">English</span>The transpose of a product reverses the order: (AB)ᵀ=BᵀAᵀ.</div>
+<div class="ex"><span class="label">예시 / Example</span>두 변환을 합성한 뒤 전치하면 순서가 반대로 바뀐다.</div>
+</section>
+<section class="item">
+<div class="num">034. 역행렬의 정의</div>
+<div class="ko"><span class="label">한국어</span>정사각행렬 A에 대해 AB=BA=I인 B가 있으면 B는 A의 역행렬이다.</div>
+<div class="en"><span class="label">English</span>A matrix B is the inverse of square matrix A if AB=BA=I.</div>
+<div class="ex"><span class="label">예시 / Example</span>A=[[1,0],[0,2]]의 역행렬은 [[1,0],[0,1/2]]이다.</div>
+</section>
+<section class="item">
+<div class="num">035. 역행렬의 유일성</div>
+<div class="ko"><span class="label">한국어</span>역행렬이 존재하면 오직 하나이다.</div>
+<div class="en"><span class="label">English</span>If a matrix has an inverse, that inverse is unique.</div>
+<div class="ex"><span class="label">예시 / Example</span>AB=I, CA=I이면 C=C(AB)=(CA)B=B.</div>
+</section>
+<section class="item">
+<div class="num">036. 곱의 역행렬</div>
+<div class="ko"><span class="label">한국어</span>A와 B가 가역이면 AB도 가역이고 (AB)⁻¹=B⁻¹A⁻¹이다.</div>
+<div class="en"><span class="label">English</span>If A and B are invertible, then AB is invertible and (AB)⁻¹=B⁻¹A⁻¹.</div>
+<div class="ex"><span class="label">예시 / Example</span>먼저 A, 다음 B를 적용한 변환을 되돌릴 때는 B⁻¹, A⁻¹ 순서로 되돌린다.</div>
+</section>
+<section class="item">
+<div class="num">037. 전치 역행렬</div>
+<div class="ko"><span class="label">한국어</span>A가 가역이면 Aᵀ도 가역이고 (Aᵀ)⁻¹=(A⁻¹)ᵀ이다.</div>
+<div class="en"><span class="label">English</span>If A is invertible, Aᵀ is invertible and (Aᵀ)⁻¹=(A⁻¹)ᵀ.</div>
+<div class="ex"><span class="label">예시 / Example</span>직교행렬에서 특히 A⁻¹=Aᵀ가 된다.</div>
+</section>
+<section class="item">
+<div class="num">038. 행 기본연산과 기본행렬</div>
+<div class="ko"><span class="label">한국어</span>각 행 기본연산은 왼쪽에서 기본행렬을 곱하는 것과 같다.</div>
+<div class="en"><span class="label">English</span>Each elementary row operation is equivalent to left multiplication by an elementary matrix.</div>
+<div class="ex"><span class="label">예시 / Example</span>두 행을 바꾸는 연산은 두 행이 바뀐 단위행렬을 왼쪽에 곱하는 것과 같다.</div>
+</section>
+<section class="item">
+<div class="num">039. 가역성과 행 기본연산</div>
+<div class="ko"><span class="label">한국어</span>정사각행렬 A가 I로 행 축약되면 A는 가역이다.</div>
+<div class="en"><span class="label">English</span>A square matrix is invertible if it row-reduces to the identity matrix.</div>
+<div class="ex"><span class="label">예시 / Example</span>[A|I]를 [I|A⁻¹]로 만들면 역행렬을 구할 수 있다.</div>
+</section>
+<section class="item">
+<div class="num">040. RREF의 유일성</div>
+<div class="ko"><span class="label">한국어</span>모든 행렬은 유일한 기약행 사다리꼴을 가진다.</div>
+<div class="en"><span class="label">English</span>Every matrix has a unique reduced row echelon form.</div>
+<div class="ex"><span class="label">예시 / Example</span>서로 다른 행 연산 경로를 사용해도 최종 RREF는 같다.</div>
+</section>
+<section class="item">
+<div class="num">041. 선형방정식 해 존재 조건</div>
+<div class="ko"><span class="label">한국어</span>Ax=b가 해를 가지려면 b가 A의 열공간에 있어야 한다.</div>
+<div class="en"><span class="label">English</span>The system Ax=b is consistent exactly when b lies in the column space of A.</div>
+<div class="ex"><span class="label">예시 / Example</span>A의 열들의 선형결합으로 b를 만들 수 있으면 해가 존재한다.</div>
+</section>
+<section class="item">
+<div class="num">042. 동차방정식의 자명해</div>
+<div class="ko"><span class="label">한국어</span>Ax=0은 항상 x=0이라는 해를 가진다.</div>
+<div class="en"><span class="label">English</span>The homogeneous system Ax=0 always has the trivial solution x=0.</div>
+<div class="ex"><span class="label">예시 / Example</span>모든 계수를 0으로 두면 A0=0이다.</div>
+</section>
+<section class="item">
+<div class="num">043. 동차방정식 비자명해 조건</div>
+<div class="ko"><span class="label">한국어</span>미지수 개수가 피벗 개수보다 많으면 Ax=0은 비자명해를 가진다.</div>
+<div class="en"><span class="label">English</span>If the number of variables exceeds the number of pivots, Ax=0 has a nontrivial solution.</div>
+<div class="ex"><span class="label">예시 / Example</span>3개 미지수에 피벗이 2개이면 자유변수가 생긴다.</div>
+</section>
+<section class="item">
+<div class="num">044. 해집합 구조</div>
+<div class="ko"><span class="label">한국어</span>Ax=b의 한 해 xp가 있으면 모든 해는 xp+xh 꼴이며 xh는 Ax=0의 해이다.</div>
+<div class="en"><span class="label">English</span>If xp solves Ax=b, then all solutions are xp+xh where xh solves Ax=0.</div>
+<div class="ex"><span class="label">예시 / Example</span>특수해 하나와 영공간 벡터들을 더해 전체 해를 얻는다.</div>
+</section>
+<section class="item">
+<div class="num">045. 선형변환의 정의</div>
+<div class="ko"><span class="label">한국어</span>T(u+v)=T(u)+T(v), T(cv)=cT(v)를 만족하면 T는 선형변환이다.</div>
+<div class="en"><span class="label">English</span>A map T is linear if it preserves addition and scalar multiplication.</div>
+<div class="ex"><span class="label">예시 / Example</span>T(x,y)=(2x,3y)는 선형변환이다.</div>
+</section>
+<section class="item">
+<div class="num">046. 선형변환과 행렬</div>
+<div class="ko"><span class="label">한국어</span>유한차원 공간의 선형변환은 기저를 정하면 행렬로 표현된다.</div>
+<div class="en"><span class="label">English</span>A linear transformation between finite-dimensional spaces is represented by a matrix once bases are chosen.</div>
+<div class="ex"><span class="label">예시 / Example</span>R²에서 T(e1), T(e2)를 열로 놓으면 T의 표준행렬이 된다.</div>
+</section>
+<section class="item">
+<div class="num">047. 합성변환과 행렬곱</div>
+<div class="ko"><span class="label">한국어</span>선형변환의 합성은 대응하는 행렬의 곱으로 표현된다.</div>
+<div class="en"><span class="label">English</span>Composition of linear transformations corresponds to matrix multiplication.</div>
+<div class="ex"><span class="label">예시 / Example</span>S(T(x))의 행렬은 S의 행렬과 T의 행렬을 곱한 것이다.</div>
+</section>
+<section class="item">
+<div class="num">048. 핵의 부분공간성</div>
+<div class="ko"><span class="label">한국어</span>선형변환 T의 핵 Ker(T)는 정의역의 부분공간이다.</div>
+<div class="en"><span class="label">English</span>The kernel of a linear map is a subspace of the domain.</div>
+<div class="ex"><span class="label">예시 / Example</span>T(x,y)=x이면 Ker(T)={(0,y)}이다.</div>
+</section>
+<section class="item">
+<div class="num">049. 상공간의 부분공간성</div>
+<div class="ko"><span class="label">한국어</span>선형변환 T의 상 Im(T)는 공역의 부분공간이다.</div>
+<div class="en"><span class="label">English</span>The image of a linear map is a subspace of the codomain.</div>
+<div class="ex"><span class="label">예시 / Example</span>T(x,y)=(x,0)의 상은 x축이다.</div>
+</section>
+<section class="item">
+<div class="num">050. 일대일 조건</div>
+<div class="ko"><span class="label">한국어</span>선형변환 T가 일대일인 것과 Ker(T)={0}인 것은 동치이다.</div>
+<div class="en"><span class="label">English</span>A linear map T is one-to-one exactly when Ker(T)={0}.</div>
+<div class="ex"><span class="label">예시 / Example</span>Ax=0이 자명해만 가지면 A의 변환은 일대일이다.</div>
+</section>
+<section class="item">
+<div class="num">051. 전사 조건</div>
+<div class="ko"><span class="label">한국어</span>선형변환 T가 전사인 것과 Im(T)가 공역 전체인 것은 동치이다.</div>
+<div class="en"><span class="label">English</span>A linear map T is onto exactly when its image equals the codomain.</div>
+<div class="ex"><span class="label">예시 / Example</span>A의 열들이 R³를 생성하면 T(x)=Ax는 R³로 전사이다.</div>
+</section>
+<section class="item">
+<div class="num">052. 랭크-널리티 정리</div>
+<div class="ko"><span class="label">한국어</span>유한차원 정의역 V에 대해 dim(V)=rank(T)+nullity(T)이다.</div>
+<div class="en"><span class="label">English</span>For finite-dimensional V, dim(V)=rank(T)+nullity(T).</div>
+<div class="ex"><span class="label">예시 / Example</span>3×5 행렬의 랭크가 3이면 영공간 차원은 2이다.</div>
+</section>
+<section class="item">
+<div class="num">053. 열공간의 차원</div>
+<div class="ko"><span class="label">한국어</span>행렬 A의 열공간 차원은 A의 랭크이다.</div>
+<div class="en"><span class="label">English</span>The dimension of the column space of A is the rank of A.</div>
+<div class="ex"><span class="label">예시 / Example</span>피벗 열이 3개이면 열공간 차원은 3이다.</div>
+</section>
+<section class="item">
+<div class="num">054. 행공간의 차원</div>
+<div class="ko"><span class="label">한국어</span>행렬 A의 행공간 차원도 A의 랭크이다.</div>
+<div class="en"><span class="label">English</span>The dimension of the row space of A is also the rank of A.</div>
+<div class="ex"><span class="label">예시 / Example</span>RREF의 영이 아닌 행 개수가 랭크이다.</div>
+</section>
+<section class="item">
+<div class="num">055. 행랭크와 열랭크의 동일성</div>
+<div class="ko"><span class="label">한국어</span>모든 행렬에서 행공간 차원과 열공간 차원은 같다.</div>
+<div class="en"><span class="label">English</span>For every matrix, row rank equals column rank.</div>
+<div class="ex"><span class="label">예시 / Example</span>3×5 행렬의 독립 행 개수와 독립 열 개수는 항상 같다.</div>
+</section>
+<section class="item">
+<div class="num">056. 영공간 차원</div>
+<div class="ko"><span class="label">한국어</span>n개의 열을 가진 행렬 A에 대해 nullity(A)=n-rank(A)이다.</div>
+<div class="en"><span class="label">English</span>For a matrix with n columns, nullity(A)=n-rank(A).</div>
+<div class="ex"><span class="label">예시 / Example</span>5개 열, 랭크 2이면 영공간 차원은 3이다.</div>
+</section>
+<section class="item">
+<div class="num">057. 왼쪽 영공간 차원</div>
+<div class="ko"><span class="label">한국어</span>m×n 행렬 A에 대해 왼쪽 영공간 차원은 m-rank(A)이다.</div>
+<div class="en"><span class="label">English</span>For an m×n matrix A, the dimension of the left null space is m-rank(A).</div>
+<div class="ex"><span class="label">예시 / Example</span>4×3 행렬의 랭크가 2이면 Aᵀy=0의 해공간 차원은 2이다.</div>
+</section>
+<section class="item">
+<div class="num">058. 네 가지 기본 부분공간</div>
+<div class="ko"><span class="label">한국어</span>행렬 A에는 열공간, 행공간, 영공간, 왼쪽 영공간이 대응된다.</div>
+<div class="en"><span class="label">English</span>A matrix has four fundamental subspaces: column space, row space, null space, and left null space.</div>
+<div class="ex"><span class="label">예시 / Example</span>A가 m×n이면 Col(A)⊂R^m, Null(A)⊂R^n이다.</div>
+</section>
+<section class="item">
+<div class="num">059. 직교여공간 관계</div>
+<div class="ko"><span class="label">한국어</span>Row(A)의 직교여공간은 Null(A)이다.</div>
+<div class="en"><span class="label">English</span>The orthogonal complement of Row(A) is Null(A).</div>
+<div class="ex"><span class="label">예시 / Example</span>Ax=0은 x가 A의 모든 행과 직교한다는 뜻이다.</div>
+</section>
+<section class="item">
+<div class="num">060. 열공간과 왼쪽 영공간</div>
+<div class="ko"><span class="label">한국어</span>Col(A)의 직교여공간은 Null(Aᵀ)이다.</div>
+<div class="en"><span class="label">English</span>The orthogonal complement of Col(A) is Null(Aᵀ).</div>
+<div class="ex"><span class="label">예시 / Example</span>Aᵀy=0이면 y는 A의 모든 열과 직교한다.</div>
+</section>
+<section class="item">
+<div class="num">061. 행렬식의 곱셈성</div>
+<div class="ko"><span class="label">한국어</span>정사각행렬 A,B에 대해 det(AB)=det(A)det(B)이다.</div>
+<div class="en"><span class="label">English</span>For square matrices A and B, det(AB)=det(A)det(B).</div>
+<div class="ex"><span class="label">예시 / Example</span>det(A)=2, det(B)=3이면 det(AB)=6이다.</div>
+</section>
+<section class="item">
+<div class="num">062. 단위행렬의 행렬식</div>
+<div class="ko"><span class="label">한국어</span>det(I)=1이다.</div>
+<div class="en"><span class="label">English</span>The determinant of the identity matrix is 1.</div>
+<div class="ex"><span class="label">예시 / Example</span>I₃의 행렬식은 1이다.</div>
+</section>
+<section class="item">
+<div class="num">063. 삼각행렬의 행렬식</div>
+<div class="ko"><span class="label">한국어</span>삼각행렬의 행렬식은 대각성분의 곱이다.</div>
+<div class="en"><span class="label">English</span>The determinant of a triangular matrix is the product of its diagonal entries.</div>
+<div class="ex"><span class="label">예시 / Example</span>diag(2,3,4)의 행렬식은 24이다.</div>
+</section>
+<section class="item">
+<div class="num">064. 행 교환과 행렬식</div>
+<div class="ko"><span class="label">한국어</span>두 행을 교환하면 행렬식의 부호가 바뀐다.</div>
+<div class="en"><span class="label">English</span>Swapping two rows changes the sign of the determinant.</div>
+<div class="ex"><span class="label">예시 / Example</span>det가 5였던 행렬에서 두 행을 바꾸면 -5가 된다.</div>
+</section>
+<section class="item">
+<div class="num">065. 행 스칼라배와 행렬식</div>
+<div class="ko"><span class="label">한국어</span>한 행에 k를 곱하면 행렬식도 k배가 된다.</div>
+<div class="en"><span class="label">English</span>Multiplying one row by k multiplies the determinant by k.</div>
+<div class="ex"><span class="label">예시 / Example</span>한 행을 3배 하면 det도 3배가 된다.</div>
+</section>
+<section class="item">
+<div class="num">066. 행 더하기와 행렬식</div>
+<div class="ko"><span class="label">한국어</span>한 행에 다른 행의 배수를 더해도 행렬식은 변하지 않는다.</div>
+<div class="en"><span class="label">English</span>Adding a multiple of one row to another does not change the determinant.</div>
+<div class="ex"><span class="label">예시 / Example</span>R2 ← R2+5R1을 해도 det는 같다.</div>
+</section>
+<section class="item">
+<div class="num">067. 가역성과 행렬식</div>
+<div class="ko"><span class="label">한국어</span>정사각행렬 A는 det(A)≠0일 때 그리고 그때만 가역이다.</div>
+<div class="en"><span class="label">English</span>A square matrix A is invertible exactly when det(A)≠0.</div>
+<div class="ex"><span class="label">예시 / Example</span>det(A)=0이면 A의 열들은 종속이다.</div>
+</section>
+<section class="item">
+<div class="num">068. 전치 행렬식</div>
+<div class="ko"><span class="label">한국어</span>det(Aᵀ)=det(A)이다.</div>
+<div class="en"><span class="label">English</span>The determinant of a transpose equals the determinant of the original matrix.</div>
+<div class="ex"><span class="label">예시 / Example</span>행과 열을 바꾸어도 부피 배율은 같다.</div>
+</section>
+<section class="item">
+<div class="num">069. 스칼라배 행렬식</div>
+<div class="ko"><span class="label">한국어</span>n×n 행렬 A에 대해 det(cA)=c^n det(A)이다.</div>
+<div class="en"><span class="label">English</span>For an n×n matrix A, det(cA)=c^n det(A).</div>
+<div class="ex"><span class="label">예시 / Example</span>2×2 행렬을 3배 하면 det는 9배가 된다.</div>
+</section>
+<section class="item">
+<div class="num">070. 여인수 전개</div>
+<div class="ko"><span class="label">한국어</span>행렬식은 임의의 행 또는 열에 대한 여인수 전개로 계산할 수 있다.</div>
+<div class="en"><span class="label">English</span>A determinant can be computed by cofactor expansion along any row or column.</div>
+<div class="ex"><span class="label">예시 / Example</span>0이 많은 행을 선택하면 계산이 쉬워진다.</div>
+</section>
+<section class="item">
+<div class="num">071. 크래머 공식</div>
+<div class="ko"><span class="label">한국어</span>det(A)≠0이면 Ax=b의 각 해는 행렬식의 비로 구할 수 있다.</div>
+<div class="en"><span class="label">English</span>If det(A)≠0, Cramer's rule gives each component of the solution of Ax=b as a ratio of determinants.</div>
+<div class="ex"><span class="label">예시 / Example</span>2×2 연립방정식에서 x=det(Ax)/det(A)로 계산한다.</div>
+</section>
+<section class="item">
+<div class="num">072. 수반행렬 공식</div>
+<div class="ko"><span class="label">한국어</span>가역행렬 A에 대해 A⁻¹ = adj(A)/det(A)이다.</div>
+<div class="en"><span class="label">English</span>For invertible A, A⁻¹ = adj(A)/det(A).</div>
+<div class="ex"><span class="label">예시 / Example</span>2×2 행렬 [[a,b],[c,d]]의 역행렬은 1/(ad-bc)[[d,-b],[-c,a]]이다.</div>
+</section>
+<section class="item">
+<div class="num">073. 고유값의 정의</div>
+<div class="ko"><span class="label">한국어</span>Av=λv를 만족하는 0이 아닌 v가 있으면 λ는 A의 고유값이다.</div>
+<div class="en"><span class="label">English</span>A scalar λ is an eigenvalue of A if Av=λv for some nonzero vector v.</div>
+<div class="ex"><span class="label">예시 / Example</span>diag(2,3)에서 e1은 고유값 2의 고유벡터이다.</div>
+</section>
+<section class="item">
+<div class="num">074. 고유벡터의 정의</div>
+<div class="ko"><span class="label">한국어</span>Av=λv를 만족하는 0이 아닌 벡터 v는 λ에 대한 고유벡터이다.</div>
+<div class="en"><span class="label">English</span>A nonzero vector v satisfying Av=λv is an eigenvector for λ.</div>
+<div class="ex"><span class="label">예시 / Example</span>A가 x축 방향을 2배 늘리면 x축 위 벡터는 고유벡터이다.</div>
+</section>
+<section class="item">
+<div class="num">075. 특성방정식</div>
+<div class="ko"><span class="label">한국어</span>고유값은 det(A-λI)=0의 해이다.</div>
+<div class="en"><span class="label">English</span>Eigenvalues are the roots of det(A-λI)=0.</div>
+<div class="ex"><span class="label">예시 / Example</span>2×2 행렬의 고유값은 이차방정식으로 구할 수 있다.</div>
+</section>
+<section class="item">
+<div class="num">076. 고유공간의 부분공간성</div>
+<div class="ko"><span class="label">한국어</span>λ에 대한 고유공간 Null(A-λI)는 부분공간이다.</div>
+<div class="en"><span class="label">English</span>The eigenspace for λ, Null(A-λI), is a subspace.</div>
+<div class="ex"><span class="label">예시 / Example</span>같은 고유값의 고유벡터들의 합도 같은 고유공간에 속한다.</div>
+</section>
+<section class="item">
+<div class="num">077. 서로 다른 고유값의 고유벡터 독립성</div>
+<div class="ko"><span class="label">한국어</span>서로 다른 고유값에 대응하는 고유벡터들은 일차독립이다.</div>
+<div class="en"><span class="label">English</span>Eigenvectors corresponding to distinct eigenvalues are linearly independent.</div>
+<div class="ex"><span class="label">예시 / Example</span>3개의 서로 다른 고유값을 가진 3×3 행렬은 대각화 가능하다.</div>
+</section>
+<section class="item">
+<div class="num">078. 대각화 조건</div>
+<div class="ko"><span class="label">한국어</span>n×n 행렬 A가 n개의 일차독립 고유벡터를 가지면 대각화 가능하다.</div>
+<div class="en"><span class="label">English</span>An n×n matrix is diagonalizable if it has n linearly independent eigenvectors.</div>
+<div class="ex"><span class="label">예시 / Example</span>P의 열을 고유벡터로 두면 P⁻¹AP=D가 된다.</div>
+</section>
+<section class="item">
+<div class="num">079. 중복 없는 고유값과 대각화</div>
+<div class="ko"><span class="label">한국어</span>n×n 행렬이 서로 다른 n개의 고유값을 가지면 대각화 가능하다.</div>
+<div class="en"><span class="label">English</span>An n×n matrix with n distinct eigenvalues is diagonalizable.</div>
+<div class="ex"><span class="label">예시 / Example</span>2×2 행렬이 고유값 1,3을 가지면 대각화 가능하다.</div>
+</section>
+<section class="item">
+<div class="num">080. 대각행렬의 고유값</div>
+<div class="ko"><span class="label">한국어</span>대각행렬의 고유값은 대각성분이다.</div>
+<div class="en"><span class="label">English</span>The eigenvalues of a diagonal matrix are its diagonal entries.</div>
+<div class="ex"><span class="label">예시 / Example</span>diag(4,-1,2)의 고유값은 4,-1,2이다.</div>
+</section>
+<section class="item">
+<div class="num">081. 삼각행렬의 고유값</div>
+<div class="ko"><span class="label">한국어</span>삼각행렬의 고유값은 대각성분이다.</div>
+<div class="en"><span class="label">English</span>The eigenvalues of a triangular matrix are its diagonal entries.</div>
+<div class="ex"><span class="label">예시 / Example</span>상삼각행렬의 특성다항식은 대각성분에서 바로 나온다.</div>
+</section>
+<section class="item">
+<div class="num">082. 행렬식과 고유값</div>
+<div class="ko"><span class="label">한국어</span>n×n 행렬의 행렬식은 고유값들의 곱과 같다.</div>
+<div class="en"><span class="label">English</span>The determinant of a matrix equals the product of its eigenvalues, counted with multiplicity.</div>
+<div class="ex"><span class="label">예시 / Example</span>고유값이 2,3,5이면 det=30이다.</div>
+</section>
+<section class="item">
+<div class="num">083. 대각합과 고유값</div>
+<div class="ko"><span class="label">한국어</span>n×n 행렬의 trace는 고유값들의 합과 같다.</div>
+<div class="en"><span class="label">English</span>The trace of a matrix equals the sum of its eigenvalues, counted with multiplicity.</div>
+<div class="ex"><span class="label">예시 / Example</span>고유값이 1,4이면 trace=5이다.</div>
+</section>
+<section class="item">
+<div class="num">084. 케일리-해밀턴 정리</div>
+<div class="ko"><span class="label">한국어</span>정사각행렬은 자기 자신의 특성다항식을 만족한다.</div>
+<div class="en"><span class="label">English</span>Every square matrix satisfies its own characteristic polynomial.</div>
+<div class="ex"><span class="label">예시 / Example</span>특성다항식이 p(λ)=λ²-5λ+6이면 A²-5A+6I=0이다.</div>
+</section>
+<section class="item">
+<div class="num">085. 내적의 양의 정부호성</div>
+<div class="ko"><span class="label">한국어</span>내적은 <v,v>≥0이고 <v,v>=0이면 v=0이다.</div>
+<div class="en"><span class="label">English</span>An inner product satisfies positive definiteness: <v,v>≥0, with equality only for v=0.</div>
+<div class="ex"><span class="label">예시 / Example</span>R²에서 v·v=x²+y²≥0이다.</div>
+</section>
+<section class="item">
+<div class="num">086. 코시-슈바르츠 부등식</div>
+<div class="ko"><span class="label">한국어</span>|<u,v>| ≤ ||u|| ||v|| 이다.</div>
+<div class="en"><span class="label">English</span>The Cauchy-Schwarz inequality states |<u,v>| ≤ ||u|| ||v||.</div>
+<div class="ex"><span class="label">예시 / Example</span>u=(1,2), v=(3,4)이면 |11| ≤ √5√25가 성립한다.</div>
+</section>
+<section class="item">
+<div class="num">087. 삼각부등식</div>
+<div class="ko"><span class="label">한국어</span>||u+v|| ≤ ||u||+||v|| 이다.</div>
+<div class="en"><span class="label">English</span>The triangle inequality states ||u+v|| ≤ ||u||+||v||.</div>
+<div class="ex"><span class="label">예시 / Example</span>두 변의 길이 합은 나머지 한 변보다 길거나 같다.</div>
+</section>
+<section class="item">
+<div class="num">088. 피타고라스 정리</div>
+<div class="ko"><span class="label">한국어</span>u와 v가 직교하면 ||u+v||²=||u||²+||v||²이다.</div>
+<div class="en"><span class="label">English</span>If u and v are orthogonal, then ||u+v||²=||u||²+||v||².</div>
+<div class="ex"><span class="label">예시 / Example</span>(3,0)과 (0,4)의 합의 길이는 5이다.</div>
+</section>
+<section class="item">
+<div class="num">089. 직교집합의 독립성</div>
+<div class="ko"><span class="label">한국어</span>0이 아닌 서로 직교하는 벡터들의 집합은 일차독립이다.</div>
+<div class="en"><span class="label">English</span>A set of nonzero mutually orthogonal vectors is linearly independent.</div>
+<div class="ex"><span class="label">예시 / Example</span>표준기저 e1,e2,e3는 서로 직교하고 독립이다.</div>
+</section>
+<section class="item">
+<div class="num">090. 정규직교집합</div>
+<div class="ko"><span class="label">한국어</span>서로 직교하고 길이가 1인 벡터들의 집합을 정규직교집합이라 한다.</div>
+<div class="en"><span class="label">English</span>An orthonormal set consists of mutually orthogonal unit vectors.</div>
+<div class="ex"><span class="label">예시 / Example</span>R²의 {(1,0),(0,1)}은 정규직교집합이다.</div>
+</section>
+<section class="item">
+<div class="num">091. 정규직교기저 좌표</div>
+<div class="ko"><span class="label">한국어</span>정규직교기저에서 벡터의 좌표는 내적으로 구한다.</div>
+<div class="en"><span class="label">English</span>In an orthonormal basis, coordinates are computed by inner products.</div>
+<div class="ex"><span class="label">예시 / Example</span>v = <v,e1>e1 + <v,e2>e2이다.</div>
+</section>
+<section class="item">
+<div class="num">092. 직교사영 공식</div>
+<div class="ko"><span class="label">한국어</span>u 위로의 v의 사영은 proj_u(v)=<v,u>/<u,u> · u이다.</div>
+<div class="en"><span class="label">English</span>The projection of v onto u is proj_u(v)=<v,u>/<u,u> · u.</div>
+<div class="ex"><span class="label">예시 / Example</span>v=(2,3), u=(1,0)이면 사영은 (2,0)이다.</div>
+</section>
+<section class="item">
+<div class="num">093. 그람-슈미트 과정</div>
+<div class="ko"><span class="label">한국어</span>일차독립 벡터 집합은 같은 생성공간을 갖는 정규직교집합으로 바꿀 수 있다.</div>
+<div class="en"><span class="label">English</span>The Gram-Schmidt process converts an independent set into an orthonormal set with the same span.</div>
+<div class="ex"><span class="label">예시 / Example</span>두 독립 벡터에서 첫 벡터 방향을 빼서 두 번째 직교 방향을 만든다.</div>
+</section>
+<section class="item">
+<div class="num">094. 직교행렬의 정의</div>
+<div class="ko"><span class="label">한국어</span>QᵀQ=I인 행렬 Q를 직교행렬이라 한다.</div>
+<div class="en"><span class="label">English</span>A matrix Q satisfying QᵀQ=I is orthogonal.</div>
+<div class="ex"><span class="label">예시 / Example</span>회전행렬은 길이와 각도를 보존하는 직교행렬이다.</div>
+</section>
+<section class="item">
+<div class="num">095. 직교행렬의 역행렬</div>
+<div class="ko"><span class="label">한국어</span>직교행렬 Q에 대해 Q⁻¹=Qᵀ이다.</div>
+<div class="en"><span class="label">English</span>For an orthogonal matrix Q, Q⁻¹=Qᵀ.</div>
+<div class="ex"><span class="label">예시 / Example</span>계산에서 역행렬을 전치로 쉽게 구할 수 있다.</div>
+</section>
+<section class="item">
+<div class="num">096. 직교행렬의 길이 보존</div>
+<div class="ko"><span class="label">한국어</span>직교행렬 Q는 벡터의 길이를 보존한다.</div>
+<div class="en"><span class="label">English</span>An orthogonal matrix preserves vector lengths.</div>
+<div class="ex"><span class="label">예시 / Example</span>||Qv||=||v||이다.</div>
+</section>
+<section class="item">
+<div class="num">097. 직교행렬의 내적 보존</div>
+<div class="ko"><span class="label">한국어</span>직교행렬 Q는 내적을 보존한다.</div>
+<div class="en"><span class="label">English</span>An orthogonal matrix preserves inner products.</div>
+<div class="ex"><span class="label">예시 / Example</span><Qu,Qv>=<u,v>이다.</div>
+</section>
+<section class="item">
+<div class="num">098. 최소제곱 해</div>
+<div class="ko"><span class="label">한국어</span>Ax=b가 정확히 풀리지 않을 때 최소제곱 해는 ||Ax-b||를 최소화한다.</div>
+<div class="en"><span class="label">English</span>When Ax=b is inconsistent, a least-squares solution minimizes ||Ax-b||.</div>
+<div class="ex"><span class="label">예시 / Example</span>데이터 점들에 가장 가까운 직선을 찾는 선형회귀가 예이다.</div>
+</section>
+<section class="item">
+<div class="num">099. 정규방정식</div>
+<div class="ko"><span class="label">한국어</span>최소제곱 해는 AᵀAx=Aᵀb를 만족한다.</div>
+<div class="en"><span class="label">English</span>A least-squares solution satisfies the normal equations AᵀAx=Aᵀb.</div>
+<div class="ex"><span class="label">예시 / Example</span>선형회귀에서 기울기와 절편을 구할 때 사용한다.</div>
+</section>
+<section class="item">
+<div class="num">100. A의 열 독립과 정규방정식 유일해</div>
+<div class="ko"><span class="label">한국어</span>A의 열들이 일차독립이면 AᵀA는 가역이고 최소제곱 해는 유일하다.</div>
+<div class="en"><span class="label">English</span>If the columns of A are linearly independent, AᵀA is invertible and the least-squares solution is unique.</div>
+<div class="ex"><span class="label">예시 / Example</span>데이터 설계행렬의 두 열이 독립이면 회귀계수가 하나로 정해진다.</div>
+</section>
+<section class="item">
+<div class="num">101. 대칭행렬의 고유값</div>
+<div class="ko"><span class="label">한국어</span>실수 대칭행렬의 고유값은 모두 실수이다.</div>
+<div class="en"><span class="label">English</span>All eigenvalues of a real symmetric matrix are real.</div>
+<div class="ex"><span class="label">예시 / Example</span>공분산행렬은 대칭행렬이므로 고유값이 실수이다.</div>
+</section>
+<section class="item">
+<div class="num">102. 대칭행렬의 직교 고유벡터</div>
+<div class="ko"><span class="label">한국어</span>실수 대칭행렬에서 서로 다른 고유값의 고유벡터는 직교한다.</div>
+<div class="en"><span class="label">English</span>For a real symmetric matrix, eigenvectors for distinct eigenvalues are orthogonal.</div>
+<div class="ex"><span class="label">예시 / Example</span>PCA에서 주성분 방향들이 서로 직교하는 이유이다.</div>
+</section>
+<section class="item">
+<div class="num">103. 스펙트럼 정리</div>
+<div class="ko"><span class="label">한국어</span>실수 대칭행렬은 직교행렬로 대각화 가능하다.</div>
+<div class="en"><span class="label">English</span>Every real symmetric matrix is orthogonally diagonalizable.</div>
+<div class="ex"><span class="label">예시 / Example</span>A=QDQᵀ 꼴로 표현할 수 있다.</div>
+</section>
+<section class="item">
+<div class="num">104. 양의 정부호 행렬</div>
+<div class="ko"><span class="label">한국어</span>대칭행렬 A가 모든 0이 아닌 x에 대해 xᵀAx>0이면 양의 정부호이다.</div>
+<div class="en"><span class="label">English</span>A symmetric matrix A is positive definite if xᵀAx>0 for all nonzero x.</div>
+<div class="ex"><span class="label">예시 / Example</span>A=I이면 xᵀIx=||x||²>0이다.</div>
+</section>
+<section class="item">
+<div class="num">105. 양의 정부호와 고유값</div>
+<div class="ko"><span class="label">한국어</span>대칭행렬이 양의 정부호인 것과 모든 고유값이 양수인 것은 동치이다.</div>
+<div class="en"><span class="label">English</span>A symmetric matrix is positive definite exactly when all its eigenvalues are positive.</div>
+<div class="ex"><span class="label">예시 / Example</span>diag(2,5)는 고유값이 모두 양수라 양의 정부호이다.</div>
+</section>
+<section class="item">
+<div class="num">106. 특이값 분해</div>
+<div class="ko"><span class="label">한국어</span>모든 m×n 행렬 A는 A=UΣVᵀ로 분해할 수 있다.</div>
+<div class="en"><span class="label">English</span>Every m×n matrix has a singular value decomposition A=UΣVᵀ.</div>
+<div class="ex"><span class="label">예시 / Example</span>이미지 압축에서 큰 특이값만 남겨 근사한다.</div>
+</section>
+<section class="item">
+<div class="num">107. 특이값의 비음성</div>
+<div class="ko"><span class="label">한국어</span>특이값은 항상 0 이상이며 AᵀA의 고유값의 제곱근이다.</div>
+<div class="en"><span class="label">English</span>Singular values are nonnegative square roots of eigenvalues of AᵀA.</div>
+<div class="ex"><span class="label">예시 / Example</span>AᵀA의 고유값이 9,4이면 특이값은 3,2이다.</div>
+</section>
+<section class="item">
+<div class="num">108. 랭크와 특이값</div>
+<div class="ko"><span class="label">한국어</span>행렬의 랭크는 0이 아닌 특이값의 개수와 같다.</div>
+<div class="en"><span class="label">English</span>The rank of a matrix equals the number of nonzero singular values.</div>
+<div class="ex"><span class="label">예시 / Example</span>특이값이 5,2,0이면 랭크는 2이다.</div>
+</section>
+<section class="item">
+<div class="num">109. 최적 저랭크 근사</div>
+<div class="ko"><span class="label">한국어</span>SVD에서 가장 큰 k개의 특이값만 남기면 Frobenius 노름 기준 최적의 rank-k 근사를 얻는다.</div>
+<div class="en"><span class="label">English</span>Keeping the largest k singular values gives the best rank-k approximation in the Frobenius norm.</div>
+<div class="ex"><span class="label">예시 / Example</span>사진 압축에서 상위 20개 특이값만 사용해 이미지를 근사한다.</div>
+</section>
+<section class="item">
+<div class="num">110. 닮음 행렬의 고유값</div>
+<div class="ko"><span class="label">한국어</span>A와 P⁻¹AP는 같은 고유값을 가진다.</div>
+<div class="en"><span class="label">English</span>Similar matrices A and P⁻¹AP have the same eigenvalues.</div>
+<div class="ex"><span class="label">예시 / Example</span>기저를 바꾸어도 선형변환의 본질적 확대율은 변하지 않는다.</div>
+</section>
+<section class="item">
+<div class="num">111. 닮음 행렬의 행렬식과 trace</div>
+<div class="ko"><span class="label">한국어</span>닮음 행렬은 행렬식과 trace가 같다.</div>
+<div class="en"><span class="label">English</span>Similar matrices have the same determinant and trace.</div>
+<div class="ex"><span class="label">예시 / Example</span>A와 대각화된 D는 det와 trace가 같다.</div>
+</section>
+<section class="item">
+<div class="num">112. 기저변환 행렬</div>
+<div class="ko"><span class="label">한국어</span>한 기저에서 다른 기저로 좌표를 바꾸는 선형변환은 가역행렬로 표현된다.</div>
+<div class="en"><span class="label">English</span>A change of basis is represented by an invertible matrix.</div>
+<div class="ex"><span class="label">예시 / Example</span>표준좌표를 기저 B좌표로 바꿀 때 P_B⁻¹을 사용한다.</div>
+</section>
+<section class="item">
+<div class="num">113. 좌표변환과 닮음</div>
+<div class="ko"><span class="label">한국어</span>선형변환의 행렬은 기저가 바뀌면 닮음 변환으로 바뀐다.</div>
+<div class="en"><span class="label">English</span>The matrix of a linear transformation changes by similarity under a change of basis.</div>
+<div class="ex"><span class="label">예시 / Example</span>새 행렬은 P⁻¹AP 꼴이다.</div>
+</section>
+<section class="item">
+<div class="num">114. 블록 대각행렬 행렬식</div>
+<div class="ko"><span class="label">한국어</span>블록 대각행렬의 행렬식은 각 대각 블록의 행렬식 곱이다.</div>
+<div class="en"><span class="label">English</span>The determinant of a block diagonal matrix is the product of the determinants of its diagonal blocks.</div>
+<div class="ex"><span class="label">예시 / Example</span>diag(A,B)의 det는 det(A)det(B)이다.</div>
+</section>
+<section class="item">
+<div class="num">115. 블록 삼각행렬 행렬식</div>
+<div class="ko"><span class="label">한국어</span>블록 삼각행렬의 행렬식은 대각 블록 행렬식들의 곱이다.</div>
+<div class="en"><span class="label">English</span>The determinant of a block triangular matrix is the product of determinants of diagonal blocks.</div>
+<div class="ex"><span class="label">예시 / Example</span>위쪽 블록이 복잡해도 대각 블록만 보면 det를 구할 수 있다.</div>
+</section>
+<section class="item">
+<div class="num">116. LU 분해</div>
+<div class="ko"><span class="label">한국어</span>적절한 조건에서 행렬 A는 하삼각행렬 L과 상삼각행렬 U의 곱으로 분해된다.</div>
+<div class="en"><span class="label">English</span>Under suitable conditions, a matrix A can be factored as A=LU, with L lower triangular and U upper triangular.</div>
+<div class="ex"><span class="label">예시 / Example</span>연립방정식을 먼저 Ly=b, 다음 Ux=y로 푼다.</div>
+</section>
+<section class="item">
+<div class="num">117. QR 분해</div>
+<div class="ko"><span class="label">한국어</span>열 독립 행렬 A는 A=QR로 분해되며 Q는 정규직교 열, R은 상삼각행렬이다.</div>
+<div class="en"><span class="label">English</span>A matrix with independent columns can be factored as A=QR, where Q has orthonormal columns and R is upper triangular.</div>
+<div class="ex"><span class="label">예시 / Example</span>최소제곱 문제를 안정적으로 풀 때 QR 분해를 사용한다.</div>
+</section>
+<section class="item">
+<div class="num">118. 행렬 노름의 비음성</div>
+<div class="ko"><span class="label">한국어</span>행렬 노름은 항상 0 이상이고 0이 되는 경우는 영행렬뿐이다.</div>
+<div class="en"><span class="label">English</span>A matrix norm is nonnegative and equals zero only for the zero matrix.</div>
+<div class="ex"><span class="label">예시 / Example</span>Frobenius 노름은 모든 성분 제곱합의 제곱근이다.</div>
+</section>
+<section class="item">
+<div class="num">119. Frobenius 노름</div>
+<div class="ko"><span class="label">한국어</span>||A||_F는 모든 성분 제곱합의 제곱근이다.</div>
+<div class="en"><span class="label">English</span>The Frobenius norm is the square root of the sum of squares of all entries.</div>
+<div class="ex"><span class="label">예시 / Example</span>[[1,2],[3,4]]의 Frobenius 노름은 √30이다.</div>
+</section>
+<section class="item">
+<div class="num">120. 선형변환의 차원 공식</div>
+<div class="ko"><span class="label">한국어</span>부분공간 U,W에 대해 dim(U+W)=dim(U)+dim(W)-dim(U∩W)이다.</div>
+<div class="en"><span class="label">English</span>For subspaces U and W, dim(U+W)=dim(U)+dim(W)-dim(U∩W).</div>
+<div class="ex"><span class="label">예시 / Example</span>두 평면이 한 직선에서 만나면 합공간 차원은 2+2-1=3이다.</div>
+</section>
+<section class="item">
+<div class="num">121. 직합 조건</div>
+<div class="ko"><span class="label">한국어</span>U∩W={0}이면 U+W는 직합 U⊕W이다.</div>
+<div class="en"><span class="label">English</span>If U∩W={0}, then U+W is the direct sum U⊕W.</div>
+<div class="ex"><span class="label">예시 / Example</span>R²에서 x축과 y축의 합은 R²이고 교집합은 {0}이다.</div>
+</section>
+<section class="item">
+<div class="num">122. 몫공간 차원</div>
+<div class="ko"><span class="label">한국어</span>U가 V의 부분공간이면 dim(V/U)=dim(V)-dim(U)이다.</div>
+<div class="en"><span class="label">English</span>If U is a subspace of V, then dim(V/U)=dim(V)-dim(U).</div>
+<div class="ex"><span class="label">예시 / Example</span>R³을 xy평면으로 나눈 몫공간의 차원은 1이다.</div>
+</section>
+<section class="item">
+<div class="num">123. 쌍대공간 차원</div>
+<div class="ko"><span class="label">한국어</span>유한차원 V의 쌍대공간 V*는 V와 같은 차원을 가진다.</div>
+<div class="en"><span class="label">English</span>The dual space V* of a finite-dimensional vector space has the same dimension as V.</div>
+<div class="ex"><span class="label">예시 / Example</span>R³의 선형함수공간 차원도 3이다.</div>
+</section>
+</main>
+<footer>Linear Algebra 100 Theorems · Korean & English · No Table</footer>
+</body>
+</html>
