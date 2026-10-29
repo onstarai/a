@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>알고리즘 성능 평가 · 단일 정답 10문항</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,"Apple SD Gothic Neo","Nanum Gothic",sans-serif;background:#f3f6fb;color:#19283d;line-height:1.8}header{background:#172c46;color:white;padding:48px 24px}header>div,main{max-width:1000px;margin:auto}h1{font-size:34px;line-height:1.4}header p{color:#dce8f7}main{padding:20px 18px 60px}section{background:white;border:1px solid #dbe2ed;border-radius:14px;padding:28px;margin:22px 0}h2{font-size:23px;line-height:1.5}.tag{color:#165bb0;font-weight:700;font-size:14px}pre{background:#152338;color:#eaf0fc;border-radius:9px;padding:18px;overflow:auto;font-size:13px;line-height:1.65}code{font-family:Consolas,monospace}.option{display:flex;gap:10px;border:1px solid #dce3ee;border-radius:8px;padding:12px;margin:9px 0;cursor:pointer}.option:has(input:checked){border-color:#276ac0;background:#edf4ff}input{margin-top:9px;flex-shrink:0}button{font:inherit;background:#1d5fae;border:0;color:white;border-radius:7px;padding:9px 16px;cursor:pointer;margin:8px 8px 8px 0}button.secondary{background:#e8eff9;color:#164f92}details{background:#f0f5fc;padding:14px 18px;border-radius:8px;margin-top:14px}summary{cursor:pointer;font-weight:700}.feedback{font-weight:700;white-space:pre-line}.correct{color:#146343}.wrong{color:#a53026}table{width:100%;border-collapse:collapse}td,th{text-align:left;border-bottom:1px solid #dae2ee;padding:10px}li{margin:8px 0}.muted{color:#51647d;font-size:14px}.answers{display:none}.answers.show{display:block}@media(max-width:600px){section{padding:18px}h1{font-size:28px}}@media print{body{background:white}header{background:white;color:#19283d;padding:10px}header p{color:#19283d}button,.feedback,#score{display:none}section.question{break-before:page}pre{white-space:pre-wrap;overflow:visible;color:#19283d;background:#f2f4f8;font-size:10px}.answers{display:block;break-before:page}details{display:none}section{border:0;padding:10px}}</style></head><body><header><div><div>PYTHON · ALGORITHM ASSESSMENT</div><h1>코드로 판단하는 알고리즘 성능<br/>5지선다형 10문항</h1><p>각 문항에서 옳은 설명을 <strong>반드시 1개</strong> 고르세요.</p></div></header><main><section><h2>응시 안내</h2><p>입력 크기와 연산 횟수, 빅오, 탐색 조건, 측정 방법, 알고리즘 선택을 평가합니다. 각 코드는 독립 실행 가능한 Python 3 예시입니다. 정수 덧셈·비교·대입과 리스트 인덱스 접근은 상수 시간으로 가정합니다. 함수 자체의 분석에서는 별도 언급이 없는 한 입력 생성·출력 비용을 제외합니다.</p><p>문항당 1점이며 정답 1개를 선택해야 득점합니다. 코드의 출력은 문항별로 펼쳐 확인할 수 있습니다. HTML 자체에서 파이썬 코드를 실행하지는 않습니다.</p><button onclick="gradeAll()">전체 채점</button><button class="secondary" onclick="resetQuiz()">선택 초기화</button><p aria-live="polite" id="score" role="status"></p></section><section class="question" id="q1"><div class="tag">QUESTION 01 / 10</div><h2>1. 입력 크기와 연산 횟수</h2><pre><code>def total(data):
+    s = 0
+    count = 0
+    for x in data:
+        s += x
+        count += 1
+    return s, count
+
+for n in [4, 8, 16]:
+    data = [0] * n
+    result, count = total(data)
+    print(f"n={n}, 합={result}, 덧셈 횟수={count}")</code></pre><p><strong>다음 코드에서 total 함수의 덧셈 횟수와 시간 복잡도에 관한 설명으로 옳은 것을 1개 고르시오.</strong></p><label class="option"><input aria-label="1번 문항 1번 선택지" name="q1" type="radio" value="1"/><span>① 입력 크기 n은 data의 원소 개수로 볼 수 있다.</span></label><label class="option"><input aria-label="1번 문항 2번 선택지" name="q1" type="radio" value="2"/><span>② 모든 합계가 0이므로 total의 시간 복잡도는 O(1)이다.</span></label><label class="option"><input aria-label="1번 문항 3번 선택지" name="q1" type="radio" value="3"/><span>③ n이 두 배가 되어도 s += x의 실행 횟수는 변하지 않는다.</span></label><label class="option"><input aria-label="1번 문항 4번 선택지" name="q1" type="radio" value="4"/><span>④ 출력되는 합계가 같으면 서로 다른 입력에서도 덧셈 횟수가 같다.</span></label><label class="option"><input aria-label="1번 문항 5번 선택지" name="q1" type="radio" value="5"/><span>⑤ 이 코드의 출력만으로 실행 시간이 정확히 몇 초인지 알 수 있다.</span></label><button onclick="grade(1)">이 문항 채점</button><p aria-live="polite" class="feedback" id="feedback1" role="status"></p><details><summary>실행 결과 보기</summary><pre><code>n=4, 합=0, 덧셈 횟수=4
+n=8, 합=0, 덧셈 횟수=8
+n=16, 합=0, 덧셈 횟수=16
+</code></pre></details></section><section class="question" id="q2"><div class="tag">QUESTION 02 / 10</div><h2>2. 빅오 표기법의 의미</h2><pre><code>def work(n):
+    count = 0
+    for _ in range(3):
+        for _ in range(n):
+            count += 1
+    count += 1
+    count += 1
+    return count
+
+for n in [10, 100]:
+    print(n, work(n))</code></pre><p><strong>count += 1을 대표 연산으로 셀 때, 다음 설명 중 옳은 것을 1개 고르시오.</strong></p><label class="option"><input aria-label="2번 문항 1번 선택지" name="q2" type="radio" value="1"/><span>① work(n)의 대표 연산 횟수는 n²이다.</span></label><label class="option"><input aria-label="2번 문항 2번 선택지" name="q2" type="radio" value="2"/><span>② work(n)의 대표 연산 횟수는 3n² + 2이다.</span></label><label class="option"><input aria-label="2번 문항 3번 선택지" name="q2" type="radio" value="3"/><span>③ 바깥 반복문이 있으므로 안쪽 반복 횟수와 무관하게 항상 O(n²)이다.</span></label><label class="option"><input aria-label="2번 문항 4번 선택지" name="q2" type="radio" value="4"/><span>④ 상수배와 낮은 차수 항을 생략하면 선형 성장인 O(n)으로 표현할 수 있다.</span></label><label class="option"><input aria-label="2번 문항 5번 선택지" name="q2" type="radio" value="5"/><span>⑤ O(n)은 n이 100일 때 정확히 100초 걸린다는 뜻이다.</span></label><button onclick="grade(2)">이 문항 채점</button><p aria-live="polite" class="feedback" id="feedback2" role="status"></p><details><summary>실행 결과 보기</summary><pre><code>10 32
+100 302
+</code></pre></details></section><section class="question" id="q3"><div class="tag">QUESTION 03 / 10</div><h2>3. O(1), O(log n), O(n)의 코드 연결</h2><pre><code>def first(data):
+    return data[0]
+
+def visit_all(data):
+    count = 0
+    for _ in data:
+        count += 1
+    return count
+
+def halve(n):
+    steps = 0
+    while n &gt; 1:
+        n //= 2
+        steps += 1
+    return steps
+
+data = list(range(16))
+print(first(data), visit_all(data), halve(len(data)))</code></pre><p><strong>파이썬 리스트의 인덱스 접근과 작은 정수 연산을 상수 시간으로 가정한다. 각 함수 자체에 관한 설명으로 옳은 것을 1개 고르시오.</strong></p><label class="option"><input aria-label="3번 문항 1번 선택지" name="q3" type="radio" value="1"/><span>① first는 반환값이 0이므로 입력 크기가 커질수록 O(n²)이 된다.</span></label><label class="option"><input aria-label="3번 문항 2번 선택지" name="q3" type="radio" value="2"/><span>② halve는 매 반복에서 n을 1씩 줄인다.</span></label><label class="option"><input aria-label="3번 문항 3번 선택지" name="q3" type="radio" value="3"/><span>③ visit_all은 반복문이 하나이므로 O(1)이다.</span></label><label class="option"><input aria-label="3번 문항 4번 선택지" name="q3" type="radio" value="4"/><span>④ 비어 있지 않은 리스트에서 first의 원소 접근 횟수는 리스트 길이 n과 같다.</span></label><label class="option"><input aria-label="3번 문항 5번 선택지" name="q3" type="radio" value="5"/><span>⑤ n이 2의 거듭제곱이면 halve의 반복 횟수는 log₂n이며, 시간 복잡도는 O(log n)이다.</span></label><button onclick="grade(3)">이 문항 채점</button><p aria-live="polite" class="feedback" id="feedback3" role="status"></p><details><summary>실행 결과 보기</summary><pre><code>0 16 4
+</code></pre></details></section><section class="question" id="q4"><div class="tag">QUESTION 04 / 10</div><h2>4. O(n²)과 중첩 반복문</h2><pre><code>def count_pairs(n):
+    count = 0
+    for i in range(n):
+        for j in range(n):
+            count += 1
+    return count
+
+for n in [4, 8]:
+    print(n, count_pairs(n))</code></pre><p><strong>count += 1의 실행 횟수를 기준으로 옳은 설명을 1개 고르시오.</strong></p><label class="option"><input aria-label="4번 문항 1번 선택지" name="q4" type="radio" value="1"/><span>① 대표 연산 횟수는 n²이다.</span></label><label class="option"><input aria-label="4번 문항 2번 선택지" name="q4" type="radio" value="2"/><span>② n이 4에서 8로 커지면 대표 연산 횟수도 두 배가 된다.</span></label><label class="option"><input aria-label="4번 문항 3번 선택지" name="q4" type="radio" value="3"/><span>③ 안쪽 범위를 range(3)으로 바꾸어도 항상 이차 성장이다.</span></label><label class="option"><input aria-label="4번 문항 4번 선택지" name="q4" type="radio" value="4"/><span>④ 이 코드는 i와 j가 같은 경우를 세지 않는다.</span></label><label class="option"><input aria-label="4번 문항 5번 선택지" name="q4" type="radio" value="5"/><span>⑤ n이 두 배가 되면 대표 연산 횟수는 여덟 배가 된다.</span></label><button onclick="grade(4)">이 문항 채점</button><p aria-live="polite" class="feedback" id="feedback4" role="status"></p><details><summary>실행 결과 보기</summary><pre><code>4 16
+8 64
+</code></pre></details></section><section class="question" id="q5"><div class="tag">QUESTION 05 / 10</div><h2>5. 실제 실행 시간 측정</h2><pre><code>import time
+import statistics
+
+def linear_sum(n):
+    s = 0
+    for i in range(n):
+        s += i
+    return s
+
+linear_sum(1000)  # 워밍업: 측정 구간 밖
+for n in [10000, 100000]:
+    times = []
+    for _ in range(5):
+        start = time.perf_counter()
+        result = linear_sum(n)
+        elapsed = time.perf_counter() - start
+        assert result == n * (n - 1) // 2
+        times.append(elapsed)
+    print(f"n={n}, 중앙값={statistics.median(times):.6f}초")</code></pre><p><strong>다음 측정 방법과 결과 해석에 관한 설명으로 옳은 것을 1개 고르시오.</strong></p><label class="option"><input aria-label="5번 문항 1번 선택지" name="q5" type="radio" value="1"/><span>① 한 번 측정한 값만으로 모든 입력에 대한 빅오를 확정할 수 있다.</span></label><label class="option"><input aria-label="5번 문항 2번 선택지" name="q5" type="radio" value="2"/><span>② perf_counter()가 반환한 값 하나만으로 해당 함수 호출의 경과 시간을 알 수 있다.</span></label><label class="option"><input aria-label="5번 문항 3번 선택지" name="q5" type="radio" value="3"/><span>③ 같은 코드라도 실행 환경과 다른 작업의 영향을 받아 측정값이 달라질 수 있다.</span></label><label class="option"><input aria-label="5번 문항 4번 선택지" name="q5" type="radio" value="4"/><span>④ n이 10배이면 측정 시간도 예외 없이 정확히 10배여야 한다.</span></label><label class="option"><input aria-label="5번 문항 5번 선택지" name="q5" type="radio" value="5"/><span>⑤ 워밍업 실행과 print 실행은 모두 start 이후 측정 구간에 포함된다.</span></label><button onclick="grade(5)">이 문항 채점</button><p aria-live="polite" class="feedback" id="feedback5" role="status"></p><details><summary>실행 결과 보기 · 시간은 실행 환경마다 다름</summary><pre><code>n=10000, 중앙값=0.000423초
+n=100000, 중앙값=0.004318초
+</code></pre></details></section><section class="question" id="q6"><div class="tag">QUESTION 06 / 10</div><h2>6. 선형 탐색과 이진 탐색의 조건</h2><pre><code>def linear_search(a, target):
+    for i in range(len(a)):
+        if a[i] == target:
+            return i
+    return -1
+
+def binary_search(a, target):
+    left, right = 0, len(a) - 1
+    while left &lt;= right:
+        mid = (left + right) // 2
+        if a[mid] == target:
+            return mid
+        if target &lt; a[mid]:
+            right = mid - 1
+        else:
+            left = mid + 1
+    return -1
+
+a = [2, 5, 8, 12, 16, 23, 38]
+print(linear_search(a, 23))
+print(binary_search(a, 23))</code></pre><p><strong>리스트의 인덱스 접근을 상수 시간으로 가정한다. 옳은 설명을 1개 고르시오.</strong></p><label class="option"><input aria-label="6번 문항 1번 선택지" name="q6" type="radio" value="1"/><span>① 선형 탐색은 오름차순 정렬이 되어 있지 않으면 사용할 수 없다.</span></label><label class="option"><input aria-label="6번 문항 2번 선택지" name="q6" type="radio" value="2"/><span>② 두 함수는 모든 입력에서 같은 개수의 원소를 검사한다.</span></label><label class="option"><input aria-label="6번 문항 3번 선택지" name="q6" type="radio" value="3"/><span>③ 이진 탐색은 정렬되지 않은 임의의 리스트에서도 항상 올바른 결과를 보장한다.</span></label><label class="option"><input aria-label="6번 문항 4번 선택지" name="q6" type="radio" value="4"/><span>④ 선형 탐색은 목표가 없으면 모든 원소를 확인하므로 최악 O(n)이다.</span></label><label class="option"><input aria-label="6번 문항 5번 선택지" name="q6" type="radio" value="5"/><span>⑤ 이진 탐색은 오름차순 정렬 조건에서도 최악의 경우 반드시 n개 원소를 모두 확인한다.</span></label><button onclick="grade(6)">이 문항 채점</button><p aria-live="polite" class="feedback" id="feedback6" role="status"></p><details><summary>실행 결과 보기</summary><pre><code>5
+5
+</code></pre></details></section><section class="question" id="q7"><div class="tag">QUESTION 07 / 10</div><h2>7. 알고리즘 전략: 탐욕과 동적계획법</h2><pre><code>def greedy_count(amount, coins):
+    count = 0
+    for coin in sorted(coins, reverse=True):
+        count += amount // coin
+        amount %= coin
+    return count if amount == 0 else -1
+
+def dp_count(amount, coins):
+    dp = [float("inf")] * (amount + 1)
+    dp[0] = 0
+    for value in range(1, amount + 1):
+        for coin in coins:
+            if coin &lt;= value:
+                dp[value] = min(dp[value], dp[value - coin] + 1)
+    return dp[amount] if dp[amount] != float("inf") else -1
+
+coins = [1, 3, 4]  # 각 동전은 제한 없이 사용 가능
+print("탐욕:", greedy_count(6, coins))
+print("DP:", dp_count(6, coins))</code></pre><p><strong>양의 정수 동전으로 합계 6을 만들 때의 설명으로 옳은 것을 1개 고르시오.</strong></p><label class="option"><input aria-label="7번 문항 1번 선택지" name="q7" type="radio" value="1"/><span>① 이 예제의 탐욕법은 3+3을 선택하여 동전 2개를 사용한다.</span></label><label class="option"><input aria-label="7번 문항 2번 선택지" name="q7" type="radio" value="2"/><span>② 동적계획법은 작은 금액에 필요한 최소 개수를 저장하고 재사용한다.</span></label><label class="option"><input aria-label="7번 문항 3번 선택지" name="q7" type="radio" value="3"/><span>③ 이 예제는 큰 동전부터 고르는 탐욕법이 모든 동전 체계에서 최적임을 입증한다.</span></label><label class="option"><input aria-label="7번 문항 4번 선택지" name="q7" type="radio" value="4"/><span>④ dp_count는 각 금액의 결과를 저장하지 않고 언제나 처음부터 모든 경우를 다시 탐색한다.</span></label><label class="option"><input aria-label="7번 문항 5번 선택지" name="q7" type="radio" value="5"/><span>⑤ 백트래킹, 분할정복, 동적계획법은 모든 문제에서 동일한 시간 복잡도를 가진다.</span></label><button onclick="grade(7)">이 문항 채점</button><p aria-live="polite" class="feedback" id="feedback7" role="status"></p><details><summary>실행 결과 보기</summary><pre><code>탐욕: 3
+DP: 2
+</code></pre></details></section><section class="question" id="q8"><div class="tag">QUESTION 08 / 10</div><h2>8. 정확성과 적용 조건을 함께 확인하기</h2><pre><code>def fast_guess(a, target):
+    if a and a[0] == target:
+        return 0
+    return -1
+
+def correct_search(a, target):
+    for i, value in enumerate(a):
+        if value == target:
+            return i
+    return -1
+
+data = [2, 5, 8]
+print("빠른 추측:", fast_guess(data, 8))
+print("전체 탐색:", correct_search(data, 8))</code></pre><p><strong>문제의 요구 사항은 “임의의 리스트에서 목표가 있으면 그 인덱스를, 없으면 -1을 반환한다”이다. 옳은 설명을 1개 고르시오.</strong></p><label class="option"><input aria-label="8번 문항 1번 선택지" name="q8" type="radio" value="1"/><span>① fast_guess가 더 짧고 O(1)이므로 요구 사항과 관계없이 선택해야 한다.</span></label><label class="option"><input aria-label="8번 문항 2번 선택지" name="q8" type="radio" value="2"/><span>② 예제에서 fast_guess는 목표가 실제로 없다는 사실을 정확히 확인한다.</span></label><label class="option"><input aria-label="8번 문항 3번 선택지" name="q8" type="radio" value="3"/><span>③ fast_guess는 예제에서 목표 8이 있는 인덱스 2를 반환한다.</span></label><label class="option"><input aria-label="8번 문항 4번 선택지" name="q8" type="radio" value="4"/><span>④ 이 예제에서는 정확성을 확인한 뒤 correct_search의 최악 O(n) 비용을 고려해야 한다.</span></label><label class="option"><input aria-label="8번 문항 5번 선택지" name="q8" type="radio" value="5"/><span>⑤ 두 함수가 -1을 반환하는 경우가 하나라도 같으면 모든 입력에서 동등하다.</span></label><button onclick="grade(8)">이 문항 채점</button><p aria-live="polite" class="feedback" id="feedback8" role="status"></p><details><summary>실행 결과 보기</summary><pre><code>빠른 추측: -1
+전체 탐색: 2
+</code></pre></details></section><section class="question" id="q9"><div class="tag">QUESTION 09 / 10</div><h2>9. 효율성 비교와 실험 설계</h2><pre><code>def sum_once(data):
+    total = 0
+    count = 0
+    for x in data:
+        total += x
+        count += 1
+    return total, count
+
+def sum_twice(data):
+    total = 0
+    count = 0
+    for x in data:
+        total += x
+        count += 1
+    for x in data:
+        total += x
+        count += 1
+    return total // 2, count
+
+for n in [10, 100]:
+    data = list(range(n))
+    print(n, sum_once(data), sum_twice(data))</code></pre><p><strong>원소는 정수이며, total += x의 횟수를 센다. 함수 자체의 복잡도와 비교 방법에 관한 설명으로 옳은 것을 1개 고르시오.</strong></p><label class="option"><input aria-label="9번 문항 1번 선택지" name="q9" type="radio" value="1"/><span>① sum_once와 sum_twice는 모두 O(n)이지만 대표 연산 횟수는 각각 n회와 2n회이다.</span></label><label class="option"><input aria-label="9번 문항 2번 선택지" name="q9" type="radio" value="2"/><span>② 두 함수의 빅오가 같으므로 어떤 환경에서도 실행 시간이 완전히 같다.</span></label><label class="option"><input aria-label="9번 문항 3번 선택지" name="q9" type="radio" value="3"/><span>③ 합계가 같으면 연산 횟수와 성능은 비교할 필요가 없다.</span></label><label class="option"><input aria-label="9번 문항 4번 선택지" name="q9" type="radio" value="4"/><span>④ 실제 시간을 비교할 때는 서로 다른 입력을 사용해야 공정하다.</span></label><label class="option"><input aria-label="9번 문항 5번 선택지" name="q9" type="radio" value="5"/><span>⑤ 서로 다른 n의 실행 시간을 한 번씩만 재면 코드 분석 없이 빅오를 확정할 수 있다.</span></label><button onclick="grade(9)">이 문항 채점</button><p aria-live="polite" class="feedback" id="feedback9" role="status"></p><details><summary>실행 결과 보기</summary><pre><code>10 (45, 10) (45, 20)
+100 (4950, 100) (4950, 200)
+</code></pre></details></section><section class="question" id="q10"><div class="tag">QUESTION 10 / 10</div><h2>10. 종합 선택: 정렬 준비 비용과 반복 탐색</h2><pre><code>from bisect import bisect_left
+
+def linear_contains(a, target):
+    for value in a:
+        if value == target:
+            return True
+    return False
+
+def binary_contains(ordered, target):
+    i = bisect_left(ordered, target)
+    return i &lt; len(ordered) and ordered[i] == target
+
+raw = [23, 2, 16, 5, 8, 12, 38]
+targets = [23, 7, 12]
+print("선형 반복:", [linear_contains(raw, t) for t in targets])
+ordered = sorted(raw)  # 탐색을 반복하기 전에 한 번만 정렬
+print("정렬 후 이진:", [binary_contains(ordered, t) for t in targets])</code></pre><p><strong>자료는 탐색 중 변경되지 않으며, 원래 인덱스가 아닌 존재 여부만 필요하다. n은 자료 수, q는 목표 수이다. 일반 비교 정렬의 최악 O(n log n)을 가정할 때 옳은 설명을 1개 고르시오.</strong></p><label class="option"><input aria-label="10번 문항 1번 선택지" name="q10" type="radio" value="1"/><span>① 이진 탐색을 사용하므로 정렬까지 포함한 전체 비용도 항상 O(q log n)이다.</span></label><label class="option"><input aria-label="10번 문항 2번 선택지" name="q10" type="radio" value="2"/><span>② 선형 탐색을 q번 반복하는 방법의 최악 시간 비용은 입력 크기 n과 무관한 O(q)이다.</span></label><label class="option"><input aria-label="10번 문항 3번 선택지" name="q10" type="radio" value="3"/><span>③ q가 1이어도 정렬 후 이진 탐색이 모든 환경에서 반드시 더 빠르다.</span></label><label class="option"><input aria-label="10번 문항 4번 선택지" name="q10" type="radio" value="4"/><span>④ 한 번 정렬하고 이진 탐색을 q번 하면 전체 시간 비용은 O(n log n + q log n)이다.</span></label><label class="option"><input aria-label="10번 문항 5번 선택지" name="q10" type="radio" value="5"/><span>⑤ 정렬 후에는 target이 원래 리스트의 어느 인덱스에 있었는지도 이 함수가 자동 반환한다.</span></label><button onclick="grade(10)">이 문항 채점</button><p aria-live="polite" class="feedback" id="feedback10" role="status"></p><details><summary>실행 결과 보기</summary><pre><code>선형 반복: [True, False, True]
+정렬 후 이진: [True, False, True]
+</code></pre></details></section><section><h2>정답 및 선택지별 해설</h2><button aria-expanded="false" id="answerToggle" onclick="toggleAnswers()">정답·해설 펼치기</button><div class="answers" id="answers"><h3>정답표</h3><table><thead><tr><th>문항</th><th>정답</th></tr></thead><tbody><tr><td>1</td><td>①</td></tr><tr><td>2</td><td>④</td></tr><tr><td>3</td><td>⑤</td></tr><tr><td>4</td><td>①</td></tr><tr><td>5</td><td>③</td></tr><tr><td>6</td><td>④</td></tr><tr><td>7</td><td>②</td></tr><tr><td>8</td><td>④</td></tr><tr><td>9</td><td>①</td></tr><tr><td>10</td><td>④</td></tr></tbody></table><h3>1. 입력 크기와 연산 횟수 · 정답 ①</h3><ul><li><strong>① 옳음</strong> — 이 문제에서는 리스트 길이를 입력 크기로 정의한다.</li><li><strong>② 틀림</strong> — 반환값과 관계없이 모든 원소를 처리하므로 total은 O(n)이다.</li><li><strong>③ 틀림</strong> — 원소마다 한 번 더하므로 n이 두 배가 되면 덧셈 횟수도 두 배가 된다.</li><li><strong>④ 틀림</strong> — 합계는 모두 0이지만 덧셈 횟수는 4, 8, 16회로 다르다.</li><li><strong>⑤ 틀림</strong> — 연산 횟수만으로 특정 환경에서의 실행 초를 정확히 결정할 수 없다.</li></ul><h3>2. 빅오 표기법의 의미 · 정답 ④</h3><ul><li><strong>① 틀림</strong> — 바깥 반복이 n번이 아니라 고정된 3번이다.</li><li><strong>② 틀림</strong> — 바깥 반복은 고정된 3회이므로 대표 연산 횟수는 3n + 2이다.</li><li><strong>③ 틀림</strong> — 반복문의 겹수만으로 복잡도를 결정하지 않는다.</li><li><strong>④ 옳음</strong> — 3n + 2의 주된 증가 항은 n에 비례한다.</li><li><strong>⑤ 틀림</strong> — 빅오는 정확한 실행 초를 나타내지 않는다.</li></ul><h3>3. O(1), O(log n), O(n)의 코드 연결 · 정답 ⑤</h3><ul><li><strong>① 틀림</strong> — 반환값의 수치는 복잡도를 결정하지 않으며 첫 원소 접근은 O(1)이다.</li><li><strong>② 틀림</strong> — n //= 2는 n을 절반으로 줄인다.</li><li><strong>③ 틀림</strong> — 모든 원소를 방문하므로 O(n)이다.</li><li><strong>④ 틀림</strong> — first는 인덱스 0의 원소만 읽으므로 원소 접근은 1회이다.</li><li><strong>⑤ 옳음</strong> — n=16이면 16→8→4→2→1로 4회 반복한다.</li></ul><h3>4. O(n²)과 중첩 반복문 · 정답 ①</h3><ul><li><strong>① 옳음</strong> — i의 n가지 경우마다 j가 n번 반복하므로 n×n회이다.</li><li><strong>② 틀림</strong> — 16회에서 64회로 네 배 증가한다.</li><li><strong>③ 틀림</strong> — 안쪽이 고정 3회이면 3n회이므로 선형 성장이다.</li><li><strong>④ 틀림</strong> — i == j를 제외하는 조건이 없으므로 자기 자신과의 쌍도 센다.</li><li><strong>⑤ 틀림</strong> — 대표 연산은 n²회이므로 입력이 두 배가 되면 네 배가 된다.</li></ul><h3>5. 실제 실행 시간 측정 · 정답 ③</h3><ul><li><strong>① 틀림</strong> — 단일 실험만으로 점근적인 증가율을 확정할 수 없다. 코드 분석과 여러 규모의 실험을 함께 본다.</li><li><strong>② 틀림</strong> — 해당 호출의 경과 시간은 종료 시각과 시작 시각의 차이로 구한다. 반환값 하나만으로는 알 수 없다.</li><li><strong>③ 옳음</strong> — 실행 환경과 시스템의 실행 중단 등이 측정 시간에 영향을 줄 수 있다.</li><li><strong>④ 틀림</strong> — 연산량의 비율과 실측 시간의 비율이 정확히 일치할 필요는 없다.</li><li><strong>⑤ 틀림</strong> — 워밍업은 루프 전에, 출력은 측정 후에 실행된다.</li></ul><h3>6. 선형 탐색과 이진 탐색의 조건 · 정답 ④</h3><ul><li><strong>① 틀림</strong> — 선형 탐색은 정렬 여부와 무관하게 사용할 수 있다.</li><li><strong>② 틀림</strong> — 예제에서 선형 탐색은 6개, 이진 탐색은 가운데 원소 2개를 확인한다.</li><li><strong>③ 틀림</strong> — 정렬 조건이 없으면 버린 구간에 정답이 있을 수 있다.</li><li><strong>④ 옳음</strong> — 없는 목표를 찾으려면 n개를 모두 확인한다.</li><li><strong>⑤ 틀림</strong> — 정렬된 리스트에서는 탐색 범위를 절반가량 줄이므로 최악 O(log n)이다.</li></ul><h3>7. 알고리즘 전략: 탐욕과 동적계획법 · 정답 ②</h3><ul><li><strong>① 틀림</strong> — 큰 동전부터 고르는 이 구현은 4+1+1을 선택하여 동전 3개를 사용한다.</li><li><strong>② 옳음</strong> — dp[value - coin]에 저장된 값을 이용하며 6은 3+3의 2개로 만들 수 있다.</li><li><strong>③ 틀림</strong> — 오히려 최적해 2개보다 많은 3개를 사용한 반례이다.</li><li><strong>④ 틀림</strong> — dp 배열을 통해 부분 문제의 결과를 재사용한다.</li><li><strong>⑤ 틀림</strong> — 전략만으로 모든 문제의 복잡도가 같아지지 않는다. 가지치기 조건과 부분 문제 구조도 영향을 준다.</li></ul><h3>8. 정확성과 적용 조건을 함께 확인하기 · 정답 ④</h3><ul><li><strong>① 틀림</strong> — 빠르더라도 정확하지 않으면 해당 문제의 해결 알고리즘으로 선택할 수 없다.</li><li><strong>② 틀림</strong> — 8은 인덱스 2에 있지만 첫 원소만 검사하고 -1을 반환한다.</li><li><strong>③ 틀림</strong> — 첫 원소 2만 확인한 뒤 -1을 반환하므로 인덱스 2의 목표를 놓친다.</li><li><strong>④ 옳음</strong> — correct_search는 요구를 만족하며, 없는 값이나 뒤쪽 목표는 선형 시간이 필요하다.</li><li><strong>⑤ 틀림</strong> — 일부 입력에서의 일치가 모든 입력에서의 동등성을 보장하지 않는다.</li></ul><h3>9. 효율성 비교와 실험 설계 · 정답 ①</h3><ul><li><strong>① 옳음</strong> — 상수배를 생략하면 둘 다 선형 성장이지만 수행하는 덧셈 수는 다르다.</li><li><strong>② 틀림</strong> — 빅오는 상수 계수와 세부 구현 비용의 차이를 없애 주지 않는다.</li><li><strong>③ 틀림</strong> — 정답이 같아도 효율성은 다를 수 있다.</li><li><strong>④ 틀림</strong> — 동일한 문제 조건과 입력으로 비교하여 불필요한 차이를 통제해야 한다.</li><li><strong>⑤ 틀림</strong> — 단발성 실측만으로 점근적 증가율을 확정할 수 없다. 반복 측정과 연산 횟수 분석을 함께 해석해야 한다.</li></ul><h3>10. 종합 선택: 정렬 준비 비용과 반복 탐색 · 정답 ④</h3><ul><li><strong>① 틀림</strong> — 초기 정렬 준비 비용을 빠뜨린 설명이다.</li><li><strong>② 틀림</strong> — 한 번의 선형 탐색이 최악 O(n)이므로 q번 반복하는 비용은 O(qn)이다.</li><li><strong>③ 틀림</strong> — 한 번만 찾을 때는 정렬 준비 비용 때문에 선형 탐색이 유리할 수 있다.</li><li><strong>④ 옳음</strong> — 정렬을 한 번 수행하고 로그 시간 탐색을 q번 하는 비용을 더한다.</li><li><strong>⑤ 틀림</strong> — 함수는 불리언을 반환한다. 원래 위치가 필요하면 별도 위치 정보를 보존해야 한다.</li></ul></div></section><p class="muted">인쇄 시 문제와 정답·해설이 함께 포함됩니다. 학생용으로 배포하려면 인쇄 범위에서 해설 페이지를 제외하세요.</p></main><script>const key=[[1], [4], [5], [1], [3], [4], [2], [4], [1], [4]];
+function selected(n){return [...document.querySelectorAll('input[name="q'+n+'"]:checked')].map(x=>Number(x.value))}
+function grade(n){const s=selected(n),ok=s.length===1&&s[0]===key[n-1][0];const el=document.getElementById('feedback'+n);el.className='feedback '+(ok?'correct':'wrong');el.textContent=s.length!==1?'정답이라고 생각하는 선택지 1개를 선택하세요.':ok?'정답입니다.':'오답입니다. 코드를 다시 살펴보세요. 정답과 이유는 아래 해설에서 확인할 수 있습니다.';return ok}
+function gradeAll(){let score=0;for(let i=1;i<=10;i++)if(grade(i))score++;document.getElementById('score').textContent='채점 결과: '+score+' / 10점';}
+function resetQuiz(){document.querySelectorAll('input[type="radio"]').forEach(x=>x.checked=false);document.querySelectorAll('.feedback').forEach(x=>x.textContent='');document.getElementById('score').textContent='';document.getElementById('answers').classList.remove('show');const b=document.getElementById('answerToggle');b.setAttribute('aria-expanded','false');b.textContent='정답·해설 펼치기';document.querySelectorAll('details').forEach(x=>x.open=false)}
+function toggleAnswers(){const show=document.getElementById('answers').classList.toggle('show');const b=document.getElementById('answerToggle');b.setAttribute('aria-expanded',String(show));b.textContent=show?'정답·해설 접기':'정답·해설 펼치기'}
+</script></body></html>

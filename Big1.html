@@ -1,0 +1,138 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>빅오 시간 복잡도 10문항 코드 평가</title><style>body{margin:0;background:#f3f6fb;color:#1c2b40;font-family:Arial,"Malgun Gothic",sans-serif;line-height:1.7}header{background:linear-gradient(120deg,#16345b,#176f91);color:white;padding:30px max(20px,calc((100vw - 1100px)/2))}main{max-width:1100px;margin:auto;padding:22px}.panel,.question{background:white;border:1px solid #dce5ef;border-radius:14px;padding:24px;margin:18px 0;box-shadow:0 3px 12px #20344a0a}h2{color:#16466c}pre{white-space:pre-wrap;word-break:break-word;background:#132337;color:#e8f5ff;padding:17px;border-radius:9px;font-size:14px;line-height:1.55}pre.output{background:#edf7f1;color:#175a3e}label.option{display:block;border:1px solid #dae3ef;border-radius:8px;padding:9px 12px;margin:8px 0;cursor:pointer}label.option:hover{background:#f2f8ff}input[type=checkbox]{transform:scale(1.2);margin-right:10px}button{border:0;border-radius:8px;background:#146d9c;color:white;padding:11px 18px;cursor:pointer;font-weight:bold;margin:5px}button.secondary{background:#53677b}input[type=text]{padding:10px;border:1px solid #b6c5d5;border-radius:7px;max-width:180px}details{background:#f4f8fc;border-radius:8px;padding:10px 15px;margin-top:10px}summary{cursor:pointer;font-weight:bold}.feedback{margin-top:10px;font-weight:bold}.correct{color:#13734b}.wrong{color:#bb3341}.muted{color:#58718a;font-size:14px}nav{position:sticky;top:0;background:white;padding:10px;text-align:center;border-bottom:1px solid #ddd;z-index:5}nav a{margin:0 5px;color:#17638d} @media print{nav,button,.inputs{display:none}details{display:block}body{background:white}.question{break-inside:avoid;box-shadow:none}}</style></head><body><header><h1>시간 복잡도와 알고리즘 선택</h1><p>10개 코드 예시 · 5지선다 · 옳은 것 정확히 2개 선택 · 자동 채점 및 상세 해설</p></header><nav><a href="#guide">응시 안내</a><a href="#q1">1번</a><a href="#q5">5번</a><a href="#q10">10번</a><a href="#result">채점</a></nav><main><section class="panel" id="guide"><h2>학습 목표</h2><p>입력 크기와 연산 횟수의 관계를 바탕으로 O(1), O(log n), O(n), O(n log n), O(n²)을 비교하고 실제 실행 시간을 측정하여 문제에 적합한 알고리즘을 선택한다.</p><p><b>응시 방법:</b> 각 문항의 파이썬 코드를 살펴보고 정답 2개를 고르세요. 각 10점, 총 100점입니다. 채점 후 정답과 상세 해설이 열립니다.</p><div class="inputs">학번 <input id="sid" type="text" placeholder="예: 1100"> 이름 <input id="sname" type="text" placeholder="이름"></div></section><section class="question" id="q1"><h2>1. 시간 복잡도와 입력 크기</h2><p><b>예시 코드</b> <button class="secondary" onclick="copyCode(1)">코드 복사</button></p><pre id="code1">def total(a):
+    s = 0
+    for x in a:
+        s += x
+        print(&quot;더한 값:&quot;, x, &quot;누적:&quot;, s)
+    return s
+
+print(&quot;합계:&quot;, total([1, 2, 3, 4]))</pre><p><b>예상 출력 결과</b></p><pre class="output">더한 값: 1 누적: 1
+더한 값: 2 누적: 3
+더한 값: 3 누적: 6
+더한 값: 4 누적: 10
+합계: 10</pre><p><b>문제: 위 코드 및 관련 개념에 관한 설명 중 옳은 것을 정확히 2개 고르시오.</b></p><label class="option"><input type="checkbox" name="q1" value="0" onchange="limit(this,1)">① 입력 원소가 n개라면 덧셈은 n번 실행된다.</label><label class="option"><input type="checkbox" name="q1" value="1" onchange="limit(this,1)">② 이 코드의 시간 복잡도는 O(n)이다.</label><label class="option"><input type="checkbox" name="q1" value="2" onchange="limit(this,1)">③ 이 코드의 복잡도는 출력된 합계 10으로 결정된다.</label><label class="option"><input type="checkbox" name="q1" value="3" onchange="limit(this,1)">④ 입력이 두 배면 반복 횟수는 네 배가 된다.</label><label class="option"><input type="checkbox" name="q1" value="4" onchange="limit(this,1)">⑤ 모든 입력에서 덧셈은 한 번만 실행된다.</label><p class="muted" id="count1">선택: 0/2</p><div class="feedback" id="fb1"></div><details id="detail1"><summary>정답 및 상세 해설 (학습용 펼치기)</summary><p><b>정답: ①, ②</b></p><p>반복문이 원소를 한 번씩 방문하므로 덧셈 횟수는 n이고 시간 복잡도는 O(n)이다. 합계의 크기와 연산 횟수는 다른 개념이다.</p><p><b>선지별 판단</b></p><ol><li>옳음 — 입력 원소가 n개라면 덧셈은 n번 실행된다.</li><li>옳음 — 이 코드의 시간 복잡도는 O(n)이다.</li><li>틀림 — 이 코드의 복잡도는 출력된 합계 10으로 결정된다.</li><li>틀림 — 입력이 두 배면 반복 횟수는 네 배가 된다.</li><li>틀림 — 모든 입력에서 덧셈은 한 번만 실행된다.</li></ol></details></section><section class="question" id="q2"><h2>2. 빅오 표기법</h2><p><b>예시 코드</b> <button class="secondary" onclick="copyCode(2)">코드 복사</button></p><pre id="code2">def work(n):
+    count = 0
+    for i in range(n):
+        count += 1
+    print(&quot;n =&quot;, n, &quot;반복 횟수 =&quot;, count)
+
+for n in [2, 4, 8]:
+    work(n)</pre><p><b>예상 출력 결과</b></p><pre class="output">n = 2 반복 횟수 = 2
+n = 4 반복 횟수 = 4
+n = 8 반복 횟수 = 8</pre><p><b>문제: 위 코드 및 관련 개념에 관한 설명 중 옳은 것을 정확히 2개 고르시오.</b></p><label class="option"><input type="checkbox" name="q2" value="0" onchange="limit(this,2)">① O(n)은 반드시 n초가 걸린다는 뜻이다.</label><label class="option"><input type="checkbox" name="q2" value="1" onchange="limit(this,2)">② O(n)은 실행 환경과 무관한 정확한 시간을 뜻한다.</label><label class="option"><input type="checkbox" name="q2" value="2" onchange="limit(this,2)">③ 빅오는 입력 크기에 따른 연산량 증가 경향을 표현한다.</label><label class="option"><input type="checkbox" name="q2" value="3" onchange="limit(this,2)">④ 빅오에서는 모든 상수배를 정확한 실행 초로 바꾼다.</label><label class="option"><input type="checkbox" name="q2" value="4" onchange="limit(this,2)">⑤ 3n+5와 n은 모두 O(n)으로 나타낼 수 있다.</label><p class="muted" id="count2">선택: 0/2</p><div class="feedback" id="fb2"></div><details id="detail2"><summary>정답 및 상세 해설 (학습용 펼치기)</summary><p><b>정답: ③, ⑤</b></p><p>빅오는 증가율을 나타내는 점근적 상한 표기다. 3n+5와 n은 모두 O(n)이다. 측정된 초 단위 시간과 같지 않다.</p><p><b>선지별 판단</b></p><ol><li>틀림 — O(n)은 반드시 n초가 걸린다는 뜻이다.</li><li>틀림 — O(n)은 실행 환경과 무관한 정확한 시간을 뜻한다.</li><li>옳음 — 빅오는 입력 크기에 따른 연산량 증가 경향을 표현한다.</li><li>틀림 — 빅오에서는 모든 상수배를 정확한 실행 초로 바꾼다.</li><li>옳음 — 3n+5와 n은 모두 O(n)으로 나타낼 수 있다.</li></ol></details></section><section class="question" id="q3"><h2>3. O(1), O(log n), O(n)</h2><p><b>예시 코드</b> <button class="secondary" onclick="copyCode(3)">코드 복사</button></p><pre id="code3">def compare(a):
+    print(&quot;첫 원소:&quot;, a[0])
+    for x in a:
+        print(&quot;순회:&quot;, x)
+
+compare([2, 4, 6, 8])</pre><p><b>예상 출력 결과</b></p><pre class="output">첫 원소: 2
+순회: 2
+순회: 4
+순회: 6
+순회: 8</pre><p><b>문제: 위 코드 및 관련 개념에 관한 설명 중 옳은 것을 정확히 2개 고르시오.</b></p><label class="option"><input type="checkbox" name="q3" value="0" onchange="limit(this,3)">① 첫 원소 접근은 항상 O(n²)이다.</label><label class="option"><input type="checkbox" name="q3" value="1" onchange="limit(this,3)">② 모든 원소 순회는 O(log n)이다.</label><label class="option"><input type="checkbox" name="q3" value="2" onchange="limit(this,3)">③ 이진 탐색은 정렬 여부와 무관하게 O(1)이다.</label><label class="option"><input type="checkbox" name="q3" value="3" onchange="limit(this,3)">④ 인덱스로 첫 원소를 읽는 연산은 일반적인 리스트에서 O(1)이다.</label><label class="option"><input type="checkbox" name="q3" value="4" onchange="limit(this,3)">⑤ 원소를 한 번씩 출력하는 반복은 O(n)이다.</label><p class="muted" id="count3">선택: 0/2</p><div class="feedback" id="fb3"></div><details id="detail3"><summary>정답 및 상세 해설 (학습용 펼치기)</summary><p><b>정답: ④, ⑤</b></p><p>리스트의 인덱스 접근은 O(1), 전체 순회는 O(n)이다. 이진 탐색은 정렬된 자료에서 탐색 범위를 줄이며 O(log n)이다.</p><p><b>선지별 판단</b></p><ol><li>틀림 — 첫 원소 접근은 항상 O(n²)이다.</li><li>틀림 — 모든 원소 순회는 O(log n)이다.</li><li>틀림 — 이진 탐색은 정렬 여부와 무관하게 O(1)이다.</li><li>옳음 — 인덱스로 첫 원소를 읽는 연산은 일반적인 리스트에서 O(1)이다.</li><li>옳음 — 원소를 한 번씩 출력하는 반복은 O(n)이다.</li></ol></details></section><section class="question" id="q4"><h2>4. O(n²) 중첩 반복문</h2><p><b>예시 코드</b> <button class="secondary" onclick="copyCode(4)">코드 복사</button></p><pre id="code4">def pairs(n):
+    count = 0
+    for i in range(n):
+        for j in range(n):
+            count += 1
+            print((i, j), &quot;누적:&quot;, count)
+
+pairs(3)</pre><p><b>예상 출력 결과</b></p><pre class="output">(0, 0) 누적: 1
+(0, 1) 누적: 2
+(0, 2) 누적: 3
+(1, 0) 누적: 4
+(1, 1) 누적: 5
+(1, 2) 누적: 6
+(2, 0) 누적: 7
+(2, 1) 누적: 8
+(2, 2) 누적: 9</pre><p><b>문제: 위 코드 및 관련 개념에 관한 설명 중 옳은 것을 정확히 2개 고르시오.</b></p><label class="option"><input type="checkbox" name="q4" value="0" onchange="limit(this,4)">① n=3일 때 내부 핵심 연산은 9회 실행된다.</label><label class="option"><input type="checkbox" name="q4" value="1" onchange="limit(this,4)">② 이 구조의 핵심 연산 횟수는 n²이다.</label><label class="option"><input type="checkbox" name="q4" value="2" onchange="limit(this,4)">③ n을 두 배로 하면 핵심 연산 횟수는 두 배다.</label><label class="option"><input type="checkbox" name="q4" value="3" onchange="limit(this,4)">④ 중첩 반복문이므로 언제나 O(1)이다.</label><label class="option"><input type="checkbox" name="q4" value="4" onchange="limit(this,4)">⑤ n=10이면 핵심 연산은 10회 실행된다.</label><p class="muted" id="count4">선택: 0/2</p><div class="feedback" id="fb4"></div><details id="detail4"><summary>정답 및 상세 해설 (학습용 펼치기)</summary><p><b>정답: ①, ②</b></p><p>바깥 반복 n회마다 안쪽 반복 n회가 실행되어 총 n×n=n²회다. n이 두 배면 횟수는 네 배가 된다.</p><p><b>선지별 판단</b></p><ol><li>옳음 — n=3일 때 내부 핵심 연산은 9회 실행된다.</li><li>옳음 — 이 구조의 핵심 연산 횟수는 n²이다.</li><li>틀림 — n을 두 배로 하면 핵심 연산 횟수는 두 배다.</li><li>틀림 — 중첩 반복문이므로 언제나 O(1)이다.</li><li>틀림 — n=10이면 핵심 연산은 10회 실행된다.</li></ol></details></section><section class="question" id="q5"><h2>5. 실제 실행 시간 측정</h2><p><b>예시 코드</b> <button class="secondary" onclick="copyCode(5)">코드 복사</button></p><pre id="code5">import time
+
+def linear_sum(n):
+    s = 0
+    for i in range(n):
+        s += i
+    return s
+
+for n in [1000, 10000]:
+    start = time.perf_counter()
+    result = linear_sum(n)
+    elapsed = time.perf_counter() - start
+    print(&quot;n:&quot;, n, &quot;합:&quot;, result,
+          &quot;시간(초):&quot;, round(elapsed, 6))</pre><p><b>예상 출력 결과</b></p><pre class="output">n: 1000 합: 499500 시간(초): (실행 환경에 따라 달라짐)
+n: 10000 합: 49995000 시간(초): (실행 환경에 따라 달라짐)</pre><p><b>문제: 위 코드 및 관련 개념에 관한 설명 중 옳은 것을 정확히 2개 고르시오.</b></p><label class="option"><input type="checkbox" name="q5" value="0" onchange="limit(this,5)">① 한 번 측정하면 빅오를 수학적으로 증명할 수 있다.</label><label class="option"><input type="checkbox" name="q5" value="1" onchange="limit(this,5)">② 모든 컴퓨터에서 시간은 완전히 같다.</label><label class="option"><input type="checkbox" name="q5" value="2" onchange="limit(this,5)">③ perf_counter()로 경과 시간을 측정할 수 있다.</label><label class="option"><input type="checkbox" name="q5" value="3" onchange="limit(this,5)">④ 실행 시간이 짧으면 결과의 정확성을 검사할 필요가 없다.</label><label class="option"><input type="checkbox" name="q5" value="4" onchange="limit(this,5)">⑤ 서로 다른 입력 크기를 여러 번 측정하면 증가 경향을 살필 수 있다.</label><p class="muted" id="count5">선택: 0/2</p><div class="feedback" id="fb5"></div><details id="detail5"><summary>정답 및 상세 해설 (학습용 펼치기)</summary><p><b>정답: ③, ⑤</b></p><p>perf_counter()는 고해상도 경과 시간 측정에 유용하다. 실제 값은 환경과 실행 상황에 따라 달라지므로 반복 측정하고 이론 복잡도와 구분해야 한다.</p><p><b>선지별 판단</b></p><ol><li>틀림 — 한 번 측정하면 빅오를 수학적으로 증명할 수 있다.</li><li>틀림 — 모든 컴퓨터에서 시간은 완전히 같다.</li><li>옳음 — perf_counter()로 경과 시간을 측정할 수 있다.</li><li>틀림 — 실행 시간이 짧으면 결과의 정확성을 검사할 필요가 없다.</li><li>옳음 — 서로 다른 입력 크기를 여러 번 측정하면 증가 경향을 살필 수 있다.</li></ol></details></section><section class="question" id="q6"><h2>6. 선형 탐색과 이진 탐색</h2><p><b>예시 코드</b> <button class="secondary" onclick="copyCode(6)">코드 복사</button></p><pre id="code6">def linear(a, x):
+    for i, v in enumerate(a):
+        print(&quot;선형 검사:&quot;, i, v)
+        if v == x: return i
+    return -1
+
+def binary(a, x):
+    l, r = 0, len(a)-1
+    while l &lt;= r:
+        m = (l+r)//2
+        print(&quot;이진 검사:&quot;, m, a[m])
+        if a[m] == x: return m
+        if x &lt; a[m]: r = m-1
+        else: l = m+1
+    return -1
+
+a = [2, 5, 8, 12, 16, 23, 38]
+print(&quot;선형 결과:&quot;, linear(a, 23))
+print(&quot;이진 결과:&quot;, binary(a, 23))</pre><p><b>예상 출력 결과</b></p><pre class="output">선형 검사: 0 2
+선형 검사: 1 5
+선형 검사: 2 8
+선형 검사: 3 12
+선형 검사: 4 16
+선형 검사: 5 23
+선형 결과: 5
+이진 검사: 3 12
+이진 검사: 5 23
+이진 결과: 5</pre><p><b>문제: 위 코드 및 관련 개념에 관한 설명 중 옳은 것을 정확히 2개 고르시오.</b></p><label class="option"><input type="checkbox" name="q6" value="0" onchange="limit(this,6)">① 이진 탐색은 무작위 순서에서도 같은 방식으로 항상 정확하다.</label><label class="option"><input type="checkbox" name="q6" value="1" onchange="limit(this,6)">② 선형 탐색은 최악의 경우 O(n)이다.</label><label class="option"><input type="checkbox" name="q6" value="2" onchange="limit(this,6)">③ 두 탐색은 항상 같은 수의 비교를 한다.</label><label class="option"><input type="checkbox" name="q6" value="3" onchange="limit(this,6)">④ 정렬된 리스트에서 이진 탐색은 O(log n)으로 동작한다.</label><label class="option"><input type="checkbox" name="q6" value="4" onchange="limit(this,6)">⑤ 이진 탐색은 모든 원소를 무조건 검사한다.</label><p class="muted" id="count6">선택: 0/2</p><div class="feedback" id="fb6"></div><details id="detail6"><summary>정답 및 상세 해설 (학습용 펼치기)</summary><p><b>정답: ②, ④</b></p><p>선형 탐색은 최악의 경우 n개를 확인한다. 이진 탐색은 정렬된 자료에서 탐색 범위를 절반씩 줄이므로 O(log n)이다.</p><p><b>선지별 판단</b></p><ol><li>틀림 — 이진 탐색은 무작위 순서에서도 같은 방식으로 항상 정확하다.</li><li>옳음 — 선형 탐색은 최악의 경우 O(n)이다.</li><li>틀림 — 두 탐색은 항상 같은 수의 비교를 한다.</li><li>옳음 — 정렬된 리스트에서 이진 탐색은 O(log n)으로 동작한다.</li><li>틀림 — 이진 탐색은 모든 원소를 무조건 검사한다.</li></ol></details></section><section class="question" id="q7"><h2>7. 알고리즘 전략 통합</h2><p><b>예시 코드</b> <button class="secondary" onclick="copyCode(7)">코드 복사</button></p><pre id="code7">def fib(n, memo={}):
+    if n &lt;= 1: return n
+    if n not in memo:
+        print(&quot;새로 계산:&quot;, n)
+        memo[n] = fib(n-1, memo) + fib(n-2, memo)
+    return memo[n]
+
+print(&quot;결과:&quot;, fib(5, {}))</pre><p><b>예상 출력 결과</b></p><pre class="output">새로 계산: 5
+새로 계산: 4
+새로 계산: 3
+새로 계산: 2
+결과: 5</pre><p><b>문제: 위 코드 및 관련 개념에 관한 설명 중 옳은 것을 정확히 2개 고르시오.</b></p><label class="option"><input type="checkbox" name="q7" value="0" onchange="limit(this,7)">① 동적계획법은 중복 부분 문제의 결과를 저장하여 재사용할 수 있다.</label><label class="option"><input type="checkbox" name="q7" value="1" onchange="limit(this,7)">② 모든 탐욕 알고리즘은 어떤 문제에서도 최적해를 보장한다.</label><label class="option"><input type="checkbox" name="q7" value="2" onchange="limit(this,7)">③ 분할정복은 문제를 작은 부분으로 나누어 해결하는 전략이다.</label><label class="option"><input type="checkbox" name="q7" value="3" onchange="limit(this,7)">④ 백트래킹은 언제나 모든 경우를 끝까지 검사한다.</label><label class="option"><input type="checkbox" name="q7" value="4" onchange="limit(this,7)">⑤ 모든 알고리즘은 같은 시간 복잡도를 가진다.</label><p class="muted" id="count7">선택: 0/2</p><div class="feedback" id="fb7"></div><details id="detail7"><summary>정답 및 상세 해설 (학습용 펼치기)</summary><p><b>정답: ①, ③</b></p><p>메모이제이션은 이미 계산한 피보나치 값을 재사용한다. 분할정복은 부분 문제를 해결하고 결합한다. 탐욕법의 최적성은 문제 조건에 달려 있다.</p><p><b>선지별 판단</b></p><ol><li>옳음 — 동적계획법은 중복 부분 문제의 결과를 저장하여 재사용할 수 있다.</li><li>틀림 — 모든 탐욕 알고리즘은 어떤 문제에서도 최적해를 보장한다.</li><li>옳음 — 분할정복은 문제를 작은 부분으로 나누어 해결하는 전략이다.</li><li>틀림 — 백트래킹은 언제나 모든 경우를 끝까지 검사한다.</li><li>틀림 — 모든 알고리즘은 같은 시간 복잡도를 가진다.</li></ol></details></section><section class="question" id="q8"><h2>8. 알고리즘 선택 기준</h2><p><b>예시 코드</b> <button class="secondary" onclick="copyCode(8)">코드 복사</button></p><pre id="code8">def find_first(a, target):
+    for i, x in enumerate(a):
+        print(&quot;검사:&quot;, i, x)
+        if x == target:
+            return i
+    return -1
+
+print(&quot;찾은 위치:&quot;, find_first([9, 3, 7], 7))</pre><p><b>예상 출력 결과</b></p><pre class="output">검사: 0 9
+검사: 1 3
+검사: 2 7
+찾은 위치: 2</pre><p><b>문제: 위 코드 및 관련 개념에 관한 설명 중 옳은 것을 정확히 2개 고르시오.</b></p><label class="option"><input type="checkbox" name="q8" value="0" onchange="limit(this,8)">① 코드가 가장 짧으면 무조건 최선이다.</label><label class="option"><input type="checkbox" name="q8" value="1" onchange="limit(this,8)">② 같은 빅오를 가진 알고리즘은 실제 시간이 언제나 같다.</label><label class="option"><input type="checkbox" name="q8" value="2" onchange="limit(this,8)">③ 정확하지 않아도 빠르면 선택해야 한다.</label><label class="option"><input type="checkbox" name="q8" value="3" onchange="limit(this,8)">④ 선택 전에 결과가 요구 조건에 맞는지 확인해야 한다.</label><label class="option"><input type="checkbox" name="q8" value="4" onchange="limit(this,8)">⑤ 자료의 정렬 상태와 크기 등 입력 조건을 고려해야 한다.</label><p class="muted" id="count8">선택: 0/2</p><div class="feedback" id="fb8"></div><details id="detail8"><summary>정답 및 상세 해설 (학습용 펼치기)</summary><p><b>정답: ④, ⑤</b></p><p>알고리즘은 정확성이 먼저다. 정렬 상태, 입력 규모, 시간·공간 비용, 구현 비용을 종합해 선택한다.</p><p><b>선지별 판단</b></p><ol><li>틀림 — 코드가 가장 짧으면 무조건 최선이다.</li><li>틀림 — 같은 빅오를 가진 알고리즘은 실제 시간이 언제나 같다.</li><li>틀림 — 정확하지 않아도 빠르면 선택해야 한다.</li><li>옳음 — 선택 전에 결과가 요구 조건에 맞는지 확인해야 한다.</li><li>옳음 — 자료의 정렬 상태와 크기 등 입력 조건을 고려해야 한다.</li></ol></details></section><section class="question" id="q9"><h2>9. [12정과03-06] 성취기준</h2><p><b>예시 코드</b> <button class="secondary" onclick="copyCode(9)">코드 복사</button></p><pre id="code9">def steps(n):
+    c = 0
+    while n &gt; 1:
+        print(&quot;현재 크기:&quot;, n)
+        n //= 2
+        c += 1
+    print(&quot;반으로 줄인 횟수:&quot;, c)
+
+steps(16)</pre><p><b>예상 출력 결과</b></p><pre class="output">현재 크기: 16
+현재 크기: 8
+현재 크기: 4
+현재 크기: 2
+반으로 줄인 횟수: 4</pre><p><b>문제: 위 코드 및 관련 개념에 관한 설명 중 옳은 것을 정확히 2개 고르시오.</b></p><label class="option"><input type="checkbox" name="q9" value="0" onchange="limit(this,9)">① 입력 크기는 분석에서 고려하지 않는다.</label><label class="option"><input type="checkbox" name="q9" value="1" onchange="limit(this,9)">② 입력 크기에 따른 반복 횟수를 분석할 수 있다.</label><label class="option"><input type="checkbox" name="q9" value="2" onchange="limit(this,9)">③ 출력 결과만 맞으면 효율성 비교는 불필요하다.</label><label class="option"><input type="checkbox" name="q9" value="3" onchange="limit(this,9)">④ 실행 시간 한 번만 측정하면 모든 복잡도가 확정된다.</label><label class="option"><input type="checkbox" name="q9" value="4" onchange="limit(this,9)">⑤ 서로 다른 알고리즘의 효율성을 비교하는 활동과 관련된다.</label><p class="muted" id="count9">선택: 0/2</p><div class="feedback" id="fb9"></div><details id="detail9"><summary>정답 및 상세 해설 (학습용 펼치기)</summary><p><b>정답: ②, ⑤</b></p><p>입력 크기와 연산 횟수의 관계를 분석하고 서로 다른 해결 방법의 효율성을 비교한다. 예시의 반복 횟수는 log₂ n에 비례한다.</p><p><b>선지별 판단</b></p><ol><li>틀림 — 입력 크기는 분석에서 고려하지 않는다.</li><li>옳음 — 입력 크기에 따른 반복 횟수를 분석할 수 있다.</li><li>틀림 — 출력 결과만 맞으면 효율성 비교는 불필요하다.</li><li>틀림 — 실행 시간 한 번만 측정하면 모든 복잡도가 확정된다.</li><li>옳음 — 서로 다른 알고리즘의 효율성을 비교하는 활동과 관련된다.</li></ol></details></section><section class="question" id="q10"><h2>10. Ⅲ단원 통합 비교</h2><p><b>예시 코드</b> <button class="secondary" onclick="copyCode(10)">코드 복사</button></p><pre id="code10">def merge_sort(a):
+    if len(a) &lt;= 1: return a
+    m = len(a)//2
+    left = merge_sort(a[:m])
+    right = merge_sort(a[m:])
+    i = j = 0
+    out = []
+    while i &lt; len(left) and j &lt; len(right):
+        if left[i] &lt;= right[j]:
+            out.append(left[i]); i += 1
+        else:
+            out.append(right[j]); j += 1
+    out.extend(left[i:]); out.extend(right[j:])
+    print(&quot;병합:&quot;, out)
+    return out
+
+print(&quot;정렬:&quot;, merge_sort([4, 1, 3, 2]))</pre><p><b>예상 출력 결과</b></p><pre class="output">병합: [1, 4]
+병합: [2, 3]
+병합: [1, 2, 3, 4]
+정렬: [1, 2, 3, 4]</pre><p><b>문제: 위 코드 및 관련 개념에 관한 설명 중 옳은 것을 정확히 2개 고르시오.</b></p><label class="option"><input type="checkbox" name="q10" value="0" onchange="limit(this,10)">① 병합 정렬의 대표적인 시간 복잡도는 O(n log n)이다.</label><label class="option"><input type="checkbox" name="q10" value="1" onchange="limit(this,10)">② 모든 문제에는 동일한 알고리즘을 적용해야 한다.</label><label class="option"><input type="checkbox" name="q10" value="2" onchange="limit(this,10)">③ 빠르기만 하면 정렬 결과가 틀려도 된다.</label><label class="option"><input type="checkbox" name="q10" value="3" onchange="limit(this,10)">④ O(n²)은 입력 크기와 무관한 상수 시간이다.</label><label class="option"><input type="checkbox" name="q10" value="4" onchange="limit(this,10)">⑤ 대표 복잡도를 실제 코드의 반복·분할 구조와 연결해 비교할 수 있다.</label><p class="muted" id="count10">선택: 0/2</p><div class="feedback" id="fb10"></div><details id="detail10"><summary>정답 및 상세 해설 (학습용 펼치기)</summary><p><b>정답: ①, ⑤</b></p><p>병합 정렬은 분할 단계가 약 log n층, 각 층의 병합 작업이 총 O(n)이어서 O(n log n)이다. 예제는 작은 리스트의 동작 관찰용이며 pop(0)의 비용에 유의해야 한다.</p><p><b>선지별 판단</b></p><ol><li>옳음 — 병합 정렬의 대표적인 시간 복잡도는 O(n log n)이다.</li><li>틀림 — 모든 문제에는 동일한 알고리즘을 적용해야 한다.</li><li>틀림 — 빠르기만 하면 정렬 결과가 틀려도 된다.</li><li>틀림 — O(n²)은 입력 크기와 무관한 상수 시간이다.</li><li>옳음 — 대표 복잡도를 실제 코드의 반복·분할 구조와 연결해 비교할 수 있다.</li></ol></details></section><section class="panel" id="result"><h2>자동 채점 및 결과 저장</h2><button onclick="grade()">채점하기</button><button onclick="save()">TXT 결과 저장</button><button class="secondary" onclick="resetQuiz()">다시 풀기</button><p id="score">아직 채점하지 않았습니다.</p><p class="muted">TXT 파일명: 학번_이름_점수_시간복잡도10문항_응시시각.txt · 정오답, 선택한 답, 정답, 상세 해설 기록</p></section></main><script>const questions=[{"title": "시간 복잡도와 입력 크기", "answers": [0, 1], "explain": "반복문이 원소를 한 번씩 방문하므로 덧셈 횟수는 n이고 시간 복잡도는 O(n)이다. 합계의 크기와 연산 횟수는 다른 개념이다.", "options": ["입력 원소가 n개라면 덧셈은 n번 실행된다.", "이 코드의 시간 복잡도는 O(n)이다.", "이 코드의 복잡도는 출력된 합계 10으로 결정된다.", "입력이 두 배면 반복 횟수는 네 배가 된다.", "모든 입력에서 덧셈은 한 번만 실행된다."]}, {"title": "빅오 표기법", "answers": [2, 4], "explain": "빅오는 증가율을 나타내는 점근적 상한 표기다. 3n+5와 n은 모두 O(n)이다. 측정된 초 단위 시간과 같지 않다.", "options": ["O(n)은 반드시 n초가 걸린다는 뜻이다.", "O(n)은 실행 환경과 무관한 정확한 시간을 뜻한다.", "빅오는 입력 크기에 따른 연산량 증가 경향을 표현한다.", "빅오에서는 모든 상수배를 정확한 실행 초로 바꾼다.", "3n+5와 n은 모두 O(n)으로 나타낼 수 있다."]}, {"title": "O(1), O(log n), O(n)", "answers": [3, 4], "explain": "리스트의 인덱스 접근은 O(1), 전체 순회는 O(n)이다. 이진 탐색은 정렬된 자료에서 탐색 범위를 줄이며 O(log n)이다.", "options": ["첫 원소 접근은 항상 O(n²)이다.", "모든 원소 순회는 O(log n)이다.", "이진 탐색은 정렬 여부와 무관하게 O(1)이다.", "인덱스로 첫 원소를 읽는 연산은 일반적인 리스트에서 O(1)이다.", "원소를 한 번씩 출력하는 반복은 O(n)이다."]}, {"title": "O(n²) 중첩 반복문", "answers": [0, 1], "explain": "바깥 반복 n회마다 안쪽 반복 n회가 실행되어 총 n×n=n²회다. n이 두 배면 횟수는 네 배가 된다.", "options": ["n=3일 때 내부 핵심 연산은 9회 실행된다.", "이 구조의 핵심 연산 횟수는 n²이다.", "n을 두 배로 하면 핵심 연산 횟수는 두 배다.", "중첩 반복문이므로 언제나 O(1)이다.", "n=10이면 핵심 연산은 10회 실행된다."]}, {"title": "실제 실행 시간 측정", "answers": [2, 4], "explain": "perf_counter()는 고해상도 경과 시간 측정에 유용하다. 실제 값은 환경과 실행 상황에 따라 달라지므로 반복 측정하고 이론 복잡도와 구분해야 한다.", "options": ["한 번 측정하면 빅오를 수학적으로 증명할 수 있다.", "모든 컴퓨터에서 시간은 완전히 같다.", "perf_counter()로 경과 시간을 측정할 수 있다.", "실행 시간이 짧으면 결과의 정확성을 검사할 필요가 없다.", "서로 다른 입력 크기를 여러 번 측정하면 증가 경향을 살필 수 있다."]}, {"title": "선형 탐색과 이진 탐색", "answers": [1, 3], "explain": "선형 탐색은 최악의 경우 n개를 확인한다. 이진 탐색은 정렬된 자료에서 탐색 범위를 절반씩 줄이므로 O(log n)이다.", "options": ["이진 탐색은 무작위 순서에서도 같은 방식으로 항상 정확하다.", "선형 탐색은 최악의 경우 O(n)이다.", "두 탐색은 항상 같은 수의 비교를 한다.", "정렬된 리스트에서 이진 탐색은 O(log n)으로 동작한다.", "이진 탐색은 모든 원소를 무조건 검사한다."]}, {"title": "알고리즘 전략 통합", "answers": [0, 2], "explain": "메모이제이션은 이미 계산한 피보나치 값을 재사용한다. 분할정복은 부분 문제를 해결하고 결합한다. 탐욕법의 최적성은 문제 조건에 달려 있다.", "options": ["동적계획법은 중복 부분 문제의 결과를 저장하여 재사용할 수 있다.", "모든 탐욕 알고리즘은 어떤 문제에서도 최적해를 보장한다.", "분할정복은 문제를 작은 부분으로 나누어 해결하는 전략이다.", "백트래킹은 언제나 모든 경우를 끝까지 검사한다.", "모든 알고리즘은 같은 시간 복잡도를 가진다."]}, {"title": "알고리즘 선택 기준", "answers": [3, 4], "explain": "알고리즘은 정확성이 먼저다. 정렬 상태, 입력 규모, 시간·공간 비용, 구현 비용을 종합해 선택한다.", "options": ["코드가 가장 짧으면 무조건 최선이다.", "같은 빅오를 가진 알고리즘은 실제 시간이 언제나 같다.", "정확하지 않아도 빠르면 선택해야 한다.", "선택 전에 결과가 요구 조건에 맞는지 확인해야 한다.", "자료의 정렬 상태와 크기 등 입력 조건을 고려해야 한다."]}, {"title": "[12정과03-06] 성취기준", "answers": [1, 4], "explain": "입력 크기와 연산 횟수의 관계를 분석하고 서로 다른 해결 방법의 효율성을 비교한다. 예시의 반복 횟수는 log₂ n에 비례한다.", "options": ["입력 크기는 분석에서 고려하지 않는다.", "입력 크기에 따른 반복 횟수를 분석할 수 있다.", "출력 결과만 맞으면 효율성 비교는 불필요하다.", "실행 시간 한 번만 측정하면 모든 복잡도가 확정된다.", "서로 다른 알고리즘의 효율성을 비교하는 활동과 관련된다."]}, {"title": "Ⅲ단원 통합 비교", "answers": [0, 4], "explain": "병합 정렬은 분할 단계가 약 log n층, 각 층의 병합 작업이 총 O(n)이어서 O(n log n)이다. 예제는 작은 리스트의 동작 관찰용이며 pop(0)의 비용에 유의해야 한다.", "options": ["병합 정렬의 대표적인 시간 복잡도는 O(n log n)이다.", "모든 문제에는 동일한 알고리즘을 적용해야 한다.", "빠르기만 하면 정렬 결과가 틀려도 된다.", "O(n²)은 입력 크기와 무관한 상수 시간이다.", "대표 복잡도를 실제 코드의 반복·분할 구조와 연결해 비교할 수 있다."]}];let graded=false;let report="";function limit(el,n){let a=[...document.querySelectorAll(`input[name=q${n}]:checked`)];if(a.length>2){el.checked=false;alert("정확히 2개까지만 선택할 수 있습니다.");a=[...document.querySelectorAll(`input[name=q${n}]:checked`)];}document.getElementById(`count${n}`).textContent=`선택: ${a.length}/2`;graded=false;}function copyCode(n){navigator.clipboard.writeText(document.getElementById(`code${n}`).innerText).then(()=>alert("코드를 복사했습니다."));}function grade(){let lines=[],score=0;const stamp=new Date().toLocaleString('ko-KR');lines.push('시간 복잡도와 알고리즘 선택 평가','학번: '+document.getElementById('sid').value,'이름: '+document.getElementById('sname').value,'응시시각: '+stamp);questions.forEach((q,i)=>{const n=i+1;let selected=[...document.querySelectorAll(`input[name=q${n}]:checked`)].map(e=>+e.value).sort();let ok=selected.length===2&&selected.every((v,j)=>v===q.answers[j]);if(ok)score+=10;let fb=document.getElementById(`fb${n}`);fb.className='feedback '+(ok?'correct':'wrong');fb.textContent=(ok?'정답 (+10점)':'오답 (0점)')+' | 내 선택: '+(selected.map(v=>'①②③④⑤'[v]).join(', ')||'미응답')+' | 정답: '+q.answers.map(v=>'①②③④⑤'[v]).join(', ');document.getElementById(`detail${n}`).open=true;lines.push('',`[${n}번] ${q.title}`,`내 답: ${selected.map(v=>'①②③④⑤'[v]).join(', ')||'미응답'}`,`정답: ${q.answers.map(v=>'①②③④⑤'[v]).join(', ')}`,`판정: ${ok?'정답':'오답'}`,`해설: ${q.explain}`);});lines.splice(4,0,'총점: '+score+'/100');document.getElementById('score').textContent=`총점: ${score} / 100점 · 정답 ${score/10}문항 / 10문항`;report=lines.join('\n');graded=true;}function save(){if(!graded)grade();const sid=(document.getElementById('sid').value.trim()||'학번미입력').replace(/[\/:*?"<>|]/g,'_'),name=(document.getElementById('sname').value.trim()||'이름미입력').replace(/[\/:*?"<>|]/g,'_');const score=Number(document.getElementById('score').textContent.match(/\d+/)[0]);const d=new Date();const pad=x=>String(x).padStart(2,'0');const time=`${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}_${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}`;const blob=new Blob(['﻿'+report],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`${sid}_${name}_${score}점_시간복잡도10문항_${time}.txt`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}function resetQuiz(){document.querySelectorAll('input[type=checkbox]').forEach(e=>e.checked=false);questions.forEach((_,i)=>{const n=i+1;document.getElementById(`count${n}`).textContent='선택: 0/2';document.getElementById(`fb${n}`).textContent='';document.getElementById(`detail${n}`).open=false;});document.getElementById('score').textContent='아직 채점하지 않았습니다.';graded=false;report='';}</script></body></html>
